@@ -8,15 +8,15 @@
 | 项目 | 一句话介绍 | 下载 |
 | --- | --- | --- |
 | [Travel Book](travel-book/) | 把旅行资料交给 AI，生成一份手机随身看的单文件旅行手册网页 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/travel-book) |
-| [Mac 图库整理](mac-photo-organizer/) | 让 AI 把 Mac「照片」里的旅行照片按「国家 → 州/省 → 地点 年.月」自动整理成相簿 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/mac-photo-organizer) |
 
-后面会陆续加上网页制作等更多分享。
+后面会陆续加上网页制作、图库整理等更多分享。
 
 ## 怎么用
 
-1. 点上面表格里的项目名，先看它自己的 README。
-2. 只想要其中一个项目，点「下载这个文件夹」就能单独下载成压缩包；想要全部，点页面右上角绿色的 **Code → Download ZIP**。
-3. 解压后把整个文件夹交给你的 AI（Claude Code、Cursor 之类能读写文件的都行），照各项目 README 里的说法跟它说就可以。
+**不用自己下载。** 点进你想用的项目，找到它 README 里「怎么用」那段话，整段复制发给你自己的 AI（Claude Code、Cursor、Codex 这类能读写文件、能联网的都可以）。
+AI 会自己把项目下载下来、读里面的说明、问你要资料，然后帮你做出来。
+
+如果你的 AI 不能联网或不能操作文件，再用备用方法：点表格里的「下载这个文件夹」单独下载，或者点页面右上角绿色的 **Code → Download ZIP** 下载全部，解压后交给 AI。
 
 ## 反馈
 
