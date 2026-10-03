@@ -5,8 +5,8 @@ description: 把用户自己的旅行资料（航班、酒店、每日安排、�
 
 # Travel Book 生成指南
 
-这份 SKILL.md 和 `template/index.html` 配套使用。把这个仓库整个交给你自己的 AI（Claude Code、Cursor
-之类能读写文件的工具都行），再把这次旅行的资料发给它，让它照着下面的规范把 `template/index.html`
+这份 SKILL.md 和 `template/index.html` 配套使用。把 `travel-book` 这个文件夹整个交给你自己的 AI（Claude Code、Cursor、
+Codex、WorkBuddy 之类能读写文件的工具都行），再把这次旅行的资料发给它，让它照着下面的规范把 `template/index.html`
 改写成这次旅行专属的页面——**改的是内容，不是结构**，`template/index.html` 里已经写好的交互组件和
 插画（见第 2 节）直接复制粘贴改文字/改地标就行，不用重新设计。
 
@@ -198,34 +198,79 @@ Google 会自动解析到最近的一家。
 
 ## 5. 怎么发布
 
-生成完第一版、用户确认内容没问题之后，**主动问一句要不要现在就部署成一个公网链接**——
-默认生成的只是本地文件，用户自己打不开链接分享给同行的人。别等用户想起来问，生成完就问。
+生成完第一版、用户确认内容没问题之后，**主动问一句要不要现在就发布成一个公网链接**——
+默认生成的只是本地文件，用户没法直接把链接分享给同行的人。别等用户想起来问，生成完就问。
 
-用户说不需要（比如只想自己留着、之后再发），就到此为止；用户确认要部署，按下面 Cloudflare Pages
-的步骤直接带他做完，不用列一堆选项让他自己选：
+用户说不需要（比如只想自己留着、之后再发），就到此为止。用户要发布，按下面的顺序走。
 
-### Cloudflare Pages（推荐，免费，带用户走一遍这个）
+**发布的硬要求：拿到链接的人不用登录、不用注册任何账号就能直接打开。** 达不到这一条的
+分享方式（比如只有登录了某个 AI 平台才能看的分享链接）都不算发布成功。
 
-1. 让用户打开 https://dash.cloudflare.com 注册/登录（免费账号即可）。
-2. 左侧 **Workers & Pages → Create → Pages → Connect to Git**，授权并选中这个仓库
-   （需要用户自己在浏览器里点，Agent 没法代替他登录/授权）。
-3. Build settings 里：
-   - Framework preset 选 **None**
-   - Build command 留空
-   - **Build output directory 填 `template`**（不是留空、不是 `/`）——这样部署出来的网站首页
-     就是改好的 `template/index.html`，不会展示这个模板项目自己的介绍页
-4. **Save and Deploy**，几十秒后拿到一个 `*.pages.dev` 的公网链接，发给用户。
-5. 告诉用户：以后每次这个仓库有新的 push，Cloudflare 都会自动重新构建部署，不用手动做任何事——
-   旅行途中让 Agent 继续改行程、push 上去，线上链接会自动更新。
+### 5.1 先判断用户在用哪个 AI 工具
 
-其他选项（用户明确要求别的方式再用，不用主动介绍）：
+- 你自己能确定当前运行在哪个产品里，就直接按对应路线走，不用问。
+- 确定不了，就问用户一句：「你现在用的是哪个 AI 工具？比如 WorkBuddy、Claude、ChatGPT、
+  Cursor……」，按回答选路线。
 
-- **GitHub Pages**：仓库 Settings → Pages，发布源同样要指到 `template` 这个子目录
-  （GitHub Pages 的简单界面只支持根目录或 `/docs`，指不了任意子目录时，退而求其次把
-  `template/index.html` 的内容复制到仓库根目录的 `index.html` 里）。
-- **Netlify / Vercel**：拖一个文件夹进去就能上线，同样注意发布的是 `template` 目录。
-- 完全不部署：改完直接把 `template/index.html` 这个文件用微信/邮件发给同行的人，手机打开就能看，
-  只是没法「一个人改了大家都看到最新版」。
+| 用户在用 | 走哪条路 |
+| --- | --- |
+| 腾讯 WorkBuddy | 5.2 用 WorkBuddy 自带的网页托管 |
+| 其他所有工具（Claude、ChatGPT、Claude Code、Cursor、Codex 等） | 5.3 用 Cloudflare Pages |
+
+### 5.2 WorkBuddy：用自带的网页托管
+
+WorkBuddy 自己就能把网页托管成一个对外可访问的链接，不需要 Cloudflare。
+
+1. 把 `template/index.html` 做成一个可以对外访问的网页，拿到公网链接。
+   用户这边只需要说一句「帮我做成一个可以对外访问的网页」就能触发。
+2. 把链接发给用户，并请他**用一个没登录过任何账号的浏览器窗口（比如无痕模式）打开试一下**，
+   确认别人不用登录也能看。
+3. 以后行程有改动，改完 `template/index.html` 后再发布一次，告诉用户新链接（如果链接变了）。
+
+### 5.3 其他工具：用 Cloudflare Pages（免费）
+
+先告诉用户：发布需要一个免费的 Cloudflare 账号，**注册和登录只能他本人在浏览器里完成**，
+你没法代替他。让他打开 https://dash.cloudflare.com/sign-up 注册好（已有账号直接登录），
+告诉你一声再继续。
+
+注册好之后，看你自己能不能在用户电脑上运行命令，二选一：
+
+**A. 你能运行命令（Claude Code、Cursor、Codex 这类）——由你来部署，推荐**
+
+1. 运行 `npx wrangler login`，会自动弹出浏览器页面，请用户在页面上点「Allow / 允许」授权。
+2. 起一个项目名：只能用小写英文字母、数字和短横线，比如 `kyoto-trip-2026`。
+   这个名字会变成网址 `https://<项目名>.pages.dev`，被别人占用了就换一个。
+3. 创建项目并部署（在 `travel-book` 文件夹里运行）：
+   ```bash
+   npx wrangler pages project create <项目名> --production-branch main
+   npx wrangler pages deploy template --project-name <项目名> --branch main
+   ```
+   **发布的是 `template` 这个目录**——网站首页就是改好的 `template/index.html`，
+   不会把模板项目自己的说明文件也发出去。
+4. 把 `https://<项目名>.pages.dev` 发给用户，请他用无痕窗口打开确认一下。
+5. 以后行程有改动，改完再运行一次第 3 步的 `deploy` 那一行就会更新，链接不变。
+
+**B. 你不能运行命令（网页版 Claude、ChatGPT 这类只能聊天的）——带用户自己上传**
+
+1. 先把改好的 `template/index.html` 交给用户下载，让他在电脑上新建一个文件夹
+   （比如叫 `my-trip`），把 `index.html` 放进去。**文件名必须是 `index.html`**。
+2. 带他在 Cloudflare 后台操作：左侧 **Workers & Pages → Create（创建）→ 选 Pages →
+   Upload assets（直接上传）**。Cloudflare 的界面文字会变，找不到就让他截图给你看，按截图指路。
+3. 填一个项目名（规则同 A 的第 2 步），把 `my-trip` 整个文件夹拖进上传区域，点 **Deploy**。
+4. 几十秒后拿到 `https://<项目名>.pages.dev` 链接，请他用无痕窗口打开确认。
+5. 以后行程有改动：你改好 `index.html` 再交给他，他在这个项目里点 **Create new deployment**，
+   重新拖一次文件夹，链接不变。
+
+**进阶：用户自己有 GitHub 仓库、希望 push 后自动更新**
+
+用户明确要这种方式时再用，不用主动介绍：Cloudflare 后台 **Workers & Pages → Create → Pages →
+Connect to Git**，授权并选中他的仓库；Build settings 里 Framework preset 选 **None**、
+Build command 留空、**Build output directory 填 `template`**。之后每次 push 都会自动重新部署。
+
+### 5.4 不发布也能分享
+
+完全不部署也可以：把 `template/index.html` 这个文件用微信/邮件直接发给同行的人，手机打开就能看，
+只是没法做到「一个人改了大家都看到最新版」。
 
 **发布前检查一遍页面里有没有确认号、门锁密码这类敏感信息**——只要有公开链接，任何拿到链接的人
 都能看到整份行程。

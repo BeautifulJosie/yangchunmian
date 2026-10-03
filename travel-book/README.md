@@ -60,14 +60,15 @@ npx serve .
 
 ## 发布分享
 
-这是纯静态单文件，挑一种就行：
+做完后 AI 会主动问你要不要发布成一个公网链接，发给同行的人不用登录、不用注册就能直接打开：
 
-- **GitHub Pages**：把 `travel-book` 文件夹里的内容复制到你自己新建的仓库，改完推到 `main`，Settings → Pages 选 `main` 分支根目录，免费。
-- **Cloudflare Pages / Workers**：连接 GitHub 仓库，push 自动部署。
-- **Netlify / Vercel**：拖一个文件夹进去就能上线。
-- 或者完全不部署，把 HTML 文件直接发给同行的人，手机打开就能看。
+- **用腾讯 WorkBuddy**：它自带网页托管，直接帮你发布，不需要别的账号。
+- **用其他 AI**（Claude、ChatGPT、Claude Code、Cursor、Codex 等）：需要你先注册一个免费的
+  [Cloudflare](https://dash.cloudflare.com/sign-up) 账号，剩下的 AI 会一步步带你做完，
+  能运行命令的 AI 会直接帮你部署。
+- 不想发布也可以，把生成的 HTML 文件直接发给同行的人，手机打开就能看。
 
-具体怎么选，`SKILL.md` 第 5 节有更详细的说明。
+具体流程见 `SKILL.md` 第 5 节。
 
 ---
 
