@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F6F3EC">
+<title>示例：日本关西六日 · Travel Book</title>
+<style>
+  :root{
+    --bg:#F6F3EC; --panel:#FFFFFF; --panel2:#FBF8F0;
+    --ink:#211E1A; --ink2:#585349; --ink3:#8D8777;
+    --line:#E6E0D0; --accent:#B5622E; --accent-bg:#F1E3D6;
+    --star:#B5622E; --tk:#8D8777;
+    --land:#E9E4CE; --land-line:#CFC79F;
+    --r2:#3E8E86; --r3:#8B5FA3;
+    --sky-top:#CFE7EE; --sky-bottom:#FBE0C3; --scene-fig:#5B4A63; --scene-sun:#F6B35C; --scene-moon:#F3ECD9;
+    --shadow:0 1px 2px rgba(30,25,15,.05), 0 8px 22px rgba(30,25,15,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#181613; --panel:#211E1A; --panel2:#252119;
+      --ink:#F1EDE3; --ink2:#C9C3B4; --ink3:#8D8777;
+      --line:#3A3529; --accent:#E08A55; --accent-bg:#3A2A1C;
+      --star:#E08A55; --tk:#8D8777;
+      --land:#2B2A20; --land-line:#453F2C;
+      --r2:#6FBBB2; --r3:#B98FD1;
+      --sky-top:#1D1830; --sky-bottom:#453655; --scene-fig:#120D1A; --scene-moon:#F3ECD9;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181613; --panel:#211E1A; --panel2:#252119;
+    --ink:#F1EDE3; --ink2:#C9C3B4; --ink3:#8D8777;
+    --line:#3A3529; --accent:#E08A55; --accent-bg:#3A2A1C;
+    --star:#E08A55; --tk:#8D8777;
+    --land:#2B2A20; --land-line:#453F2C;
+    --r2:#6FBBB2; --r3:#B98FD1;
+    --sky-top:#1D1830; --sky-bottom:#453655; --scene-fig:#120D1A; --scene-moon:#F3ECD9;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    font-size:15.5px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:640px; margin:0 auto; padding:0 0 60px;}
+  a{color:inherit;}
+  h1,h2,h3{margin:0; text-wrap:balance;}
+
+  /* ---- hero ---- */
+  /* ---- hero scene 插画 ---- */
+  .hero-scene{margin:0; line-height:0;}
+  .hero-scene svg{display:block; width:100%; height:auto;}
+  .scene-cloud{fill:#FFFFFF; opacity:.7;}
+  .scene-ridge{fill:var(--scene-fig); opacity:.3;}
+  .scene-fig{fill:var(--scene-fig);}
+  .scene-fig line{stroke:var(--scene-fig); stroke-width:2;}
+  .scene-torii path,.scene-torii rect{fill:var(--scene-fig);}
+  .sun-ico{fill:var(--scene-sun);}
+  .moon-ico{fill:var(--scene-moon); display:none;}
+  .star-ico{fill:var(--scene-moon); opacity:.8; display:none;}
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]) .sun-ico{display:none;}
+    :root:not([data-theme="light"]) .moon-ico,:root:not([data-theme="light"]) .star-ico{display:block;}
+    :root:not([data-theme="light"]) .scene-cloud{opacity:.15;}
+  }
+  :root[data-theme="dark"] .sun-ico{display:none;}
+  :root[data-theme="dark"] .moon-ico,:root[data-theme="dark"] .star-ico{display:block;}
+  :root[data-theme="dark"] .scene-cloud{opacity:.15;}
+
+  .hero{padding:28px 18px 18px;}
+  .hero .eyebrow{font-size:12px; font-weight:700; letter-spacing:.1em; color:var(--accent); text-transform:uppercase;}
+  .hero h1{font-size:26px; font-weight:800; margin-top:6px;}
+  .hero .meta{margin-top:6px; font-size:13px; color:var(--ink2);}
+  .badges{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px;}
+  .badge{font-size:12px; padding:4px 9px; border-radius:99px; background:var(--panel2); border:1px solid var(--line); color:var(--ink2);}
+  .badge.ok{color:var(--accent); border-color:var(--accent-bg); background:var(--accent-bg);}
+
+  /* ---- NOW card ---- */
+  .now{margin:0 18px 18px; padding:16px 16px 14px; background:var(--panel); border:1px solid var(--line);
+    border-radius:14px; box-shadow:var(--shadow);}
+  .now .tag{display:flex; align-items:center; gap:7px; font-size:11.5px; font-weight:700; letter-spacing:.08em;
+    color:var(--accent); text-transform:uppercase;}
+  .now .dot{width:7px; height:7px; border-radius:50%; background:var(--accent); animation:pulse 1.6s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:.35;}}
+  .now .title{font-size:17px; font-weight:700; margin-top:8px;}
+  .now .sub{font-size:12.5px; color:var(--ink3); margin-top:2px;}
+  .now .cd{font-variant-numeric:tabular-nums; font-size:22px; font-weight:800; margin-top:10px; letter-spacing:.01em;}
+  .now .todo-link{display:block; margin-top:10px; padding-top:10px; border-top:1px dashed var(--line);
+    font-size:12.5px; color:var(--ink2); text-decoration:none;}
+  .now .todo-link b{color:var(--accent);}
+
+  /* ---- sticky nav ---- */
+  .nav{position:sticky; top:0; z-index:10; display:flex; gap:14px; overflow-x:auto;
+    padding:10px 18px; background:var(--bg); border-bottom:1px solid var(--line); font-size:13px;}
+  .nav a{white-space:nowrap; text-decoration:none; color:var(--ink2); font-weight:600;}
+
+  section{padding:22px 18px 4px;}
+  .sec{font-size:18px; font-weight:800; margin-bottom:12px; display:flex; align-items:baseline; gap:8px;}
+  .sec-sub{font-size:12.5px; color:var(--ink3); margin:-8px 0 14px;}
+
+  /* ---- overview ---- */
+  .route-fig{margin:0;}
+  .route-svg{width:100%; height:auto; display:block; background:var(--panel); border:1px solid var(--line);
+    border-radius:14px; padding:10px; box-shadow:var(--shadow);}
+  .route-svg .land{fill:var(--land); stroke:var(--land-line); stroke-width:2;}
+  .route-svg .compass line,.route-svg .compass path{stroke:var(--ink3); fill:var(--ink3);}
+  .route-svg .compass text{font-size:11px; font-weight:700; fill:var(--ink3);}
+  .route-svg .flight-ln{stroke:currentColor; stroke-width:1.6; stroke-dasharray:1 5; opacity:.5; fill:none;}
+  .route-svg .flight-lbl{font-size:9.5px; fill:currentColor; opacity:.6;}
+  .route-svg .route{fill:none; stroke-width:3; stroke-linecap:round;}
+  .route-svg .route.r1{stroke:var(--accent);}
+  .route-svg .route.r2{stroke:var(--r2);}
+  .route-svg .route.r3{stroke:var(--r3);}
+  .route-svg .node-halo{fill:var(--panel); opacity:.92;}
+  .route-svg .node{fill:var(--accent);}
+  .route-svg .node.r2{fill:var(--r2);}
+  .route-svg .node-ring{fill:none; stroke:var(--accent); stroke-width:1.5; opacity:.4;}
+  .route-svg .node-day{fill:currentColor; opacity:.6;}
+  .route-svg .node-name{font-size:13px; font-weight:700; fill:currentColor;}
+  .route-svg .node-meta{font-size:9.5px; fill:currentColor; opacity:.65;}
+  .route-fig figcaption{margin-top:10px; font-size:11.5px; color:var(--ink3); line-height:1.6;}
+  .legend{margin-top:12px; display:flex; flex-direction:column; gap:7px; font-size:12.5px; color:var(--ink2);}
+  .legend .ln{display:inline-block; width:18px; height:0; border-top:3px solid var(--accent); margin-right:8px; vertical-align:2px;}
+  .legend .ln.r2{border-top-color:var(--r2);}
+  .legend .ln.r3{border-top-color:var(--r3);}
+  .legend .ln.flight{border-top:0; border-bottom:2px dashed var(--ink3); height:1px; opacity:.7;}
+
+  /* ---- cards (flights) ---- */
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 16px;
+    box-shadow:var(--shadow); margin-bottom:10px;}
+  .flight .rt{display:flex; justify-content:space-between; align-items:baseline; font-size:15px; font-weight:700;}
+  .flight .det{font-size:12.5px; color:var(--ink2); margin-top:4px;}
+
+  /* ---- day cards ---- */
+  .card.day{padding:0; overflow:hidden;}
+  .day-head{display:flex; align-items:center; gap:12px; padding:14px 16px; cursor:pointer; user-select:none;}
+  .day-num{display:flex; flex-direction:column; align-items:center; line-height:1.1; flex:none;}
+  .day-num .d{font-size:17px; font-weight:800;}
+  .day-num .w{font-size:10.5px; color:var(--ink3);}
+  .day-title{font-size:14.5px; font-weight:700;}
+  .day-route{font-size:12px; color:var(--ink3); margin-top:2px;}
+  .day-toggle{margin-left:auto; flex:none; width:22px; height:22px; display:flex; align-items:center;
+    justify-content:center; color:var(--ink3); font-size:13px; transition:transform .2s;}
+  .card.day.collapsed .day-toggle{transform:rotate(-90deg);}
+  .card.day.collapsed .daymap,.card.day.collapsed .day-body{display:none;}
+
+  .daymap-bar{display:flex; align-items:center; gap:10px; padding:0 16px 10px; flex-wrap:wrap;}
+  .dm-toggle{font-size:12px; font-weight:600; color:var(--accent); background:var(--accent-bg); border:0;
+    border-radius:99px; padding:5px 11px; cursor:pointer;}
+  .dm-note{font-size:11.5px; color:var(--ink3);}
+  .dm-go{margin-left:auto; font-size:12px; color:var(--ink2); text-decoration:none;}
+  .dm-frame{display:block;}
+  .dm-frame iframe{width:100%; height:220px; border:0; display:block;}
+
+  .day-body{padding:4px 16px 14px; border-top:1px solid var(--line);}
+  .tl{display:flex; gap:12px; padding:10px 0; border-bottom:1px dashed var(--line);}
+  .tl:last-child{border-bottom:0;}
+  .tl .t{flex:none; width:42px; font-size:12px; font-weight:700; color:var(--ink3); padding-top:1px;}
+  .tl .tx{font-size:13.5px;}
+  .tl small{display:block; margin-top:3px; font-size:12px; color:var(--ink2); line-height:1.55;}
+  .tl-gap{display:flex; align-items:center; gap:12px; padding:3px 0;}
+  .tl-gap .gt{flex:none; width:42px; display:flex; justify-content:center;}
+  .tl-gap .gt::before{content:''; width:1px; height:18px; background:var(--line);}
+  .tl-gap .chip{font-size:11px; color:var(--ink3); background:var(--panel2); border:1px solid var(--line);
+    border-radius:99px; padding:3px 11px;}
+  .pin{color:var(--accent); text-decoration:underline dotted; text-underline-offset:2px;}
+  .tag{display:inline-block; font-size:10.5px; font-weight:700; padding:1px 7px; border-radius:99px; margin-left:4px;}
+  .tag.star{background:var(--accent-bg); color:var(--accent);}
+  .tag.tk{background:var(--panel2); color:var(--tk); border:1px solid var(--line);}
+
+  .info-btn{font-family:inherit; font-size:11px; line-height:1; font-weight:700; color:var(--accent);
+    background:var(--accent-bg); border:0; border-radius:50%; width:17px; height:17px; padding:0;
+    margin-left:3px; cursor:pointer; vertical-align:2px;}
+  .info-btn[aria-expanded="true"]{background:var(--accent); color:var(--panel);}
+  .info-panel{margin-top:6px; padding:8px 10px; background:var(--panel2); border-radius:9px;
+    font-size:12px; line-height:1.6; color:var(--ink2);}
+  .info-panel p{margin:0;}
+
+  .tl.hotel .tx{color:var(--ink2);}
+  .tl.hotel b{color:var(--ink);}
+  .tl.hotel .sub{display:block; margin-top:3px; font-size:12px; color:var(--ink3); line-height:1.6;}
+
+  /* ---- todo ---- */
+  .prog{display:flex; align-items:center; gap:10px; margin-bottom:12px;}
+  .bar{flex:1; height:6px; border-radius:99px; background:var(--panel2); overflow:hidden;}
+  .bar i{display:block; height:100%; width:0%; background:var(--accent); transition:width .3s;}
+  .prog .n{font-size:12px; font-weight:700; color:var(--ink2); flex:none;}
+  .todo-group h3{font-size:13px; color:var(--ink3); margin:16px 0 8px;}
+  .todo-group h3:first-child{margin-top:0;}
+  .todo{display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line);}
+  .todo:last-child{border-bottom:0;}
+  .box{flex:none; width:20px; height:20px; margin-top:1px; border-radius:6px; border:1.5px solid var(--line);
+    background:var(--panel); color:var(--panel); cursor:pointer; display:flex; align-items:center; justify-content:center;}
+  .box svg{width:13px; height:13px; opacity:0;}
+  .todo.done .box{background:var(--accent); border-color:var(--accent); color:var(--panel);}
+  .todo.done .box svg{opacity:1;}
+  .todo .body{flex:1; min-width:0;}
+  .todo .body .name{font-size:13.5px; font-weight:600;}
+  .todo.done .body .name{color:var(--ink3); text-decoration:line-through;}
+  .todo .det{font-size:12px; color:var(--ink2); margin-top:3px; line-height:1.55;}
+
+  /* ---- 共享待办（可选同步）---- */
+  .todo-sync-note{font-size:11.5px; color:var(--ink3); margin:2px 0 10px;}
+  .todo-sync-note.off{color:var(--tk);}
+  .todo.custom .body .name{outline:0; cursor:text; border-radius:4px; padding:1px 3px; margin:-1px -3px;}
+  .todo.custom .body .name:focus{background:var(--panel2);}
+  .todo.custom .del{flex:none; align-self:flex-start; border:0; background:none; color:var(--ink3);
+    font-size:13px; cursor:pointer; padding:2px 4px;}
+  .todo.custom .del:hover{color:var(--accent);}
+  .todo-add{display:flex; gap:8px; margin-top:10px;}
+  .todo-add input{flex:1; min-width:0; font:inherit; font-size:13px; padding:8px 10px; border-radius:9px;
+    border:1px solid var(--line); background:var(--panel2); color:var(--ink);}
+  .todo-add button{flex:none; font:inherit; font-size:13px; font-weight:600; padding:8px 14px; border-radius:9px;
+    border:0; background:var(--accent); color:#fff; cursor:pointer;}
+
+  ul.tips{margin:0; padding-left:18px; font-size:13px; color:var(--ink2); line-height:1.8;}
+
+  footer{padding:24px 18px 36px; font-size:11.5px; color:var(--ink3); border-top:1px solid var(--line); margin-top:10px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ 顶部插画头图 ============ -->
+  <!-- 手绘风格 SVG 场景，用这次目的地 2~3 个最有辨识度的地标剪影拼一幅简化插画
+       （这里是大阪城 + 五重塔 + 鸟居，换城市就换成对应的地标组合）。
+       浅色模式自动显示白天天空+太阳，深色模式自动换成夜空+月亮星星，不用额外写逻辑。 -->
+  <figure class="hero-scene">
+    <svg viewBox="0 0 800 240" role="img" aria-label="大阪城、五重塔与鸟居剪影组成的关西主题插画，背景是山峦与云层">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" style="stop-color:var(--sky-top)"/>
+          <stop offset="100%" style="stop-color:var(--sky-bottom)"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="800" height="240" fill="url(#skyGrad)"/>
+
+      <!-- 云 -->
+      <g class="scene-cloud">
+        <g transform="translate(230,48)"><ellipse cx="0" cy="0" rx="26" ry="13"/><ellipse cx="22" cy="4" rx="20" ry="11"/><ellipse cx="-20" cy="5" rx="18" ry="10"/></g>
+        <g transform="translate(470,34)"><ellipse cx="0" cy="0" rx="24" ry="12"/><ellipse cx="20" cy="4" rx="18" ry="10"/><ellipse cx="-18" cy="4" rx="16" ry="9"/></g>
+        <g transform="translate(660,58)"><ellipse cx="0" cy="0" rx="22" ry="11"/><ellipse cx="18" cy="4" rx="16" ry="9"/></g>
+      </g>
+
+      <!-- 太阳（浅色模式）/ 月亮与星星（深色模式），跟随主题自动切换 -->
+      <circle class="sun-ico" cx="120" cy="54" r="29"/>
+      <g class="moon-ico">
+        <path d="M118,30 a26,26 0 1 0 2,48 a21,21 0 1 1 -2,-48 Z"/>
+      </g>
+      <g class="star-ico">
+        <circle cx="330" cy="30" r="2"/><circle cx="560" cy="24" r="1.6"/>
+        <circle cx="610" cy="46" r="2.2"/><circle cx="200" cy="22" r="1.6"/><circle cx="420" cy="60" r="1.8"/>
+      </g>
+
+      <!-- 远山 -->
+      <path class="scene-ridge" d="M0,172 L90,122 L180,157 L270,112 L370,162 L460,127 L560,167 L660,132 L760,162 L800,147 L800,240 L0,240 Z"/>
+
+      <!-- 大阪城 -->
+      <g class="scene-fig">
+        <rect x="150" y="165" width="92" height="46"/>
+        <rect x="165" y="134" width="60" height="36"/>
+        <rect x="178" y="109" width="34" height="29"/>
+        <path d="M172,109 L196,92 L220,109 Z"/>
+        <line x1="196" y1="92" x2="196" y2="80"/><circle cx="196" cy="78" r="2.6"/>
+      </g>
+
+      <!-- 五重塔 -->
+      <g class="scene-fig">
+        <rect x="384" y="176" width="72" height="34"/>
+        <rect x="391" y="151" width="58" height="28"/>
+        <rect x="398" y="129" width="44" height="24"/>
+        <rect x="405" y="109" width="30" height="22"/>
+        <rect x="411" y="91" width="18" height="20"/>
+        <line x1="420" y1="91" x2="420" y2="68"/><circle cx="420" cy="66" r="2.6"/>
+      </g>
+
+      <!-- 鸟居 -->
+      <g class="scene-fig scene-torii">
+        <path d="M556,148 Q630,129 706,148 L706,139 Q630,121 556,139 Z"/>
+        <rect x="585" y="152" width="92" height="9"/>
+        <path d="M592,160 L582,222 L598,222 L604,160 Z"/>
+        <path d="M670,160 L660,222 L676,222 L680,160 Z"/>
+      </g>
+
+      <!-- 两侧的树，做画面边框 -->
+      <g class="scene-fig">
+        <circle cx="26" cy="172" r="40"/><circle cx="60" cy="192" r="30"/>
+        <rect x="38" y="196" width="10" height="28"/>
+        <circle cx="774" cy="176" r="38"/><circle cx="742" cy="196" r="28"/>
+        <rect x="752" y="198" width="10" height="26"/>
+      </g>
+
+      <!-- 地面 -->
+      <rect class="scene-fig" x="0" y="216" width="800" height="24"/>
+    </svg>
+  </figure>
+
+  <!-- ============ Hero ============ -->
+  <!-- 换成这次旅行的标题、日期、人数、进出机场；badges 按实际预订状态调整 -->
+  <header class="hero">
+    <div class="eyebrow">TRAVEL BOOK · 示例</div>
+    <h1>🗻 日本关西六日</h1>
+    <div class="meta">2026.10.20 – 10.25 · 2 人 · 大阪 KIX 进出</div>
+    <div class="badges">
+      <span class="badge ok">✈️ 机票已订</span>
+      <span class="badge ok">🏨 酒店 3/3</span>
+      <span class="badge">🎫 门票 1/2</span>
+    </div>
+  </header>
+
+  <!-- ============ NOW 卡片：自动倒计时到下一个行程事件 ============ -->
+  <div class="now">
+    <div class="tag"><span class="dot"></span>此刻关注 · NOW</div>
+    <div class="title" id="nowTitle">—</div>
+    <div class="sub" id="nowMeta"></div>
+    <div class="cd" id="nowCd">—</div>
+    <a class="todo-link" href="#todo" id="nowTodo">当前待办：<b>—</b></a>
+  </div>
+
+  <!-- ============ 顶部锚点导航 ============ -->
+  <nav class="nav">
+    <a href="#overview">总览</a>
+    <a href="#flights">航班</a>
+    <a href="#days">每日行程</a>
+    <a href="#todo">待办清单</a>
+    <a href="#tips">贴士</a>
+  </nav>
+
+  <!-- ============ 行程总览 ============ -->
+  <!-- 这是默认应该做到的地图水准：真实地形轮廓 + 按天上色的路线 + 图例，画法见同仓库 SKILL.md 第 3 节。
+       只有资料非常简单（比如单一城市、没有跨城市移动）时才退到文字路线概述，别退到不对应
+       任何真实地方的抽象装饰图形。 -->
+  <section id="overview">
+    <h2 class="sec">🗺️ 行程总览</h2>
+    <div class="sec-sub">大阪 → 京都 → 奈良一日往返 → 京都 → 大阪，关西地区环游</div>
+    <figure class="route-fig">
+      <svg class="route-svg" viewBox="0 0 600 400" role="img"
+        aria-label="关西地区地图：大阪入境，前往京都住两晚，中途一日往返奈良，再回大阪飞离">
+        <defs>
+          <marker id="rArrow1" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 Z" fill="var(--accent)"/>
+          </marker>
+          <marker id="rArrow2" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 Z" fill="var(--r2)"/>
+          </marker>
+          <marker id="rArrow3" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 Z" fill="var(--r3)"/>
+          </marker>
+        </defs>
+
+        <!-- 地形轮廓：简化的关西沿海+纪伊半岛示意，不追求测绘精度，能认出大致方位即可 -->
+        <path class="land" d="M150,35 C230,10 345,15 435,42 C488,58 515,92 503,142
+          C495,182 468,202 452,242 C433,288 406,330 366,370 C346,390 320,393 300,374
+          C277,350 267,313 246,282 C222,247 192,222 172,192 C147,157 124,126 135,86
+          C140,64 150,35 150,35 Z"/>
+
+        <!-- 指北针 -->
+        <g class="compass" transform="translate(56,58)">
+          <line x1="0" y1="16" x2="0" y2="-14"/>
+          <path d="M0,-14 L-5,-4 L5,-4 Z"/>
+          <text x="0" y="30" text-anchor="middle">北</text>
+        </g>
+
+        <!-- 航段：虚线代表飞机，起讫点在地图边缘之外 -->
+        <path class="flight-ln" d="M14,172 L196,206"/>
+        <text class="flight-lbl" x="18" y="164">✈ 10/20 首尔 ICN 飞来</text>
+        <path class="flight-ln" d="M196,206 L14,236"/>
+        <text class="flight-lbl" x="18" y="252">✈ 10/25 飞返首尔 ICN</text>
+
+        <!-- Day 1 大阪 → 京都 -->
+        <path class="route r1" d="M199,199 Q252,146 297,117" marker-end="url(#rArrow1)"/>
+        <!-- Day 3 京都 → 奈良 → 京都（一日往返，去程/回程各偏移几像素避免完全重叠）-->
+        <path class="route r2" d="M309,120 Q330,155 339,185" marker-end="url(#rArrow2)"/>
+        <path class="route r2" d="M333,195 Q317,161 301,129" marker-end="url(#rArrow2)"/>
+        <!-- Day 4 京都 → 大阪 -->
+        <path class="route r3" d="M303,123 Q253,168 203,216" marker-end="url(#rArrow3)"/>
+
+        <!-- 大阪：入境/离境，住2晚 -->
+        <circle class="node-halo" cx="196" cy="206" r="15"/>
+        <circle class="node-ring" cx="196" cy="206" r="13"/>
+        <circle class="node r1" cx="196" cy="206" r="7"/>
+        <text class="node-name" x="196" y="231" text-anchor="middle">大阪</text>
+        <text class="node-meta" x="196" y="244" text-anchor="middle">Day 1–2 · 5 · 夜1/3</text>
+
+        <!-- 京都：住2晚 -->
+        <circle class="node-halo" cx="302" cy="115" r="15"/>
+        <circle class="node-ring" cx="302" cy="115" r="13"/>
+        <circle class="node r1" cx="302" cy="115" r="7"/>
+        <text class="node-name" x="302" y="88" text-anchor="middle">京都</text>
+        <text class="node-meta" x="302" y="75" text-anchor="middle">Day 2–4 · 夜2</text>
+
+        <!-- 奈良：当天往返，不过夜 -->
+        <circle class="node-halo" cx="341" cy="192" r="10"/>
+        <circle class="node node-day r2" cx="341" cy="192" r="6"/>
+        <text class="node-name" x="341" y="215" text-anchor="middle">奈良</text>
+        <text class="node-meta" x="341" y="228" text-anchor="middle">Day 3 · 一日往返</text>
+      </svg>
+      <figcaption>地形为简化示意，不代表精确测绘边界；实际驾驶/换乘请以当天的 Google Maps 导航为准。</figcaption>
+    </figure>
+    <div class="legend">
+      <div><span class="ln flight"></span>飞行段 · 10/20 ICN→KIX（已订）/ 10/25 KIX→ICN（已订）</div>
+      <div><span class="ln r1"></span>Day 1 · 10/21 大阪 → 京都 · 电车约 1 小时</div>
+      <div><span class="ln r2"></span>Day 3 · 10/23 京都 → 奈良 → 京都 · 电车来回约 1.5 小时</div>
+      <div><span class="ln r3"></span>Day 4 · 10/24 京都 → 大阪 · 电车约 45 分钟</div>
+    </div>
+  </section>
+
+  <!-- ============ 航班卡片 ============ -->
+  <!-- 确认号等隐私信息不要写在这里——如果这个页面会公开分享的话，只写「见邮件」 -->
+  <section id="flights">
+    <h2 class="sec">✈️ 航班</h2>
+    <div class="card flight">
+      <div class="rt"><span>ICN → KIX</span><span>10/20</span></div>
+      <div class="det">CX 468 · 08:40–10:20 · 2 人 · 确认号见邮件</div>
+    </div>
+    <div class="card flight">
+      <div class="rt"><span>KIX → ICN</span><span>10/25</span></div>
+      <div class="det">CX 469 · 19:10–21:00 · 2 人 · 确认号见邮件</div>
+    </div>
+  </section>
+
+  <!-- ============ 每日行程 ============ -->
+  <!-- 下面这张 Day 卡演示了四种已内置的交互：
+       1) .pin            —— 点地名跳 Google 地图导航
+       2) .info-btn/.info-panel —— 点 ⓘ 展开地点简介
+       3) .dm-toggle/.dm-frame  —— 点按钮展开当天完整路线地图
+       4) .day-toggle      —— 点标题栏折叠/展开整卡（某天过去后可以加 collapsed class）
+       复制这张卡改成自己的天数即可，事件时间要跟下面 EVENTS 数组、地图 query 保持一致。 -->
+  <section id="days">
+    <h2 class="sec">📅 每日行程</h2>
+
+    <div class="card day">
+      <div class="day-head">
+        <div class="day-num"><span class="d">10.21</span><span class="w">周三</span></div>
+        <div style="flex:1">
+          <div class="day-title">大阪市区：道顿堀 · 大阪城</div>
+          <div class="day-route">步行 + 地铁 · 全天市区内</div>
+        </div>
+        <span class="day-toggle" aria-hidden="true">▾</span>
+      </div>
+
+      <div class="daymap">
+        <div class="daymap-bar">
+          <button class="dm-toggle" type="button"
+            data-src="https://maps.google.com/maps?saddr=Osaka+Station&daddr=Dotonbori+to:Osaka+Castle&output=embed">🗺️ 展开今日路线地图</button>
+          <span class="dm-note">酒店 → 道顿堀 → 大阪城 · 约 40 分钟</span>
+          <a class="dm-go" href="https://www.google.com/maps/dir/?api=1&origin=Osaka+Station&destination=Osaka+Castle&travelmode=transit&waypoints=Dotonbori" target="_blank" rel="noopener">Google 导航 ↗</a>
+        </div>
+        <div class="dm-frame"></div>
+      </div>
+
+      <div class="day-body">
+        <div class="tl">
+          <span class="t">10:00</span>
+          <div class="tx">
+            <a class="pin" href="https://www.google.com/maps/search/?api=1&query=Dotonbori%2C%20Osaka" target="_blank" rel="noopener">道顿堀</a>
+            <button class="info-btn" type="button" data-target="info-dotonbori" aria-expanded="false" aria-label="道顿堀简介">ⓘ</button>
+            <span class="tag star">⭐ 必逛</span>
+            <small>大阪最热闹的美食与霓虹招牌街区，逛完顺路吃午饭</small>
+            <div class="info-panel" id="info-dotonbori" hidden><p>沿道顿堀川两岸展开的商业街区，格力高跑跑人、蟹道乐大螃蟹招牌都在这里；晚上灯牌亮起来氛围最好，白天人少好拍照。</p></div>
+          </div>
+        </div>
+        <div class="tl-gap"><span class="gt"></span><span class="chip">🚶 步行约 15 分钟</span></div>
+        <div class="tl">
+          <span class="t">14:00</span>
+          <div class="tx">
+            <a class="pin" href="https://www.google.com/maps/search/?api=1&query=Osaka%20Castle" target="_blank" rel="noopener">大阪城</a>
+            <button class="info-btn" type="button" data-target="info-castle" aria-expanded="false" aria-label="大阪城简介">ⓘ</button>
+            <span class="tag tk">🎫 天守阁需购票</span>
+            <small>公园免费，登天守阁需要买票；秋天护城河边银杏很好看</small>
+            <div class="info-panel" id="info-castle" hidden><p>丰臣秀吉建造的名城，现存天守阁为战后重建，内部是博物馆。公园本身免费开放，登阁看展需单独购票，17:00 闭馆前是最后入场时间。</p></div>
+          </div>
+        </div>
+        <div class="tl hotel">
+          <span class="t">🏨</span>
+          <div class="tx"><b>夜1 · 大阪心斋桥某酒店</b><span class="sub">订好后把酒店名/地址填在这里</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 更多天数照这张卡的结构复制 -->
+
+  </section>
+
+  <!-- ============ 待办清单 ============ -->
+  <!-- 已经订好/确认的事项给对应 .todo 加 data-locked="1"，页面会固定显示已完成，不受本地勾选状态影响 -->
+  <section id="todo">
+    <h2 class="sec">✅ 待办清单</h2>
+    <div class="card">
+      <div class="prog"><div class="bar"><i id="progBar"></i></div><span class="n" id="progNum">0/0</span></div>
+
+      <div class="todo-group">
+        <h3>已搞定</h3>
+        <div class="todo" data-id="flight" data-locked="1">
+          <button class="box" aria-label="勾选"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>
+          <div class="body"><div class="name">1. 往返机票</div>
+          <div class="det">CX 468 / CX 469 · 2 人 · 已确认</div></div>
+        </div>
+
+        <h3>待办</h3>
+        <div class="todo" data-id="jrpass">
+          <button class="box" aria-label="勾选"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>
+          <div class="body"><div class="name">2. 关西周游券</div>
+          <div class="det">出发前在网上买好，到站换纸质票</div></div>
+        </div>
+
+        <h3>大家一起加</h3>
+        <p class="todo-sync-note" id="todoSyncNote">跨设备同步未开启，这部分待办只保存在你自己的设备上。开启方式见 SKILL.md「可选：跨设备待办同步」。</p>
+        <div id="todoCustomList"></div>
+        <form class="todo-add" id="todoForm">
+          <input id="todoInput" type="text" maxlength="80" placeholder="加一条大家都能看到的待办">
+          <button type="submit">添加</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 贴士 ============ -->
+  <section id="tips">
+    <h2 class="sec">💡 贴士</h2>
+    <div class="card">
+      <ul class="tips">
+        <li><b>天气：</b>10 月关西早晚温差大，备件薄外套。</li>
+        <li><b>交通：</b>关西周游券覆盖大部分地铁与部分 JR，出站前确认闸机是否支持。</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>Travel Book · 日本关西六日 · 2 人行</footer>
+</div>
+
+<script>
+// 跨设备/跨好友共享待办（可选）：只要 supabaseUrl / supabaseAnonKey 还是空字符串，
+// 下面的同步代码就不会真的发起连接，页面会一直安全地停留在本机 localStorage 模式——
+// 所以 enabled 默认就是 true 也没关系，不用等确认要用同步才去改它。
+// 想让不同的朋友打开同一个链接、互相加待办、互相看到对方的勾选和编辑，按
+// SKILL.md「可选：跨设备待办同步」配一个免费 Supabase 项目，把下面 supabaseUrl /
+// supabaseAnonKey / tripId 三项填好就行，不用改别的代码。
+// enabled 留着是为了需要时能一键强制关闭同步（比如调试、或者想临时切回纯本地模式）。
+var SYNC = {
+  enabled: true,
+  supabaseUrl: '',       // 例如 https://xxxx.supabase.co
+  supabaseAnonKey: '',   // Supabase 项目的 anon public key（公开可嵌入前端，靠 RLS 策略控权限)
+  tripId: 'my-trip'      // 同一次旅行的所有人要填同一个 tripId 才会同步到一起；建议用不容易被猜到的字符串
+};
+
+(function(){
+  /* ============ 待办清单 ============ */
+  var KEY='travelBook.todos.v1'; // 改成自己这次旅行的唯一 key，避免多趟旅行互相覆盖
+  var saved={};
+  try{ saved=JSON.parse(localStorage.getItem(KEY))||{}; }catch(e){}
+  var presetItems=[].slice.call(document.querySelectorAll('.todo[data-id]'));
+  var customListEl=document.getElementById('todoCustomList');
+  var todoForm=document.getElementById('todoForm');
+  var todoInput=document.getElementById('todoInput');
+  var syncNote=document.getElementById('todoSyncNote');
+  var sync=null; // 同步就绪后指向下面的 sync 对象；未开启/加载失败时保持 null，退回本地模式
+
+  function isLocked(el){ return el.dataset.locked==='1'; }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function localStateOf(el){
+    if(isLocked(el)) return true;
+    var id=el.dataset.id;
+    return id in saved ? !!saved[id] : false;
+  }
+  function localPersist(){ try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(e){} }
+
+  function renderPreset(){
+    var done=0;
+    presetItems.forEach(function(el){
+      var on = sync ? sync.getPreset(el.dataset.id, isLocked(el)) : localStateOf(el);
+      el.classList.toggle('done', on);
+      if(on) done++;
+    });
+    return done;
+  }
+  function renderCustom(){
+    var list = sync ? sync.customItems() : [];
+    customListEl.innerHTML='';
+    list.forEach(function(item){
+      var row=document.createElement('div');
+      row.className='todo custom'+(item.done?' done':'');
+      row.innerHTML =
+        '<button class="box" type="button" aria-label="勾选"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>'+
+        '<div class="body"><div class="name" contenteditable="true" spellcheck="false">'+escapeHtml(item.text||'')+'</div></div>'+
+        '<button class="del" type="button" aria-label="删除">✕</button>';
+      row.querySelector('.box').addEventListener('click', function(){ sync.toggleCustom(item.id, !item.done); });
+      row.querySelector('.del').addEventListener('click', function(){ sync.deleteCustom(item.id); });
+      row.querySelector('.name').addEventListener('blur', function(e){
+        var text=e.target.textContent.trim();
+        if(text && text!==item.text) sync.editCustom(item.id, text);
+      });
+      customListEl.appendChild(row);
+    });
+  }
+  function render(){
+    var presetDone=renderPreset();
+    renderCustom();
+    var customList = sync ? sync.customItems() : [];
+    var customDone = customList.filter(function(i){ return i.done; }).length;
+    var total = presetItems.length + customList.length;
+    var done = presetDone + customDone;
+    document.getElementById('progNum').textContent=done+'/'+total;
+    document.getElementById('progBar').style.width=(total? Math.round(done/total*100) : 0)+'%';
+  }
+
+  presetItems.forEach(function(el){
+    if(isLocked(el)) return;
+    el.querySelector('.box').addEventListener('click', function(){
+      if(sync){ sync.togglePreset(el.dataset.id); return; }
+      var id=el.dataset.id;
+      saved[id]=!localStateOf(el);
+      localPersist(); render();
+    });
+  });
+
+  todoForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var text=todoInput.value.trim();
+    if(!text) return;
+    todoInput.value='';
+    if(sync){ sync.addCustom(text); }
+    else{ syncNote.textContent='跨设备同步未开启，没法添加这部分待办——先按 SKILL.md 配好同步，或者直接把这条加进上面固定的待办列表里。'; }
+  });
+
+  render();
+
+  /* ---- 同步初始化：只有配置齐全才会真正连 Supabase，否则维持纯本地模式 ---- */
+  if(SYNC.enabled && SYNC.supabaseUrl && SYNC.supabaseAnonKey){
+    var script=document.createElement('script');
+    script.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js';
+    script.onload=function(){
+      try{
+        var client=window.supabase.createClient(SYNC.supabaseUrl, SYNC.supabaseAnonKey);
+        var rows={}; // id -> row
+
+        function presetRowId(presetId){ return 'preset:'+presetId; }
+        function applyRow(row){ if(row.trip_id===SYNC.tripId) rows[row.id]=row; }
+        function removeRow(id){ delete rows[id]; }
+
+        sync={
+          getPreset:function(presetId, locked){
+            if(locked) return true;
+            var row=rows[presetRowId(presetId)];
+            return row ? !!row.done : false;
+          },
+          togglePreset:function(presetId){
+            var id=presetRowId(presetId);
+            var cur=rows[id] ? !!rows[id].done : false;
+            client.from('todo_items').upsert({id:id, trip_id:SYNC.tripId, kind:'preset', done:!cur, updated_at:new Date().toISOString()})
+              .then(function(res){ if(res.error) console.warn('同步失败', res.error); });
+          },
+          customItems:function(){
+            return Object.keys(rows).map(function(k){ return rows[k]; })
+              .filter(function(r){ return r.kind==='custom'; })
+              .sort(function(a,b){ return (a.created_at||'') < (b.created_at||'') ? -1 : 1; });
+          },
+          addCustom:function(text){
+            var id='custom:'+Date.now()+':'+Math.random().toString(36).slice(2,8);
+            client.from('todo_items').insert({id:id, trip_id:SYNC.tripId, kind:'custom', text:text, done:false})
+              .then(function(res){ if(res.error) console.warn('添加失败', res.error); });
+          },
+          toggleCustom:function(id, done){
+            client.from('todo_items').update({done:done, updated_at:new Date().toISOString()}).eq('id', id)
+              .then(function(res){ if(res.error) console.warn('更新失败', res.error); });
+          },
+          editCustom:function(id, text){
+            client.from('todo_items').update({text:text, updated_at:new Date().toISOString()}).eq('id', id)
+              .then(function(res){ if(res.error) console.warn('编辑失败', res.error); });
+          },
+          deleteCustom:function(id){
+            client.from('todo_items').delete().eq('id', id)
+              .then(function(res){ if(res.error) console.warn('删除失败', res.error); });
+          }
+        };
+
+        client.from('todo_items').select('*').eq('trip_id', SYNC.tripId).then(function(res){
+          if(res.error){ console.warn('读取待办失败，回退本地模式', res.error); sync=null; render(); return; }
+          (res.data||[]).forEach(applyRow);
+          syncNote.classList.remove('off');
+          syncNote.textContent='✓ 已开启跨设备同步 · 大家在这个链接下加的待办会互相同步';
+          render();
+        });
+
+        client.channel('todo-items-'+SYNC.tripId)
+          .on('postgres_changes', {event:'*', schema:'public', table:'todo_items', filter:'trip_id=eq.'+SYNC.tripId}, function(payload){
+            if(payload.eventType==='DELETE'){ removeRow(payload.old.id); } else { applyRow(payload.new); }
+            render();
+          })
+          .subscribe();
+      }catch(err){
+        console.warn('同步初始化失败，回退到本地模式', err);
+        sync=null; render();
+      }
+    };
+    script.onerror=function(){ console.warn('Supabase 脚本加载失败，回退到本地模式'); };
+    document.head.appendChild(script);
+  }
+
+  /* ============ 每日地图手风琴：点开才加载 iframe ============ */
+  document.querySelectorAll('.dm-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var frame=btn.closest('.daymap').querySelector('.dm-frame');
+      if(frame.querySelector('iframe')) { frame.innerHTML=''; return; }
+      var iframe=document.createElement('iframe');
+      iframe.src=btn.dataset.src; iframe.loading='lazy';
+      frame.innerHTML=''; frame.appendChild(iframe);
+    });
+  });
+
+  /* ============ 地点简介展开 ============ */
+  document.querySelectorAll('.info-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var panel=document.getElementById(btn.dataset.target);
+      if(!panel) return;
+      var open=panel.hasAttribute('hidden');
+      if(open){ panel.removeAttribute('hidden'); } else { panel.setAttribute('hidden',''); }
+      btn.setAttribute('aria-expanded', open ? 'true':'false');
+    });
+  });
+
+  /* ============ 每日行程卡折叠 ============ */
+  document.querySelectorAll('.card.day .day-head').forEach(function(head){
+    head.addEventListener('click', function(){
+      head.closest('.card.day').classList.toggle('collapsed');
+    });
+  });
+
+  /* ============ NOW 卡片：自动倒计时到下一个行程事件 ============ */
+  // 把这次旅行的关键节点按时间顺序填进 EVENTS；t 必须带时区偏移（当地时区），
+  // 否则跨时区打开页面时间会算错。全部结束后显示收尾语。
+  var EVENTS=[
+    {t:'2026-10-20T08:40:00+09:00', title:'ICN ✈ KIX 起飞', meta:'CX 468 · 提前 2 小时到机场'},
+    {t:'2026-10-21T10:00:00+09:00', title:'道顿堀', meta:'大阪市区 · 步行 + 地铁'},
+    {t:'2026-10-21T14:00:00+09:00', title:'大阪城', meta:'天守阁需购票'},
+    {t:'2026-10-25T19:10:00+09:00', title:'KIX ✈ ICN 起飞', meta:'CX 469 · 回程'}
+  ];
+  var TRIP_END=new Date(EVENTS[EVENTS.length-1].t).getTime();
+
+  function nextEvent(now){
+    for(var i=0;i<EVENTS.length;i++){
+      if(new Date(EVENTS[i].t).getTime() > now) return EVENTS[i];
+    }
+    return null;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    var now=Date.now();
+    var ev=nextEvent(now);
+    if(!ev){
+      document.getElementById('nowTitle').textContent='旅程已结束';
+      document.getElementById('nowMeta').textContent='期待下一次出发';
+      document.getElementById('nowCd').textContent='🎉';
+      return;
+    }
+    document.getElementById('nowTitle').textContent=ev.title;
+    document.getElementById('nowMeta').textContent=ev.meta||'';
+    var diff=Math.max(0, new Date(ev.t).getTime()-now);
+    var s=Math.floor(diff/1000);
+    var d=Math.floor(s/86400); s-=d*86400;
+    var h=Math.floor(s/3600); s-=h*3600;
+    var m=Math.floor(s/60); s-=m*60;
+    var out = d>0 ? (d+'天 '+pad(h)+':'+pad(m)+':'+pad(s)+' 后') : (pad(h)+':'+pad(m)+':'+pad(s)+' 后');
+    document.getElementById('nowCd').textContent=out;
+  }
+  tick(); setInterval(tick, 1000);
+
+  // 当前待办 = 清单里第一条未勾选项（读的是待办 IIFE 渲染完之后的 .done class，不用关心是本地模式还是同步模式）
+  var firstOpen=[].slice.call(document.querySelectorAll('.todo[data-id]:not(.done)'))[0];
+  document.getElementById('nowTodo').querySelector('b').textContent=
+    firstOpen ? firstOpen.querySelector('.name').textContent : '全部完成 🎉';
+})();
+</script>
+</body>
+</html>
