@@ -8,8 +8,9 @@
 | 项目 | 一句话介绍 | 下载 |
 | --- | --- | --- |
 | [Travel Book](travel-book/) | 把旅行资料交给 AI，生成一份手机随身看的单文件旅行手册网页 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/travel-book) |
+| [Mac 图库整理](mac-photo-organizer/) | 让 AI 把 Mac「照片」里的旅行照片按「国家 → 州/省 → 地点 年.月」自动整理成相簿 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/mac-photo-organizer) |
 
-后面会陆续加上网页制作、图库整理等更多分享。
+后面会陆续加上网页制作等更多分享。
 
 ## 怎么用
 
