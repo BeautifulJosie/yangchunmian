@@ -9,6 +9,7 @@
 | --- | --- | --- |
 | [Travel Book](travel-book/) | 把旅行资料交给 AI，生成一份手机随身看的单文件旅行手册网页 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/travel-book) |
 | [Mac 图库整理](mac-photo-organizer/) | 让 AI 把 Mac「照片」里的旅行照片按「国家 → 州/省 → 地点 年.月」自动整理成相簿 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/mac-photo-organizer) |
+| [双屏双游戏](dual-screen-dual-game/) | 让 AI 把 Windows 电脑配置成两块屏同时玩两个游戏（键鼠 + 手柄）：后台不静音、手柄不失灵、两个游戏的声音分开出 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/dual-screen-dual-game) |
 
 后面会陆续加上网页制作等更多分享。
 
