@@ -1,0 +1,2 @@
+osxphotos>=0.68
+pyyaml>=6

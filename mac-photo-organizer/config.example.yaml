@@ -1,0 +1,56 @@
+# Mac 图库整理配置。复制到 ~/.mac-photo-organizer/config.yaml 后修改。
+# 规则说明见 references/framework.md
+
+# 本国:本国地名只写中文,外国地名双语
+home_country: 中国
+
+# 相簿命名。可用变量:{place} {year} {month}(不补零) {mm}(补零)
+album_name: "{place} {year}.{month}"
+album_date: first          # first=第一次去的年月(名字稳定) / latest=最近一次
+
+# 同一地点多次去:merge=一个相簿 / split=按行程拆分
+trip_mode: merge
+trip_gap_days: 3           # split 模式下,间隔超过几天算新的一趟
+
+# 双语:foreign_only / none / all
+bilingual: foreign_only
+
+# 州/省中间层
+region_threshold: 5        # 一个国家地点数超过这个值才加中间层
+region_layer:
+  always: []               # 例: [美国, 中国]
+  never: []                # 例: [日本]
+unknown_region_name: 其他地区
+
+# 地点选择
+prefer_area_of_interest: true   # 有景点/国家公园名时优先用它,而不是所在城市
+
+# 多个原始地名合并成一个地点(键是显示名,值是原始地名列表)
+place_merge: {}
+#  旧金山湾区: [San Francisco, Oakland, San Jose, Palo Alto, Berkeley]
+#  潮汕: [Shantou, Chaozhou, Jieyang]
+
+# 手动指定某地点归属的州/省(键用显示名)
+place_overrides: {}
+#  黄石: 蒙大拿州（Montana）
+
+# 按国家代码改挂到别的国家/分组下
+country_aliases: {}
+#  HK: {country: 中国, region: 港澳}
+#  MO: {country: 中国, region: 港澳}
+
+# 无定位照片向前后借定位的时间窗口
+infer_window_hours: 6
+
+# 不动的主题相簿;里面的照片也不参与分类
+protected_albums: []
+#  - 滑雪
+#  - 婚礼
+skip_protected_photos: true
+
+# 未分类。截图、网上/聊天存图不是旅行照片,一律忽略,不进未分类
+unclassified:
+  folder: "📥 未分类"
+  albums:
+    no_location: 无定位
+    unknown_place: 地点不明

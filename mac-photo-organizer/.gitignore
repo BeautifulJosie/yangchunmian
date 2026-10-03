@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+# 本地工作目录含 GPS,绝不提交
+.mac-photo-organizer/
+scan.json
+plan.json
+.venv/

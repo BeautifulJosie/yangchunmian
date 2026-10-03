@@ -1,0 +1,17 @@
+# 原始地名 → 显示名。由 Claude 按 references/framework.md 的命名规则维护。
+# plan.py 输出的 untranslated 列表就是还需要补的条目。
+
+countries:
+  United States: 美国
+  Japan: 日本
+  China: 中国
+
+regions:
+  California: 加州（California）
+  New York: 纽约州（New York）
+  Guangdong: 广东省
+
+places:
+  Lake Tahoe: 太浩湖
+  Kyoto: 京都（Kyoto）
+  Shenzhen: 深圳
