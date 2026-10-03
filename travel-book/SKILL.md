@@ -217,6 +217,13 @@ Google 会自动解析到最近的一家。
 | 腾讯 WorkBuddy | 5.2 用 WorkBuddy 自带的网页托管 |
 | 其他所有工具（Claude、ChatGPT、Claude Code、Cursor、Codex 等） | 5.3 用 Cloudflare Pages |
 
+**同行的人在中国的话，优先用 WorkBuddy 发布。** Cloudflare 发布出来的 `*.pages.dev` 网址
+在中国经常打不开或者很慢。所以发布前顺便问一句「看这个页面的人在中国吗？」：
+
+- 在中国、用户用的又不是 WorkBuddy：先提醒他 Cloudflare 链接在中国可能打不开，建议把做好的
+  `template/index.html` 交给 WorkBuddy，跟它说「帮我做成一个可以对外访问的网页」来发布。
+- 用户坚持用 Cloudflare，或者同行的人都不在中国：照常走 5.3。
+
 ### 5.2 WorkBuddy：用自带的网页托管
 
 WorkBuddy 自己就能把网页托管成一个对外可访问的链接，不需要 Cloudflare。
