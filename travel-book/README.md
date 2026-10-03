@@ -29,11 +29,22 @@
 
 ## 怎么用
 
-把 `travel-book` 这个文件夹整个交给你的 AI，同时上传自己的旅行资料，直接告诉它：
+最省事的方法：打开你自己的 AI（Claude Code、Cursor、Codex 这类能读写文件、能联网的都可以），把下面这段话整段复制发给它，同时把旅行资料一起发过去：
 
-> 我的旅行资料在这里，请照着这个文件夹里的 SKILL.md 帮我生成一份旅行页面。
+```text
+请用这个模板帮我做一份旅行手册网页：
+https://github.com/BeautifulJosie/yangchunmian/tree/main/travel-book
 
-AI 会先确认资料、缺口，再动手改 `template/index.html`。资料越完整，第一版就越接近能直接用。
+1. 先把这个文件夹完整下载到我电脑上一个新文件夹里，比如运行
+   npx degit BeautifulJosie/yangchunmian/travel-book my-travel-book
+   如果用不了这条命令，可以用 git 稀疏检出，或者逐个下载里面的文件。
+2. 读里面的 SKILL.md，严格按它的步骤来：先跟我确认资料和缺口，再改 template/index.html。
+3. 做完告诉我生成的文件在哪、怎么打开。
+```
+
+AI 会自己下载模板、读规范、问你缺的信息，再动手生成页面。资料越完整，第一版就越接近能直接用。
+
+如果你用的 AI 不能联网或不能操作文件：点仓库首页的「下载这个文件夹」，解压后把整个文件夹和旅行资料一起交给它，告诉它“请照着这个文件夹里的 SKILL.md 帮我生成一份旅行页面”。
 
 ---
 
