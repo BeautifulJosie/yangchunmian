@@ -2,7 +2,7 @@
 
 把自己的旅行计划做成一份随身带着走的单文件网页——手机打开就能看，不用装 App，也不用连数据库。
 
-这是一份 **AI-Friendly 的轻量旅行网页模板**。把这个仓库和自己的旅行资料（航班、酒店、每日安排、
+这是一份 **AI-Friendly 的轻量旅行网页模板**。把 `travel-book` 这个文件夹和自己的旅行资料（航班、酒店、每日安排、
 门票等）一起交给支持文件读写的 AI（Claude Code、Cursor 之类都可以），它会照着 `SKILL.md` 里的
 规范，把 `template/index.html` 改写成这次旅行专属的页面。
 
@@ -29,9 +29,9 @@
 
 ## 怎么用
 
-把这个仓库整个交给你的 AI，同时上传自己的旅行资料，直接告诉它：
+把 `travel-book` 这个文件夹整个交给你的 AI，同时上传自己的旅行资料，直接告诉它：
 
-> 我的旅行资料在这里，请照着这个仓库的 SKILL.md 帮我生成一份旅行页面。
+> 我的旅行资料在这里，请照着这个文件夹里的 SKILL.md 帮我生成一份旅行页面。
 
 AI 会先确认资料、缺口，再动手改 `template/index.html`。资料越完整，第一版就越接近能直接用。
 
@@ -51,7 +51,7 @@ npx serve .
 
 这是纯静态单文件，挑一种就行：
 
-- **GitHub Pages**：fork 这个仓库，改完推到 `main`，Settings → Pages 里指到文件所在目录，免费。
+- **GitHub Pages**：把 `travel-book` 文件夹里的内容复制到你自己新建的仓库，改完推到 `main`，Settings → Pages 选 `main` 分支根目录，免费。
 - **Cloudflare Pages / Workers**：连接 GitHub 仓库，push 自动部署。
 - **Netlify / Vercel**：拖一个文件夹进去就能上线。
 - 或者完全不部署，把 HTML 文件直接发给同行的人，手机打开就能看。
