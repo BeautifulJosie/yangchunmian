@@ -64,11 +64,11 @@ npx serve .
 
 - **用腾讯 WorkBuddy**：它自带网页托管，直接帮你发布，不需要别的账号。
 - **用其他 AI**（Claude、ChatGPT、Claude Code、Cursor、Codex 等）：需要你先注册一个免费的
-  [Cloudflare](https://dash.cloudflare.com/sign-up) 账号，剩下的 AI 会一步步带你做完，
-  能运行命令的 AI 会直接帮你部署。
+  [Cloudflare](https://dash.cloudflare.com/sign-up) 账号，剩下的 AI 会一步步带你做完：
+  能运行命令的 AI 会直接帮你发布，装了浏览器插件的 AI 可以在网页上帮你点完。
 - 不想发布也可以，把生成的 HTML 文件直接发给同行的人，手机打开就能看。
 
-> **同行的人在中国的话，优先用 WorkBuddy 发布。** Cloudflare 的 `*.pages.dev` 链接在中国经常打不开或者很慢。
+> **同行的人在中国的话，优先用 WorkBuddy 发布。** Cloudflare 的 `*.workers.dev` 链接在中国经常打不开或者很慢。
 
 具体流程见 `SKILL.md` 第 5 节。
 

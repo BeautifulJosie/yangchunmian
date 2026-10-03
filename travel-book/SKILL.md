@@ -215,9 +215,9 @@ Google 会自动解析到最近的一家。
 | 用户在用 | 走哪条路 |
 | --- | --- |
 | 腾讯 WorkBuddy | 5.2 用 WorkBuddy 自带的网页托管 |
-| 其他所有工具（Claude、ChatGPT、Claude Code、Cursor、Codex 等） | 5.3 用 Cloudflare Pages |
+| 其他所有工具（Claude、ChatGPT、Claude Code、Cursor、Codex 等） | 5.3 用 Cloudflare |
 
-**同行的人在中国的话，优先用 WorkBuddy 发布。** Cloudflare 发布出来的 `*.pages.dev` 网址
+**同行的人在中国的话，优先用 WorkBuddy 发布。** Cloudflare 发布出来的 `*.workers.dev` 网址
 在中国经常打不开或者很慢。所以发布前顺便问一句「看这个页面的人在中国吗？」：
 
 - 在中国、用户用的又不是 WorkBuddy：先提醒他 Cloudflare 链接在中国可能打不开，建议把做好的
@@ -234,45 +234,63 @@ WorkBuddy 自己就能把网页托管成一个对外可访问的链接，不需�
    确认别人不用登录也能看。
 3. 以后行程有改动，改完 `template/index.html` 后再发布一次，告诉用户新链接（如果链接变了）。
 
-### 5.3 其他工具：用 Cloudflare Pages（免费）
+### 5.3 其他工具：用 Cloudflare（免费）
 
 先告诉用户：发布需要一个免费的 Cloudflare 账号，**注册和登录只能他本人在浏览器里完成**，
 你没法代替他。让他打开 https://dash.cloudflare.com/sign-up 注册好（已有账号直接登录），
 告诉你一声再继续。
 
-注册好之后，看你自己能不能在用户电脑上运行命令，二选一：
+Cloudflare 已经把 Pages 并进了 Workers，发布出来的网址格式是
+`https://<项目名>.<账号子域名>.workers.dev`。中间的账号子域名是 Cloudflare 给每个账号分配的，
+每个人不一样，以发布命令最后打印出来的链接为准。
 
-**A. 你能运行命令（Claude Code、Cursor、Codex 这类）——由你来部署，推荐**
+注册好之后，按你自己的能力选一条路：
+
+**A. 你能在用户电脑上运行命令（Claude Code、Cursor、Codex 这类）——由你来发布，推荐**
+
+> 不要用对话里接通的 Cloudflare 连接器 / MCP 工具来发布，它们一般没有发布网页的权限。
+> 一律用 Cloudflare 官方命令行工具 wrangler。
+>
+> 也不要用 `wrangler pages project create` / `wrangler pages deploy` 这两条旧命令：新版会自动生成
+> 一个把**整个文件夹**都发布出去的配置，连 SKILL.md、README 都会被公开，首页也不是旅行页面。
 
 1. 运行 `npx wrangler login`，会自动弹出浏览器页面，请用户在页面上点「Allow / 允许」授权。
+   先跟用户说清楚：这一步授权的是他整个 Cloudflare 账号的管理权限，凭证会存在这台电脑上，
+   不想留着随时可以运行 `npx wrangler logout` 作废。
 2. 起一个项目名：只能用小写英文字母、数字和短横线，比如 `kyoto-trip-2026`。
-   这个名字会变成网址 `https://<项目名>.pages.dev`，被别人占用了就换一个。
-3. 创建项目并部署（在 `travel-book` 文件夹里运行）：
+3. 在 `travel-book` 文件夹里运行（`--compatibility-date` 填当天日期即可）：
    ```bash
-   npx wrangler pages project create <项目名> --production-branch main
-   npx wrangler pages deploy template --project-name <项目名> --branch main
+   npx wrangler deploy --name <项目名> --assets ./template --compatibility-date 2026-10-01
    ```
-   **发布的是 `template` 这个目录**——网站首页就是改好的 `template/index.html`，
-   不会把模板项目自己的说明文件也发出去。
-4. 把 `https://<项目名>.pages.dev` 发给用户，请他用无痕窗口打开确认一下。
-5. 以后行程有改动，改完再运行一次第 3 步的 `deploy` 那一行就会更新，链接不变。
+   **只发布 `template` 这个目录**——网站首页就是改好的 `template/index.html`，
+   模板项目自己的说明文件不会被发出去。
+4. 把命令最后打印出来的 `https://....workers.dev` 链接发给用户，请他用无痕窗口打开确认一下，
+   你自己也可以检查一下 `/SKILL.md` 这类路径应该打不开（404）。
+5. 以后行程有改动，改完再运行一次第 3 步同一条命令就会更新，链接不变。
+6. 问用户要不要退出登录（`npx wrangler logout`）。旅行途中还会频繁改的话可以先留着，
+   旅行结束再退出；退出后想再更新，重新做一次第 1 步就行。
 
-**B. 你不能运行命令（网页版 Claude、ChatGPT 这类只能聊天的）——带用户自己上传**
+**B. 你不能运行命令，但能操作用户的浏览器（比如用户装了 Claude in Chrome 这类浏览器插件）——你在网页上帮他发布**
+
+用户已经在浏览器里登录好 Cloudflare 后，你在 Cloudflare 后台帮他点完下面 C 的第 2～4 步，
+上传文件这一步用插件的文件上传能力完成。登录、授权、付费相关的按钮都留给用户自己点。
+
+**C. 你只能聊天（网页版 Claude、ChatGPT 这类）——带用户自己上传**
 
 1. 先把改好的 `template/index.html` 交给用户下载，让他在电脑上新建一个文件夹
    （比如叫 `my-trip`），把 `index.html` 放进去。**文件名必须是 `index.html`**。
-2. 带他在 Cloudflare 后台操作：左侧 **Workers & Pages → Create（创建）→ 选 Pages →
-   Upload assets（直接上传）**。Cloudflare 的界面文字会变，找不到就让他截图给你看，按截图指路。
+2. 带他在 Cloudflare 后台操作：左侧 **Workers & Pages → Create（创建）**，找「上传静态文件 /
+   Upload / Drag and drop」这类直接上传的入口。**Cloudflare 的界面经常变，按钮名字以实际为准**，
+   找不到就让他截图给你看，按截图指路。
 3. 填一个项目名（规则同 A 的第 2 步），把 `my-trip` 整个文件夹拖进上传区域，点 **Deploy**。
-4. 几十秒后拿到 `https://<项目名>.pages.dev` 链接，请他用无痕窗口打开确认。
-5. 以后行程有改动：你改好 `index.html` 再交给他，他在这个项目里点 **Create new deployment**，
-   重新拖一次文件夹，链接不变。
+4. 几十秒后拿到链接，请他用无痕窗口打开确认。
+5. 以后行程有改动：你改好 `index.html` 再交给他，他在这个项目里重新上传一次文件夹，链接不变。
 
 **进阶：用户自己有 GitHub 仓库、希望 push 后自动更新**
 
-用户明确要这种方式时再用，不用主动介绍：Cloudflare 后台 **Workers & Pages → Create → Pages →
-Connect to Git**，授权并选中他的仓库；Build settings 里 Framework preset 选 **None**、
-Build command 留空、**Build output directory 填 `template`**。之后每次 push 都会自动重新部署。
+用户明确要这种方式时再用，不用主动介绍：在 Cloudflare 后台 **Workers & Pages → Create** 里选
+连接 Git 仓库，授权并选中他的仓库，把发布目录设成 `template`，构建命令留空。
+之后每次 push 都会自动重新部署。
 
 ### 5.4 不发布也能分享
 
