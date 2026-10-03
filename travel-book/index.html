@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travel Book Template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#F6F3EC; --panel:#FFFFFF; --panel2:#FBF8F0;
+    --ink:#211E1A; --ink2:#585349; --ink3:#8D8777;
+    --line:#E6E0D0; --accent:#B5622E; --accent-bg:#F1E3D6;
+    --shadow:0 1px 2px rgba(30,25,15,.05), 0 10px 26px rgba(30,25,15,.07);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#181613; --panel:#211E1A; --panel2:#252119;
+      --ink:#F1EDE3; --ink2:#C9C3B4; --ink3:#8D8777;
+      --line:#3A3529; --accent:#E08A55; --accent-bg:#3A2A1C;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 26px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181613; --panel:#211E1A; --panel2:#252119;
+    --ink:#F1EDE3; --ink2:#C9C3B4; --ink3:#8D8777;
+    --line:#3A3529; --accent:#E08A55; --accent-bg:#3A2A1C;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 26px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:760px; margin:0 auto; padding:56px 20px 70px;}
+  h1,h2{font-family:'Fraunces',Georgia,serif; text-wrap:balance; margin:0;}
+  a{color:inherit;}
+
+  .eyebrow{font-size:12.5px; font-weight:600; letter-spacing:.14em; color:var(--accent); text-transform:uppercase;}
+  h1{font-size:clamp(32px,6vw,44px); font-weight:800; margin-top:10px; line-height:1.1;}
+  .dek{font-size:16px; color:var(--ink2); margin-top:14px; max-width:56ch;}
+
+  .cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;}
+  .btn{display:inline-flex; align-items:center; gap:8px; font-size:14.5px; font-weight:600;
+    padding:12px 20px; border-radius:11px; text-decoration:none; border:1px solid transparent;}
+  .btn.primary{background:var(--accent); color:#fff; box-shadow:var(--shadow);}
+  .btn.ghost{background:var(--panel); color:var(--ink); border-color:var(--line);}
+
+  .preview{margin-top:44px; border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); background:var(--panel);}
+  .preview .bar{display:flex; align-items:center; gap:6px; padding:10px 14px; border-bottom:1px solid var(--line); background:var(--panel2);}
+  .preview .bar i{width:9px; height:9px; border-radius:50%; background:var(--line); display:block;}
+  .preview .bar span{margin-left:8px; font-size:12px; color:var(--ink3); font-family:ui-monospace,monospace;}
+  .preview iframe{display:block; width:100%; height:560px; border:0; background:var(--bg);}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:44px;}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px; box-shadow:var(--shadow);}
+  .card .ic{font-size:20px;}
+  .card h3{font-family:'Inter',sans-serif; font-size:14.5px; font-weight:700; margin:10px 0 5px;}
+  .card p{font-size:13px; color:var(--ink2); margin:0; line-height:1.6;}
+
+  .how{margin-top:52px;}
+  .how h2{font-size:22px; font-weight:800;}
+  .how ol{margin:16px 0 0; padding-left:20px; font-size:14.5px; color:var(--ink2); line-height:2;}
+  .how code{background:var(--panel2); border:1px solid var(--line); border-radius:5px; padding:1px 6px; font-size:13px; color:var(--ink);}
+
+  footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--line); font-size:12.5px; color:var(--ink3); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+  footer a{text-decoration:underline;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">AI-FRIENDLY · SINGLE-FILE TEMPLATE</div>
+  <h1>把旅行计划做成一份<br>随身带着走的网页</h1>
+  <p class="dek">把这个仓库和自己的航班、酒店、每日安排交给你的 AI，它照着 <code>SKILL.md</code> 的规范帮你填出一份专属的旅行手册——单文件、零依赖，手机打开就能看，还能发给朋友一起编辑待办。</p>
+
+  <div class="cta">
+    <a class="btn primary" href="./template/index.html">在线体验模板 →</a>
+    <a class="btn ghost" href="https://github.com/Josie999777/travel-book/archive/refs/heads/main.zip">下载完整模板包（.zip）</a>
+    <a class="btn ghost" href="https://github.com/Josie999777/travel-book">查看源码</a>
+  </div>
+
+  <div class="preview">
+    <div class="bar"><i></i><i></i><i></i><span>template/index.html</span></div>
+    <iframe src="./template/index.html" title="模板实时预览" loading="lazy"></iframe>
+  </div>
+
+  <div class="grid">
+    <div class="card"><div class="ic">⏱️</div><h3>NOW 倒计时卡片</h3><p>自动算出下一个行程事件并倒计时，整趟旅行自动推进，不用手动切。</p></div>
+    <div class="card"><div class="ic">📍</div><h3>点名字跳导航</h3><p>每个地点直接跳 Google 地图，不用接地图 SDK。</p></div>
+    <div class="card"><div class="ic">📅</div><h3>每日行程可折叠</h3><p>过去的日子收起来，只留正在进行和接下来的天数在眼前。</p></div>
+    <div class="card"><div class="ic">🔄</div><h3>待办可选同步</h3><p>配一个免费 Supabase 项目，不同朋友打开同一链接就能一起加待办、实时看到彼此的编辑。</p></div>
+  </div>
+
+  <div class="how">
+    <h2>怎么用</h2>
+    <ol>
+      <li>把这个仓库 fork 一份，交给支持读写文件的 AI（Claude Code、Cursor 都行）</li>
+      <li>把自己的旅行资料发给它，说一句「照着 <code>SKILL.md</code> 帮我生成旅行页面」</li>
+      <li>AI 会先确认资料和缺口，再改 <code>template/index.html</code> 成你自己的版本</li>
+      <li>改完直接发文件给朋友，或者部署到 GitHub Pages / Cloudflare Pages 之类的静态托管</li>
+    </ol>
+  </div>
+
+  <footer>
+    <span>MIT License</span>
+    <span><a href="https://github.com/Josie999777/travel-book/blob/main/SKILL.md">SKILL.md</a> · <a href="https://github.com/Josie999777/travel-book/blob/main/README.md">README</a> · <a href="https://github.com/Josie999777/travel-book/tree/main/optional/supabase-sync">待办同步说明</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
