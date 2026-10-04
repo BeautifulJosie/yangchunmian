@@ -11,6 +11,7 @@
 | [Mac 图库整理](mac-photo-organizer/) | 让 AI 把 Mac「照片」里的旅行照片按「国家 → 州/省 → 地点 年.月」自动整理成相簿 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/mac-photo-organizer) |
 | [双屏双游戏](dual-screen-dual-game/) | 让 AI 把 Windows 电脑配置成两块屏同时玩两个游戏（键鼠 + 手柄）：后台不静音、手柄不失灵、两个游戏的声音分开出 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/dual-screen-dual-game) |
 | [小红书视频封面](xhs-video-cover/) | 让 AI 按同一套系列风格做小红书视频封面，直接导出可上传的 PNG，还能顺手写标题和简介 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/xhs-video-cover) |
+| [3D 微缩小世界](threejs-mini-world/) | 让 AI 用 three.js 做一个 3D 微缩小岛网页：薄底座 + 满岛的小建筑和小木偶 + 日落光照 + 现场合成的背景音乐，还能做出发小红书的海报 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/threejs-mini-world) |
 
 后面会陆续加上网页制作等更多分享。
 

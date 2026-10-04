@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LA Daydream</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Nunito:wght@700;900&display=swap" />
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #dfe8e6; }
+    #app { width: 100%; height: 100%; }
+    canvas { display: block; }
+    #enter { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: linear-gradient(180deg, #6b3d8f, #f0603a 60%, #ffbe4f); color: #fff6ea; font-family: Nunito, system-ui, sans-serif; cursor: pointer; z-index: 10; transition: opacity .8s; }
+    #enter h1 { margin: 0; font: 900 48px/1 Nunito, sans-serif; letter-spacing: .04em; }
+    #enter p { margin: 0; opacity: .85; font-size: 15px; }
+    #enter.hide { opacity: 0; pointer-events: none; }
+    #mute { position: fixed; right: 18px; bottom: 18px; z-index: 5; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,246,234,.85); color: #5a3a56; font-size: 20px; cursor: pointer; box-shadow: 0 4px 14px rgba(80,30,60,.25); }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="enter"><h1>LA DAYDREAM</h1><p>点击进入小岛 · 带上耳机听加州的海风</p></div>
+  <button id="mute" title="静音">♪</button>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;700;900&family=Nunito:wght@700;900&display=swap">
+<style>
+  html, body { margin: 0; }
+  .poster { position: relative; width: 1080px; height: 1440px; overflow: hidden; background: #2b1a3d; font-family: "Noto Sans SC", "WenQuanYi Zen Hei", sans-serif; color: #fff7ef; }
+  .shot { position: absolute; inset: 0; background: url(ov.png) center/cover; }
+  .shot::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(43,26,61,.0) 0%, rgba(43,26,61,0) 66%, rgba(43,26,61,.92) 82%, #2b1a3d 100%); }
+  .top { position: absolute; left: 64px; top: 64px; }
+  .kicker { font-size: 24px; letter-spacing: .18em; opacity: .85; margin-bottom: 26px; }
+  h1 { margin: 0; font-size: 92px; line-height: 1.12; font-weight: 900; letter-spacing: .02em; text-shadow: 0 2px 24px rgba(60,20,70,.35); }
+  .bottom { position: absolute; left: 64px; right: 64px; bottom: 60px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .cap h2 { margin: 0 0 18px; font-size: 44px; font-weight: 900; }
+  .cap p { margin: 0; font-size: 27px; line-height: 1.7; opacity: .9; max-width: 640px; }
+  .meta { position: absolute; right: 64px; bottom: 60px; font-size: 22px; letter-spacing: .12em; opacity: .85; }
+  .art { position: absolute; right: 70px; bottom: 120px; }
+</style></head><body>
+<div class="poster">
+  <div class="shot"></div>
+  <div class="top">
+    <div class="kicker">作品 / LA DAYDREAM</div>
+    <h1>太阳还没落下<br>岛上的人还不想回家</h1>
+  </div>
+  <div class="bottom">
+    <div class="cap">
+      <h2>洛城白日梦</h2>
+      <p>一座用 three.js 搭出来的加州小岛。<br>有过山车、摩天轮、Route 66 的终点牌，<br>还有 22 个各忙各的小木偶。</p>
+    </div>
+  </div>
+  <svg class="art" width="300" height="260" viewBox="0 0 300 260" fill="none" stroke="#fff7ef" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- sun -->
+    <circle cx="232" cy="52" r="26"/>
+    <path d="M232 10v10M232 84v10M190 52h10M264 52h10M202 22l7 7M255 75l7 7M262 22l-7 7M209 75l-7 7"/>
+    <!-- palm -->
+    <path d="M60 230c6-50 10-90 26-130"/>
+    <path d="M86 100c-28-8-48 0-60 14M86 100c-30-24-56-20-68-10M86 100c-6-30 8-48 26-54M86 100c14-26 40-32 58-24M86 100c30-10 52 4 60 22"/>
+    <!-- figure: kokeshi with shades holding an ice cream -->
+    <path d="M150 232v-66c0-18 0-26 22-26h0c22 0 22 8 22 26v66"/>
+    <path d="M150 232h44"/>
+    <circle cx="172" cy="112" r="30"/>
+    <path d="M142 108c8-14 22-18 30-18s22 4 30 18"/>
+    <path d="M150 112h12a6 6 0 0 1 6 6v3a6 6 0 0 1-6 6h-2a7 7 0 0 1-7-7v-2zM176 112h12a6 6 0 0 1 6 6v3a6 6 0 0 1-6 6h-2a7 7 0 0 1-7-7v-2zM168 116h8"/>
+    <path d="M194 160c14-2 22 4 24 16M150 160c-12 0-20 6-22 16"/>
+    <path d="M218 176l-10 20 10 2 10-2z"/>
+    <path d="M208 178c-2-10 4-16 10-16s12 6 10 16"/>
+    <!-- waves -->
+    <path d="M20 248c12-10 24-10 36 0s24 10 36 0 24-10 36 0 24 10 36 0 24-10 36 0 24 10 36 0 24-10 36 0"/>
+  </svg>
+  <div class="meta">真实运行截图 &nbsp; 01 / 04</div>
+</div>
+</body></html>

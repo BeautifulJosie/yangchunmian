@@ -1,0 +1,25 @@
+{
+  "name": "threejs-mini-world-template",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "shoot": "node scripts/shoot.mjs shots",
+    "shoot:characters": "node scripts/shoot-characters.mjs",
+    "render:music": "node scripts/render-music.mjs 50",
+    "posters": "node scripts/shoot-poster-shots.mjs && node scripts/make-posters.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "playwright": "^1.63.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  },
+  "description": "Reference implementation: a 3D miniature island built with three.js (LA Daydream)"
+}
