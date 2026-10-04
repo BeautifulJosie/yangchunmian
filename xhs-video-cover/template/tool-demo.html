@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>模板：工具演示</title>
+<style>
+:root{
+  --accent:#2C6E80;   /* 主色：竖条、副标题、括号、&、斜色带、第二个标签 */
+  --font:'Noto Sans CJK SC','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+}
+body{margin:0;background:#E3EAED}
+</style>
+</head>
+<body>
+<div id="cover" style="width: 1080px; height: 1440px; position: relative; overflow: hidden; background: #E3EAED; font-family: var(--font); color: #101A20">
+
+  <!-- topo lines -->
+  <svg width="1080" height="1440" viewBox="0 0 1080 1440" style="position: absolute; left: 0; top: 0" aria-hidden="true">
+    <g fill="none" stroke="#C9D6DB" stroke-width="2">
+      <path d="M-40 120 C200 60 380 190 620 120 S980 40 1120 110"></path>
+      <path d="M-40 170 C220 110 400 240 640 170 S990 90 1120 160"></path>
+      <path d="M-40 560 C160 500 360 610 560 540 S900 470 1120 540"></path>
+      <path d="M-40 610 C180 550 380 660 580 590 S920 520 1120 590"></path>
+      <path d="M700 300 C820 260 980 300 1120 260"></path>
+      <path d="M680 350 C820 310 990 350 1120 310"></path>
+    </g>
+    <path d="M560 470 C760 420 940 370 1120 300 L1120 350 C940 420 780 468 580 510Z" fill="var(--accent)" opacity="0.85"></path>
+  </svg>
+
+  <!-- play button -->
+  <svg width="104" height="104" viewBox="0 0 104 104" style="position: absolute; right: 64px; top: 200px" aria-hidden="true">
+    <circle cx="52" cy="52" r="50" fill="#9AA6AB" opacity="0.9"></circle>
+    <path d="M42 32 L74 52 L42 72Z" fill="#FFFFFF"></path>
+  </svg>
+
+  <!-- headline block -->
+  <div style="position: absolute; left: 72px; top: 76px; width: 960px; display: flex; flex-direction: column; gap: 22px">
+    <div style="display: flex; gap: 28px; align-items: stretch">
+      <div style="width: 10px; background: var(--accent); border-radius: 2px"></div>
+      <h1 style="margin: 0; font-size: 110px; line-height: 1.18; font-weight: 900; letter-spacing: 1px; white-space: nowrap; color: #101A20">出国旅行亲测<br>豆包当小导游</h1>
+    </div>
+    <div style="padding-left: 38px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 56px; font-weight: 700; color: var(--accent)">翻译讲解，一个 App 搞定</div>
+      <div style="display: flex; align-items: flex-start; gap: 18px; margin-top: 6px">
+        <div style="position: relative; padding: 12px 26px; font-size: 38px; font-weight: 700; color: #1F4F5E">
+          <span style="position: absolute; left: 0; top: -4px; font-size: 34px; font-weight: 700; color: var(--accent)">(</span>
+          同声传译
+          <span style="position: absolute; right: 0; bottom: -4px; font-size: 34px; font-weight: 700; color: var(--accent)">)</span>
+        </div>
+        <div style="font-size: 60px; font-weight: 900; line-height: 1; color: var(--accent); margin-top: 22px">&amp;</div>
+        <div style="position: relative; padding: 12px 26px; margin-top: 40px; font-size: 38px; font-weight: 700; color: #1F4F5E">
+          <span style="position: absolute; left: 0; top: -4px; font-size: 34px; font-weight: 700; color: var(--accent)">(</span>
+          视频问导游
+          <span style="position: absolute; right: 0; bottom: -4px; font-size: 34px; font-weight: 700; color: var(--accent)">)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== Case 1: 同声传译 ===== -->
+  <div style="position: absolute; left: 44px; top: 610px; width: 640px; height: 960px; transform: rotate(-4deg); background: #FFFFFF; border-radius: 22px; box-shadow: 0 30px 60px rgba(20,40,50,0.22); overflow: hidden; display: flex; flex-direction: column">
+    <div style="height: 58px; background: #F1F4F5; display: flex; align-items: center; gap: 10px; padding: 0 22px; border-bottom: 1px solid #DDE4E7">
+      <div style="width: 14px; height: 14px; border-radius: 7px; background: #C9D1D4"></div>
+      <div style="width: 14px; height: 14px; border-radius: 7px; background: #C9D1D4"></div>
+      <div style="width: 14px; height: 14px; border-radius: 7px; background: #C9D1D4"></div>
+      <div style="margin-left: 16px; flex-grow: 1; height: 32px; border-radius: 16px; background: #FFFFFF; border: 1px solid #DDE4E7; font-size: 18px; color: #5A6B73; display: flex; align-items: center; padding-left: 16px">同声传译　英文 ⇄ 中文</div>
+    </div>
+    <div style="padding: 28px 28px; display: flex; flex-direction: column; gap: 22px">
+      <div style="align-self: flex-start; max-width: 460px; background: #F1F5F6; border-radius: 24px 24px 24px 6px; padding: 18px 22px; display: flex; flex-direction: column; gap: 8px">
+        <div style="font-size: 26px; font-weight: 700; color: #101A20">Can I get a half chicken with green sauce?</div>
+        <div style="font-size: 26px; color: #2C6E80; font-weight: 700">我要半只鸡，配绿酱。</div>
+      </div>
+      <div style="align-self: flex-end; max-width: 460px; background: #16222B; color: #FFFFFF; border-radius: 24px 24px 6px 24px; padding: 18px 22px; display: flex; flex-direction: column; gap: 8px">
+        <div style="font-size: 26px; font-weight: 700">Sure! For here or to go?</div>
+        <div style="font-size: 26px; color: #9ED3DE; font-weight: 700">好的！堂食还是外带？</div>
+      </div>
+      <div style="align-self: flex-start; max-width: 460px; background: #F1F5F6; border-radius: 24px 24px 24px 6px; padding: 18px 22px; display: flex; flex-direction: column; gap: 8px">
+        <div style="font-size: 26px; font-weight: 700; color: #101A20">To go, please.</div>
+        <div style="font-size: 26px; color: #2C6E80; font-weight: 700">外带，谢谢。</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 18px; margin-top: 10px">
+        <div style="width: 84px; height: 84px; border-radius: 42px; background: var(--accent); display: flex; align-items: center; justify-content: center">
+          <svg width="36" height="44" viewBox="0 0 36 44" aria-hidden="true"><rect x="10" y="0" width="16" height="28" rx="8" fill="#FFFFFF"></rect><path d="M3 20 Q3 34 18 34 Q33 34 33 20" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><path d="M18 34 V42" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path></svg>
+        </div>
+        <svg width="300" height="60" viewBox="0 0 300 60" aria-hidden="true"><g fill="var(--accent)"><rect x="0" y="24" width="8" height="12" rx="4"></rect><rect x="16" y="14" width="8" height="32" rx="4"></rect><rect x="32" y="4" width="8" height="52" rx="4"></rect><rect x="48" y="18" width="8" height="24" rx="4"></rect><rect x="64" y="8" width="8" height="44" rx="4"></rect><rect x="80" y="20" width="8" height="20" rx="4"></rect><rect x="96" y="12" width="8" height="36" rx="4"></rect><rect x="112" y="24" width="8" height="12" rx="4"></rect><rect x="128" y="6" width="8" height="48" rx="4"></rect><rect x="144" y="16" width="8" height="28" rx="4"></rect><rect x="160" y="22" width="8" height="16" rx="4"></rect><rect x="176" y="10" width="8" height="40" rx="4"></rect><rect x="192" y="24" width="8" height="12" rx="4"></rect></g></svg>
+      </div>
+      <div style="font-size: 22px; color: #4E6578">正在实时翻译…</div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 70px; top: 562px; transform: rotate(-4deg); background: #101A20; color: #FFFFFF; font-size: 30px; font-weight: 700; padding: 12px 26px; border-radius: 30px">点餐问路，边说边翻</div>
+
+  <!-- ===== Case 2: 视频通话 ===== -->
+  <div style="position: absolute; left: 610px; top: 660px; width: 420px; height: 900px; transform: rotate(4deg); background: #101A20; border-radius: 56px; padding: 14px; box-shadow: 0 30px 60px rgba(20,40,50,0.28)">
+    <div style="width: 392px; height: 872px; border-radius: 44px; overflow: hidden; position: relative; background: #8FC6E0">
+      <svg width="392" height="872" viewBox="0 0 392 872" aria-hidden="true" style="position: absolute; left: 0; top: 0">
+        <rect width="392" height="872" fill="#A9D4E6"></rect>
+        <rect x="200" y="40" width="192" height="300" fill="#6E8FA3"></rect>
+        <g fill="#9EC3D3"><rect x="220" y="70" width="40" height="30"></rect><rect x="280" y="70" width="40" height="30"></rect><rect x="340" y="70" width="40" height="30"></rect><rect x="220" y="130" width="40" height="30"></rect><rect x="280" y="130" width="40" height="30"></rect><rect x="340" y="130" width="40" height="30"></rect></g>
+        <path d="M0 200 L260 170 L260 620 L0 620Z" fill="#E7C35A"></path>
+        <rect x="0" y="330" width="392" height="300" fill="#E9CB6A"></rect>
+        <rect x="30" y="370" width="240" height="46" rx="6" fill="#C8352B"></rect>
+        <rect x="30" y="470" width="130" height="150" fill="#2B3338"></rect>
+        <rect x="190" y="470" width="170" height="150" fill="#2B3338"></rect>
+        <path d="M0 620 H392 V872 H0Z" fill="#7C858A"></path>
+        <g stroke="#FFFFFF" stroke-width="10" opacity="0.8"><line x1="20" y1="700" x2="120" y2="700"></line><line x1="160" y1="700" x2="260" y2="700"></line><line x1="300" y1="700" x2="392" y2="700"></line></g>
+      </svg>
+      <div style="position: absolute; left: 20px; top: 26px; background: rgba(16,26,32,0.65); color: #FFFFFF; font-size: 20px; font-weight: 700; padding: 6px 14px; border-radius: 16px">视频通话中 03:12</div>
+      <div style="position: absolute; left: 18px; right: 18px; bottom: 170px; background: #FFFFFF; border-radius: 22px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.2)">
+        <div style="font-size: 18px; color: var(--accent); font-weight: 700">我：这是什么店？</div>
+        <div style="font-size: 24px; color: #101A20; font-weight: 700; line-height: 1.4">豆包：这是一家秘鲁炭烤鸡店，推荐点半只鸡配绿酱～</div>
+      </div>
+      <div style="position: absolute; left: 0; right: 0; bottom: 36px; display: flex; justify-content: center; gap: 40px">
+        <div style="width: 80px; height: 80px; border-radius: 40px; background: rgba(255,255,255,0.9)"></div>
+        <div style="width: 80px; height: 80px; border-radius: 40px; background: #D8453A"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 560px; top: 606px; transform: rotate(4deg); background: var(--accent); color: #FFFFFF; font-size: 30px; font-weight: 700; padding: 12px 26px; border-radius: 30px">拍给它看，当场讲解</div>
+
+  <div style="position: absolute; left: 250px; top: 1235px; background: #FFFFFF; color: #101A20; font-size: 32px; font-weight: 900; padding: 16px 28px; border-radius: 20px; box-shadow: 0 12px 30px rgba(20,40,50,0.2); border: 3px solid #101A20; transform: rotate(-3deg)">把 AI 当随身导游</div>
+
+</div>
+</body>
+</html>

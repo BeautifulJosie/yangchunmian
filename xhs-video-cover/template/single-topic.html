@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>模板：单主题</title>
+<style>
+:root{
+  --accent:#2C6E80;   /* 主色：竖条、副标题、括号、&、斜色带、第二个标签 */
+  --font:'Noto Sans CJK SC','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+}
+body{margin:0;background:#E3EAED}
+</style>
+</head>
+<body>
+<div id="cover" style="width: 1080px; height: 1440px; position: relative; overflow: hidden; background: #E3EAED; font-family: var(--font); color: #101A20">
+
+  <!-- topo lines -->
+  <svg width="1080" height="1440" viewBox="0 0 1080 1440" style="position: absolute; left: 0; top: 0" aria-hidden="true">
+    <g fill="none" stroke="#C9D6DB" stroke-width="2">
+      <path d="M-40 120 C200 60 380 190 620 120 S980 40 1120 110"></path>
+      <path d="M-40 170 C220 110 400 240 640 170 S990 90 1120 160"></path>
+      <path d="M-40 560 C160 500 360 610 560 540 S900 470 1120 540"></path>
+      <path d="M-40 610 C180 550 380 660 580 590 S920 520 1120 590"></path>
+      <path d="M700 300 C820 260 980 300 1120 260"></path>
+      <path d="M680 350 C820 310 990 350 1120 310"></path>
+    </g>
+    <path d="M560 470 C760 420 940 370 1120 300 L1120 350 C940 420 780 468 580 510Z" fill="var(--accent)" opacity="0.85"></path>
+  </svg>
+
+  <!-- play button -->
+  <svg width="104" height="104" viewBox="0 0 104 104" style="position: absolute; right: 64px; top: 200px" aria-hidden="true">
+    <circle cx="52" cy="52" r="50" fill="#9AA6AB" opacity="0.9"></circle>
+    <path d="M42 32 L74 52 L42 72Z" fill="#FFFFFF"></path>
+  </svg>
+
+  <!-- headline block -->
+  <div style="position: absolute; left: 72px; top: 76px; width: 960px; display: flex; flex-direction: column; gap: 22px">
+    <div style="display: flex; gap: 28px; align-items: stretch">
+      <div style="width: 10px; background: var(--accent); border-radius: 2px"></div>
+      <h1 style="margin: 0; font-size: 110px; line-height: 1.18; font-weight: 900; letter-spacing: 2px; white-space: nowrap; color: #101A20">自制旅行网页<br>真的很实用</h1>
+    </div>
+    <div style="padding-left: 38px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 56px; font-weight: 700; color: var(--accent)">教程来了，出发前做一个</div>
+      <div style="display: flex; align-items: flex-start; margin-top: 6px">
+        <div style="position: relative; padding: 12px 26px; font-size: 38px; font-weight: 700; color: #1F4F5E">
+          <span style="position: absolute; left: 0; top: -4px; font-size: 34px; font-weight: 700; color: var(--accent)">(</span>
+          德州劳动节旅行
+          <span style="position: absolute; right: 0; bottom: -4px; font-size: 34px; font-weight: 700; color: var(--accent)">)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Browser window ===== -->
+  <div style="position: absolute; left: 44px; top: 610px; width: 640px; height: 960px; transform: rotate(-4deg); background: #FFFFFF; border-radius: 22px; box-shadow: 0 30px 60px rgba(20,40,50,0.22); overflow: hidden; display: flex; flex-direction: column">
+    <div style="height: 58px; background: #F1F4F5; display: flex; align-items: center; gap: 10px; padding: 0 22px; border-bottom: 1px solid #DDE4E7">
+      <div style="width: 14px; height: 14px; border-radius: 7px; background: #C9D1D4"></div>
+      <div style="width: 14px; height: 14px; border-radius: 7px; background: #C9D1D4"></div>
+      <div style="width: 14px; height: 14px; border-radius: 7px; background: #C9D1D4"></div>
+      <div style="margin-left: 16px; flex-grow: 1; height: 32px; border-radius: 16px; background: #FFFFFF; border: 1px solid #DDE4E7; font-size: 18px; color: #5A6B73; display: flex; align-items: center; padding-left: 16px">德州劳动节之旅</div>
+    </div>
+    <svg width="640" height="230" viewBox="0 0 640 230" aria-hidden="true" style="display: block">
+      <defs><linearGradient id="txsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FC6E0"></stop><stop offset="1" stop-color="#F6E3C0"></stop></linearGradient></defs>
+      <rect width="640" height="230" fill="url(#txsky)"></rect>
+      <circle cx="500" cy="72" r="36" fill="#F2B53A"></circle>
+      <!-- mesas -->
+      <path d="M180 170 L205 128 L300 128 L318 170Z" fill="#C98A5A"></path>
+      <path d="M400 172 L418 140 L470 140 L486 172Z" fill="#B97A4E"></path>
+      <path d="M0 180 Q160 166 320 176 T640 174 L640 230 L0 230Z" fill="#E2C28E"></path>
+      <!-- windmill -->
+      <g stroke="#6B5E48" stroke-width="2.5" fill="none"><path d="M560 190 L574 116 L588 190"></path><path d="M564 170 H584 M568 148 H580"></path></g>
+      <g transform="translate(574 112)" fill="#6B5E48"><path d="M0 0 L-4 -26 L4 -26Z"></path><path d="M0 0 L26 -4 L26 4Z"></path><path d="M0 0 L4 26 L-4 26Z"></path><path d="M0 0 L-26 4 L-26 -4Z"></path><circle r="4"></circle></g>
+      <!-- cacti -->
+      <g fill="#4F8B5A">
+        <rect x="90" y="140" width="16" height="60" rx="8"></rect><rect x="72" y="156" width="12" height="28" rx="6"></rect><rect x="76" y="176" width="20" height="10" rx="5"></rect><rect x="112" y="150" width="12" height="26" rx="6"></rect><rect x="100" y="168" width="20" height="10" rx="5"></rect>
+        <rect x="360" y="168" width="10" height="34" rx="5"></rect><rect x="350" y="178" width="8" height="16" rx="4"></rect>
+      </g>
+      <!-- star -->
+      <path d="M430 50 L436 66 L453 66 L439 76 L444 92 L430 82 L416 92 L421 76 L407 66 L424 66Z" fill="#FFFFFF" opacity="0.9"></path>
+      <text x="32" y="58" font-size="40" font-weight="900" fill="#3A2412" font-family="Noto Sans CJK SC, Noto Sans SC, PingFang SC, sans-serif">德州劳动节之旅</text>
+      <text x="34" y="94" font-size="20" fill="#5A3A20" font-family="Noto Sans CJK SC, Noto Sans SC, PingFang SC, sans-serif">劳动节长周末 自驾出发</text>
+    </svg>
+    <div style="padding: 22px 26px; display: flex; flex-direction: column; gap: 18px">
+      <div style="background: #16222B; color: #FFFFFF; border-radius: 18px; padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+        <div style="font-size: 18px; color: #A9BCC6">距离出发</div>
+        <div style="font-size: 50px; font-weight: 900; letter-spacing: 2px">3天 08:15:42</div>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center">
+        <div style="font-size: 24px; font-weight: 700">第 1 天</div>
+        <div style="font-size: 22px; font-weight: 900; color: #3D7A4D">2/5</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; gap: 16px; align-items: center; opacity: 0.45">
+          <div style="width: 70px; font-size: 20px; font-weight: 700">09:00</div>
+          <div style="flex-grow: 1; height: 20px; border-radius: 10px; background: #CFDADF"></div>
+          <div style="font-size: 16px; padding: 4px 12px; border-radius: 14px; background: #3D7A4D; color: #FFFFFF">已去过</div>
+        </div>
+        <div style="margin-left: 86px; font-size: 16px; color: #4E6578; background: #F1F5F6; border-radius: 12px; padding: 2px 12px; align-self: flex-start">开车约 40 分钟</div>
+        <div style="display: flex; gap: 16px; align-items: center; opacity: 0.45">
+          <div style="width: 70px; font-size: 20px; font-weight: 700">11:30</div>
+          <div style="flex-grow: 1; height: 20px; border-radius: 10px; background: #CFDADF"></div>
+          <div style="font-size: 16px; padding: 4px 12px; border-radius: 14px; background: #3D7A4D; color: #FFFFFF">已去过</div>
+        </div>
+        <div style="margin-left: 86px; font-size: 16px; color: #4E6578; background: #F1F5F6; border-radius: 12px; padding: 2px 12px; align-self: flex-start">开车约 1 小时</div>
+        <div style="display: flex; gap: 16px; align-items: center">
+          <div style="width: 70px; font-size: 20px; font-weight: 700">14:00</div>
+          <div style="flex-grow: 1; height: 20px; border-radius: 10px; background: #E1E8EB"></div>
+          <div style="font-size: 16px; padding: 4px 12px; border-radius: 14px; border: 2px solid #3D7A4D; color: #3D7A4D">打卡</div>
+        </div>
+        <div style="display: flex; gap: 16px; align-items: center">
+          <div style="width: 70px; font-size: 20px; font-weight: 700">18:30</div>
+          <div style="flex-grow: 1; height: 20px; border-radius: 10px; background: #E1E8EB"></div>
+          <div style="font-size: 16px; padding: 4px 12px; border-radius: 14px; border: 2px solid #3D7A4D; color: #3D7A4D">打卡</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- label 1 -->
+  <div style="position: absolute; left: 70px; top: 562px; transform: rotate(-4deg); background: #101A20; color: #FFFFFF; font-size: 30px; font-weight: 700; padding: 12px 26px; border-radius: 30px">倒计时 + 逐日行程</div>
+
+  <!-- ===== Phone: route map ===== -->
+  <div style="position: absolute; left: 610px; top: 660px; width: 420px; height: 900px; transform: rotate(4deg); background: #101A20; border-radius: 56px; padding: 14px; box-shadow: 0 30px 60px rgba(20,40,50,0.28)">
+    <div style="width: 392px; height: 872px; background: #FBF7EF; border-radius: 44px; overflow: hidden; display: flex; flex-direction: column">
+      <div style="padding: 34px 26px 10px; display: flex; flex-direction: column; gap: 6px">
+        <div style="font-size: 20px; color: #8A6A48; font-weight: 700">行程总览</div>
+        <div style="font-size: 44px; font-weight: 900; color: #3A2412">路线地图</div>
+      </div>
+      <svg width="392" height="400" viewBox="0 0 392 400" aria-hidden="true" style="display: block">
+        <rect width="392" height="400" fill="#F3EBDC"></rect>
+        <g fill="none" stroke="#E4D6BE" stroke-width="1.5"><path d="M0 90 C120 60 260 120 392 80"></path><path d="M0 300 C140 270 260 330 392 290"></path></g>
+        <path d="M70 40 L150 40 L150 118 L300 132 L336 170 L338 250 L300 290 L250 318 L222 372 L186 360 L160 300 L120 280 L96 232 L52 214 L40 190 L96 190 L100 120 L70 120Z" fill="#EAD9BA" stroke="#B98E5E" stroke-width="3" stroke-linejoin="round"></path>
+        <path d="M140 170 C180 190 210 180 250 200 S290 250 260 280" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12"></path>
+        <g><circle cx="140" cy="170" r="13" fill="var(--accent)" stroke="#FFFFFF" stroke-width="3"></circle><text x="140" y="175" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle" font-family="sans-serif">1</text></g>
+        <g><circle cx="250" cy="200" r="13" fill="var(--accent)" stroke="#FFFFFF" stroke-width="3"></circle><text x="250" y="205" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle" font-family="sans-serif">2</text></g>
+        <g><circle cx="260" cy="280" r="13" fill="#B5541E" stroke="#FFFFFF" stroke-width="3"></circle><text x="260" y="285" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle" font-family="sans-serif">3</text></g>
+      </svg>
+      <div style="padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+        <div style="background: #FFFFFF; border: 2px solid #E4D6BE; border-radius: 20px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px">
+          <div style="font-size: 22px; font-weight: 700; color: #3A2412">景点介绍</div>
+          <div style="height: 16px; width: 250px; border-radius: 8px; background: #EFE4D1"></div>
+          <div style="height: 16px; width: 190px; border-radius: 8px; background: #EFE4D1"></div>
+        </div>
+        <div style="height: 76px; border-radius: 22px; background: var(--accent); color: #FFFFFF; font-size: 28px; font-weight: 900; display: flex; align-items: center; justify-content: center">一键导航</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- label 2 -->
+  <div style="position: absolute; left: 560px; top: 606px; transform: rotate(4deg); background: var(--accent); color: #FFFFFF; font-size: 30px; font-weight: 700; padding: 12px 26px; border-radius: 30px">路线地图 + 景点介绍</div>
+
+  <!-- callout -->
+  <div style="position: absolute; left: 430px; top: 1205px; background: #FFFFFF; color: #101A20; font-size: 32px; font-weight: 900; padding: 16px 28px; border-radius: 20px; box-shadow: 0 12px 30px rgba(20,40,50,0.2); border: 3px solid #101A20; transform: rotate(-3deg)">一个链接就能分享</div>
+
+</div>
+</body>
+</html>
