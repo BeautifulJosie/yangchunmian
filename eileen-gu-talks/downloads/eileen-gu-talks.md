@@ -4,7 +4,7 @@
 
 From Beijing to Milan, nineteen talks, interviews and essays on growth, emotions, decisions and dealing with people, each linked to its source
 
-v1.3 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
+v1.4 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
 
 ## 写在前面 · Before you start
 
@@ -12,9 +12,9 @@ v1.3 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main
 
 Eileen Gu is mostly discussed for her results and her passport. What rewards rereading is how she looks at things: how she handles emotions, makes decisions, treats criticism and rivals, and stays herself when grilled or misread. Line up her public talks and interviews from 2022 to 2026 and you can watch that way of thinking grow.
 
-这本小书选了十九篇有原视频或官方全文可查的材料：两届冬奥会的新闻发布会、她亲笔写的《我爱上了恐惧》、美国电视和杂志的长访谈、哈佛和商界论坛的演讲、三期播客与对谈、新华社与人民日报的专访、Red Bull 的心态问答、杨澜的米兰访谈，以及 2026 年秋天在新加坡的对谈。每一章按「背景 → 她说了什么 → 为什么值得听」展开，中英对照，章末给出原视频和官方全文的入口。如果你更关心她的思考方式而不是比赛，可以从「按主题读」进。
+这本小书选了十九篇有原视频或官方全文可查的材料：两届冬奥会的新闻发布会、她亲笔写的《我爱上了恐惧》、美国电视和杂志的长访谈、哈佛和商界论坛的演讲、三期播客与对谈、新华社与人民日报的专访、Red Bull 的心态问答、杨澜的米兰访谈，以及 2026 年秋天在新加坡的对谈。**第一章先放 2026 年 8 月 Jay Shetty 播客那期**——它把方向、证据、建设性批评、训练与比赛的两套心态讲得最集中；其余十八章按时间顺序排。每一章按「背景 → 她说了什么 → 为什么值得听」展开，中英对照，章末给出原视频和官方全文的入口。带 ★ 的金句是编者最想推荐的几条。
 
-This short book selects nineteen pieces that survive as verifiable video or official full text: press conferences at two Winter Games, her own essay on fear, long interviews with US television and magazines, speeches at Harvard and to business leaders, three podcasts and conversations, interviews with Xinhua and People's Daily, a Red Bull mindset Q&A, Yang Lan's Milan interview, and a fireside chat in Singapore in autumn 2026. Each chapter runs context → what she said → why it is worth hearing, in Chinese and English side by side, with links to the original video and official texts. If her way of thinking interests you more than the competitions, start with Read by theme.
+This short book selects nineteen pieces that survive as verifiable video or official full text: press conferences at two Winter Games, her own essay on fear, long interviews with US television and magazines, speeches at Harvard and to business leaders, three podcasts and conversations, interviews with Xinhua and People's Daily, a Red Bull mindset Q&A, Yang Lan's Milan interview, and a fireside chat in Singapore in autumn 2026. **Chapter one is the August 2026 Jay Shetty podcast**, the most concentrated statement of her thinking on direction, evidence, constructive criticism and the two mindsets for training and competing; the other eighteen chapters run in date order. Each chapter goes context → what she said → why it is worth hearing, in Chinese and English side by side, with links to the original video and official texts. Key lines marked ★ are the editor's top picks.
 
 需要说明的是：**这是免费分享的解读与学习笔记，不是逐字稿。**演讲和访谈的内容版权属于讲者和发布平台，所以正文里只保留被媒体公开报道过的极短名句，并逐条标注出处；加粗的句子是提炼的要点。想看原话，每章末尾的「原文与完整报道」给出了官方发布的全文访谈和原视频入口。
 
@@ -28,63 +28,128 @@ How to use it: switch between Chinese, English and bilingual view at the top rig
 
 ### 情绪：承认它，但别让它占用时间 · Emotions: acknowledge them, but don't let them take the time
 
-- （01）把「恐惧」拆成兴奋、不确定、压力三种，分别处理。 / Split fear into excitement, uncertainty and pressure, and handle each.
-- （11）紧张和兴奋是同一种身体状态：把标签换成「我很兴奋」。 / Nerves and excitement are one bodily state: relabel it as excited.
-- （15）五分钟哭完，再理性地看问题；不让情绪占用解决问题的时间。 / Five minutes to cry, then look at the problem rationally.
-- （12）压力只是能量，更多的压力反而是好事。 / Pressure is just energy; more of it is a good thing.
-- （03）压力追上来之前，先用自我对话抢一步。 / Get one step ahead of pressure with self-talk.
-- （08）赛后低落是真实的；在成绩之外重新搭建自己是谁。 / The post-Olympic low is real; rebuild who you are beyond results.
+- （02）把「恐惧」拆成兴奋、不确定、压力三种，分别处理。 / Split fear into excitement, uncertainty and pressure, and handle each.
+- （12）紧张和兴奋是同一种身体状态：把标签换成「我很兴奋」。 / Nerves and excitement are one bodily state: relabel it as excited.
+- （16）五分钟哭完，再理性地看问题；不让情绪占用解决问题的时间。 / Five minutes to cry, then look at the problem rationally.
+- （13）压力只是能量，更多的压力反而是好事。 / Pressure is just energy; more of it is a good thing.
+- （04）压力追上来之前，先用自我对话抢一步。 / Get one step ahead of pressure with self-talk.
+- （09）赛后低落是真实的；在成绩之外重新搭建自己是谁。 / The post-Olympic low is real; rebuild who you are beyond results.
 - （19）先分清此刻是恐惧、怀疑还是紧张，再决定怎么走。 / Tell fear from doubt from nerves before deciding what to do.
-- （16）脆弱不是弱点，更难的是把它展示给世界。 / Vulnerability isn't weakness; showing it is the hard part.
-- （10）北京之后的低谷是情绪的：第一次和自己独处的孤独。 / The low after Beijing was emotional: alone with herself for the first time.
+- （17）脆弱不是弱点，更难的是把它展示给世界。 / Vulnerability isn't weakness; showing it is the hard part.
+- （11）北京之后的低谷是情绪的：第一次和自己独处的孤独。 / The low after Beijing was emotional: alone with herself for the first time.
 
 ### 成长：好奇、谦逊、愿意被纠正 · Growth: curiosity, humility, willingness to be corrected
 
-- （07）批判性好奇心：好问但不天真；谦逊就是愿意承认自己错了。 / Critical curiosity: inquisitive but not naive; humility is being willing to be wrong.
-- （18）建设性批评圈：朋友之间直说短处，不带自尊心进去。 / A constructive criticism circle: friends name each other's weaknesses, ego left outside.
-- （08）建设性的批评不可能伤到感情；每次被建议就被冒犯，人永远不会成长。 / Constructive criticism can't hurt; take offence every time and you never grow.
-- （15）学会正确面对外界评价，本身就是成长的一部分。 / Learning to face outside judgement is itself part of growing up.
+- （08）批判性好奇心：好问但不天真；谦逊就是愿意承认自己错了。 / Critical curiosity: inquisitive but not naive; humility is being willing to be wrong.
+- （01）建设性批评圈：朋友之间直说短处，不带自尊心进去。 / A constructive criticism circle: friends name each other's weaknesses, ego left outside.
+- （09）建设性的批评不可能伤到感情；每次被建议就被冒犯，人永远不会成长。 / Constructive criticism can't hurt; take offence every time and you never grow.
+- （16）学会正确面对外界评价，本身就是成长的一部分。 / Learning to face outside judgement is itself part of growing up.
 - （19）心态和习惯像肌肉一样靠重复塑造。 / Mindset and habits, like muscle, are shaped by repetition.
-- （09）伤病教会她尊重身体，不再透支。 / Injury taught her to respect the body and stop overdrawing it.
-- （14）写日记把自己的思考过程拆开看，像修修补补的科学家。 / Journal to take your thinking apart, like a tinkering scientist.
-- （11）学会怎么学，比任何单项技能都重要。 / Learning how to learn matters more than any single skill.
-- （16）觉得超不过十八岁的自己时，选的不是停下而是重新开始。 / When she felt she couldn't beat her 18-year-old self, she chose to start over.
+- （10）伤病教会她尊重身体，不再透支。 / Injury taught her to respect the body and stop overdrawing it.
+- （15）写日记把自己的思考过程拆开看，像修修补补的科学家。 / Journal to take your thinking apart, like a tinkering scientist.
+- （12）学会怎么学，比任何单项技能都重要。 / Learning how to learn matters more than any single skill.
+- （17）觉得超不过十八岁的自己时，选的不是停下而是重新开始。 / When she felt she couldn't beat her 18-year-old self, she chose to start over.
 
 ### 做决定：方向、证据、不犹豫 · Deciding: direction, evidence, no hesitation
 
-- （06）读恐惧的信号，判断什么时候推进、什么时候停；不试的遗憾重于摔倒。 / Read the fear signal to know when to push and when to stop; not trying costs more than falling.
-- （10）分清欲望驱动和恐惧驱动的动力；别进入防守模式。 / Tell desire-driven from fear-driven motivation; don't go into defence mode.
-- （10）把门留着：不提前宣布滑雪之后的计划，不把别的路堵死。 / Keep doors open: don't announce post-skiing plans that foreclose other paths.
-- （18）努力被高估了：方向错了，用力就像打墙；方向对了，努力才复利。 / Hard work is over-praised: wrong direction is punching a wall; right direction compounds.
-- （18）证据胜过肯定：信任只能靠重复和真正的准备攒出来。 / Evidence over affirmation: trust is built by repetition and real preparation.
-- （15）要么不参赛，一旦参赛就竭尽全力；比赛里最危险的是犹豫。 / Either don't enter, or give everything; hesitation is the most dangerous thing.
-- （04）没有对错，只有意图；最坏的失败是不去尝试。 / No right or wrong, only intention; the worst failure is not to try.
-- （09）把目标切小：先拿到资格，再谈金牌。 / Cut the goal down: qualify first, talk gold later.
-- （13）赛后反思：要更聪明地比赛，重排难度和稳定性的优先级。 / Afterwards: compete smarter, reorder difficulty against consistency.
+- （07）读恐惧的信号，判断什么时候推进、什么时候停；不试的遗憾重于摔倒。 / Read the fear signal to know when to push and when to stop; not trying costs more than falling.
+- （11）分清欲望驱动和恐惧驱动的动力；别进入防守模式。 / Tell desire-driven from fear-driven motivation; don't go into defence mode.
+- （11）把门留着：不提前宣布滑雪之后的计划，不把别的路堵死。 / Keep doors open: don't announce post-skiing plans that foreclose other paths.
+- （01）努力被高估了：方向错了，用力就像打墙；方向对了，努力才复利。 / Hard work is over-praised: wrong direction is punching a wall; right direction compounds.
+- （01）证据胜过肯定：信任只能靠重复和真正的准备攒出来。 / Evidence over affirmation: trust is built by repetition and real preparation.
+- （16）要么不参赛，一旦参赛就竭尽全力；比赛里最危险的是犹豫。 / Either don't enter, or give everything; hesitation is the most dangerous thing.
+- （05）没有对错，只有意图；最坏的失败是不去尝试。 / No right or wrong, only intention; the worst failure is not to try.
+- （10）把目标切小：先拿到资格，再谈金牌。 / Cut the goal down: qualify first, talk gold later.
+- （14）赛后反思：要更聪明地比赛，重排难度和稳定性的优先级。 / Afterwards: compete smarter, reorder difficulty against consistency.
 
 ### 待人：做朋友不做偶像，把门打开 · People: friend not idol, open the door for others
 
-- （02）不想当偶像，更想做大家的朋友；落地后先去安慰失误的对手。 / Friend rather than idol; console the rival who fell before celebrating.
-- （17）第一个人把门打开，后面的女性路会好走一些；帮年轻女性是扩大她们的选择。 / The first person opens the door; help young women by widening their choices.
+- （03）不想当偶像，更想做大家的朋友；落地后先去安慰失误的对手。 / Friend rather than idol; console the rival who fell before celebrating.
+- （18）第一个人把门打开，后面的女性路会好走一些；帮年轻女性是扩大她们的选择。 / The first person opens the door; help young women by widening their choices.
 - （19）女性不该互为对手，机会没有想象中稀缺，整体一起上升。 / Women needn't be rivals; opportunity isn't as scarce as it looks; rise together.
-- （15）希望自己被超越：体育的乐趣不只在金牌。 / Hopes to be surpassed: the joy of sport is not only the gold.
-- （18）指出朋友的短处是一种爱与服务，前提是出于支持而不是羞辱。 / Naming a friend's weakness is love and service, if it comes from support not insult.
-- （11）对手是唯一真正懂这一切代价的人，分享大场面是很深的联结。 / Rivals are the only ones who know the cost; sharing big moments bonds deeply.
-- （06）不认识你的人没有资格定义你；把注意力转回正面的信息。 / People who don't know you don't define you; turn back to the positive messages.
-- （16）有意识地挑选允许进入自己「小世界」的声音。 / Consciously choose which voices are allowed into your small world.
+- （16）希望自己被超越：体育的乐趣不只在金牌。 / Hopes to be surpassed: the joy of sport is not only the gold.
+- （01）指出朋友的短处是一种爱与服务，前提是出于支持而不是羞辱。 / Naming a friend's weakness is love and service, if it comes from support not insult.
+- （12）对手是唯一真正懂这一切代价的人，分享大场面是很深的联结。 / Rivals are the only ones who know the cost; sharing big moments bonds deeply.
+- （07）不认识你的人没有资格定义你；把注意力转回正面的信息。 / People who don't know you don't define you; turn back to the positive messages.
+- （17）有意识地挑选允许进入自己「小世界」的声音。 / Consciously choose which voices are allowed into your small world.
 
 ### 自我：你不是你的手艺 · Self: you are not your craft
 
-- （18）把「自己」和「自己的手艺」分开，结果不定义自我价值。 / Keep yourself separate from your craft; results don't define your worth.
-- （02）身份不是一张证件，而是你在哪里长大、和谁一起生活。 / Identity is not a document but where you grew up and whom you lived with.
+- （01）把「自己」和「自己的手艺」分开，结果不定义自我价值。 / Keep yourself separate from your craft; results don't define your worth.
+- （03）身份不是一张证件，而是你在哪里长大、和谁一起生活。 / Identity is not a document but where you grew up and whom you lived with.
 - （19）建自己的池塘，做自己想做的那条鱼，停止和别人比。 / Build your own pond, be the fish you want to be, stop comparing.
-- （13）人能控制自己想什么、怎么想，所以能控制自己成为什么样的人。 / You control what and how you think, so you control who you become.
-- （08）不为「书呆子」道歉；成功由自己定义，不靠吃过多少苦证明。 / No apology for being the nerd; define success on your own terms.
-- （14）每天成为八岁的自己会敬佩的人；爱自己是最大的炫耀。 / Become someone your eight-year-old self would look up to; loving yourself is the biggest flex.
-- （16）做第一永远不会被理解；放下被理解的执念。 / Being first is never understood; let go of the need to be understood.
-- （06）拒绝社会的分类：滑雪运动员、模特、学生可以同时成立。 / Reject the categories: skier, model and student can coexist.
+- （14）人能控制自己想什么、怎么想，所以能控制自己成为什么样的人。 / You control what and how you think, so you control who you become.
+- （09）不为「书呆子」道歉；成功由自己定义，不靠吃过多少苦证明。 / No apology for being the nerd; define success on your own terms.
+- （15）每天成为八岁的自己会敬佩的人；爱自己是最大的炫耀。 / Become someone your eight-year-old self would look up to; loving yourself is the biggest flex.
+- （17）做第一永远不会被理解；放下被理解的执念。 / Being first is never understood; let go of the need to be understood.
+- （07）拒绝社会的分类：滑雪运动员、模特、学生可以同时成立。 / Reject the categories: skier, model and student can coexist.
 
-## 01 · 我承认，我爱上了恐惧 · I admit it: I'm in love with fear
+## 01 · 像从未赢过那样训练，像从未输过那样比赛 · Train like you've never won, compete like you've never lost
+
+*2026-08-31 · 开篇 · 播客《On Purpose with Jay Shetty》「The Ground Was Cracking Beneath Me」（65 分钟） / Opening chapter · On Purpose with Jay Shetty, 'The Ground Was Cracking Beneath Me' (65 min)*
+
+### 背景 · Context
+
+米兰之后半年，她坐进 Jay Shetty 的播客，聊了一个多小时。这期节目的视频版在 Netflix 上线，音频在 Spotify、Apple Podcasts 都能听。它不谈具体比赛，谈的是她怎么训练自己的头脑：方向、证据、批评，以及如何把「自己」和「自己的手艺」分开。
+
+Six months after Milan she sat down with Jay Shetty for just over an hour. The video version streams on Netflix, the audio on Spotify and Apple Podcasts. It is not about any particular competition; it is about how she trains her mind: direction, evidence, criticism, and keeping herself separate from her craft.
+
+### 她说了什么 · What she said
+
+她首先把自己定义为一个选择了体育的知识分子，而不是一个碰巧重视智力的运动员。队里的人都知道她是「最大的书呆子」，经常帮队友做作业。
+
+She defines herself first as an intellectual who chose sport, not an athlete who happens to value intelligence. Her teammates knew her as the biggest nerd on the team, the one who helped with homework.
+
+关于努力，她说了一句很反直觉的话：**努力被高估了。朝错误的方向拼命，就像用力去撞一堵墙——力气很大，进展很少；方向对了，努力才会复利。**母亲教她的是「怎么工作」比「比别人更拼」重要。
+
+On effort she said something counter-intuitive: **hard work is over-praised. Working hard in the wrong direction is like punching a wall: lots of force, little progress. With the right direction, effort compounds.** What her mother taught her was that how you work matters more than out-working everyone.
+
+她把学习称为终极超能力：相信自己能把任何事弄明白。十二三岁时她就开始读育儿书，为了理解自己的成长；移民母亲的「学生心态」——承认自己不知道——是她学来的。
+
+She calls learning the ultimate superpower: the confidence that you can figure anything out. At 12 or 13 she started reading parenting books to understand her own development, and her immigrant mother's student mentality, admitting what she did not know, is where she learned it.
+
+这期最常被引用的，是她和朋友之间的「建设性批评圈」。它是一个正式的约定：朋友之间直接、坦率地指出彼此的弱点，不带自尊心进去。**目的是快速进步——批评只要不往心里去，就能马上用上。她把指出对方的短处看作一种深层的爱与服务，前提是它来自支持而不是羞辱。**
+
+The most quoted part of the episode is her constructive criticism circle with friends. It is a formal arrangement: friends point out each other's weaknesses openly and directly, with ego left outside. **The point is speed of improvement; criticism you do not take personally can be applied at once. She sees naming a friend's weakness as a deep act of love and service, as long as it comes from support rather than insult.**
+
+训练和比赛，她用两套完全不同的心态。训练时她对自己极度挑剔——转体差了两度、起跳早了一秒都要盯着，防止自满；**比赛时则切换成彻底的自信，相信自己是场上最好的，其他人在争第二。**这种巅峰心态只在上场那一刻打开，平时带着它会养出危险的自我。
+
+For training and competing she uses two completely different mindsets. In training she is hypercritical, fixating on a rotation two degrees short or a take-off a second early, to keep complacency out. **In competition she switches to total confidence: she is the best on the hill and everyone else is fighting for second.** That peak mindset is opened only for the performance; carried around every day it would breed a dangerous ego.
+
+信念不能靠口号假装出来。她的说法是「证据胜过肯定」：**信任只能靠重复和真正的准备一点点攒出来。**可视化是其中一部分：她会从多个机位、快放慢放地在脑子里预演动作，甚至模拟 G 力。
+
+Belief cannot be faked with affirmations. Her phrase is evidence over affirmation: **trust is built only through repetition and real preparation.** Visualisation is part of it; she rehearses tricks from several camera angles, in slow and fast motion, even simulating the G-forces.
+
+她也讲了那一个小时的事：米兰夺金后几分钟，还没上领奖台，她看到了殡仪馆的邮件，知道外婆走了。金牌一下子变得不重要。她把悲伤转成了做事——接手葬礼的安排，然后在最后一场发布会上把这件事告诉了大家。
+
+She also told the story of that hour: minutes after winning gold in Milan, before the medal ceremony, she saw an email from a funeral home and knew her grandmother was gone. The gold suddenly felt trivial. She turned grief into work, taking on the funeral arrangements, and then told the world at her final press conference.
+
+### 为什么值得听 · Why it is worth hearing
+
+如果你只想从她身上学一个可操作的习惯，是这一章：找几个信得过的朋友，约定互相直说。它把前面几章里反复出现的「意图」「尝试」「勇敢」落到了一个具体的做法上。
+
+If you want one practical habit from her, it is in this chapter: find a few trusted friends and agree to tell each other the truth. It turns the intention, trying and bravery of earlier chapters into a concrete practice.
+
+**本章金句 · Key lines**
+
+- **努力被高估了，方向没有。** / **Hard work is overpriced. Direction isn't.** （[出处](https://www.youtube.com/shorts/H7Q2JEsuTig)）
+- **我像从未赢过那样训练，像从未输过那样比赛。** / **I train like I've never won, and I compete like I've never lost.** （[出处](https://lifestyle.si.com/celebrities/eileen-gu-powerful-training-approach-perfect-motivation-mantra)）
+- **训练的时候，我只看得见自己的错误。** / **I see only my mistakes when I'm training.** （[出处](https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success)）
+
+**跳转原视频 · Original video**
+
+- YouTube · Jay Shetty Podcast 官方片段 · Hard work is overpriced. Direction isn't：https://www.youtube.com/shorts/H7Q2JEsuTig
+- YouTube · Netflix 官方片段 · I train like I've never won…：https://www.youtube.com/shorts/4RIcNzcmsrw
+- YouTube · Netflix 官方片段 · Final Five 快问快答：https://www.youtube.com/shorts/Z5oNvMmKVeg
+
+**原文与完整报道 · Full text & further reading**
+
+- 播客官方页面 · 时间轴与收听入口（27 分钟起谈批评） · Official episode page · chapters and listen links：https://www.jayshetty.me/podcast/eileen-gu-the-ground-was-cracking-beneath-me
+- Apple Podcasts · 完整音频 · Apple Podcasts · full audio：https://podcasts.apple.com/us/podcast/on-purpose-with-jay-shetty/id1450994021?i=1000786924221
+- Netflix · 视频版 · Netflix · video edition：https://www.netflix.com/onpurposewithjayshetty
+- Olympics.com · 对这期的报道 · Olympics.com · report on the episode：https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success
+
+## 02 · 我承认，我爱上了恐惧 · I admit it: I'm in love with fear
 
 *2022-02-01 · 《纽约时报》· 北京冬奥前她亲笔写的随笔 / The New York Times · A first-person essay written before Beijing 2022*
 
@@ -133,7 +198,7 @@ To understand how she can cry for five minutes and then solve the problem, start
 - 《纽约时报》原文 · The New York Times · original essay：https://www.nytimes.com/interactive/2022/sports/olympics/eileen-gu-skiing-fear.html
 - 新东方在线 · 中英对照全文转载 · Koolearn · bilingual reprint of the full text：https://english.koolearn.com/20220217/840691.html
 
-## 02 · 在中国我是中国人，在美国我是美国人 · Chinese in China, American in America
+## 03 · 在中国我是中国人，在美国我是美国人 · Chinese in China, American in America
 
 *2022-02-08 · 北京冬奥会 · 自由式滑雪女子大跳台夺金后新闻发布会 / Beijing 2022 · Women's Freeski Big Air gold-medal press conference*
 
@@ -196,7 +261,7 @@ This press conference set the template she has used ever since for the US–Chin
 - 新浪新闻 · 发布会问答整理 · Sina News · press conference Q&A：https://news.sina.com.cn/c/2022-02-09/doc-ikyamrmz9751544.shtml
 - Fox News · 身份问题的英文报道 · Fox News · report on the citizenship exchange：https://www.foxnews.com/sports/us-olympic-freeskier-eileen-gu-citizenship-gold-china
 
-## 03 · 像长长地呼出一口气 · Like letting out a deep breath
+## 04 · 像长长地呼出一口气 · Like letting out a deep breath
 
 *2022-02-18 · 北京冬奥会 · 自由式滑雪女子 U 型场地夺金后新闻发布会 / Beijing 2022 · Women's Freeski Halfpipe gold-medal press conference*
 
@@ -244,7 +309,7 @@ This is her closing statement on Beijing. Gratitude, managing pressure, and lega
 - 美联社（NY1 转载）· U 池夺金报道 · AP via NY1 · halfpipe gold report：https://www.ny1.com/nyc/brooklyn/ap-top-news/2022/02/18/gu-breezes-to-gold-in-ski-halfpipe-3rd-medal-at-olympics
 - NST · 「深呼吸」原话报道 · NST · the 'deep breath' remark：https://www.nst.com.my/amp/sports/others/2022/02/772553/grateful-gu-wins-halfpipe-gold-third-medal-beijing-games
 
-## 04 · 最大的失败是不去尝试 · The worst failure is not to try
+## 05 · 最大的失败是不去尝试 · The worst failure is not to try
 
 *2022-05-04 · NBC《TODAY》 · 与 Hoda Kotb 的演播室访谈 / NBC TODAY · Studio interview with Hoda Kotb*
 
@@ -288,7 +353,7 @@ The segment's title came from one of her lines: **the worst failure is not to tr
 
 - Fox News · 对这段访谈的报道 · Fox News · report on the TODAY interview：https://www.foxnews.com/media/nbc-today-eileen-gu-china-uyghur-concentration-camps
 
-## 05 · 一个关于「全球主义」的美好例子 · A beautiful example of globalism
+## 06 · 一个关于「全球主义」的美好例子 · A beautiful example of globalism
 
 *2022-06-07 · TIME100 峰会（纽约） · 与 TIME 记者 Sean Gregory 对谈 / TIME100 Summit, New York · Onstage with TIME's Sean Gregory*
 
@@ -334,7 +399,7 @@ This is her clearest attempt to hold both countries at once. It shows the cost o
 
 - Yahoo Sports · TIME100 峰会报道 · Yahoo Sports · TIME100 Summit report：https://sports.yahoo.com/china-eileen-gu-serve-ambassador-223322015.html
 
-## 06 · 知道什么时候推，什么时候停 · Knowing when to push and when to stop
+## 07 · 知道什么时候推，什么时候停 · Knowing when to push and when to stop
 
 *2022-11-08 · YPO EDGE 2022（纽约）· 与企业家的台上对谈，YPO 官网整理 / YPO EDGE 2022, New York · Onstage conversation with CEOs, written up by YPO*
 
@@ -372,7 +437,7 @@ She rejects society's categories: skier, model and student can coexist, and risk
 
 - YPO 官网 · 对谈整理稿 · YPO · official write-up of the conversation：https://www.ypo.org/2022/11/olympic-gold-medalist-eileen-gu-on-embracing-fear-and-changing-the-game/
 
-## 07 · 尝试的勇气 · Courage to try
+## 08 · 尝试的勇气 · Courage to try
 
 *2024-04-05 · 哈佛—哥伦比亚世界发展论坛开幕式 · 青年代表主题演讲（哈佛纪念教堂） / Harvard–Columbia World Development Forum opening · Youth Delegate keynote, Harvard Memorial Church*
 
@@ -415,7 +480,7 @@ If you watch only one of her formal speeches, make it this one. It expands tryin
 - YouTube · Olympic Champion Eileen Gu Speaks at Harvard University（波士顿中文广播电视台，9 分钟）：https://www.youtube.com/watch?v=whAIkl7gu5I
 - Bilibili · 谷爱凌哈佛演讲 中文字幕版（B 站转载）：https://www.bilibili.com/video/BV1BD42157tx
 
-## 08 · 我不为「书呆子」道歉 · No apology for being the nerd
+## 09 · 我不为「书呆子」道歉 · No apology for being the nerd
 
 *2025-06 · 播客《The Burnouts》 · 与 Phoebe Gates、Sophia Kianni 的长谈 / The Burnouts podcast · Long-form conversation with Phoebe Gates and Sophia Kianni*
 
@@ -469,7 +534,7 @@ What makes this episode valuable is that it puts the tidy phrases of earlier cha
 
 - The Wantrepreneur Show · 这期播客的要点整理（含「建设性批评」原话） · The Wantrepreneur Show · notes on the episode, incl. the 'constructive criticism' line：https://www.thewantrepreneurshow.com/blog/how-eileen-gu-built-a-global-brand-at-18-without-burning-out/
 
-## 09 · 我怕的是我再也滑不了了 · What I feared was never skiing again
+## 10 · 我怕的是我再也滑不了了 · What I feared was never skiing again
 
 *2025-12 · 新华社专访 · 崇礼云顶 U 型场地世界杯夺冠后、米兰冬奥前（视频 2026-02-08 发布） / Xinhua interview · After the Chongli halfpipe World Cup win, before Milano Cortina (video published 2026-02-08)*
 
@@ -517,7 +582,7 @@ To understand her mindset in the Milan cycle, start here. It is the other side o
 - 新华网 · 专访全文（2025-12-19） · Xinhua · full interview text, 2025-12-19：https://www.news.cn/sports/20251219/d6da9746b495477c95dd6185bf44823b/c.html
 - 新华网 ·「遇见·谷爱凌」专题（2026-02-09） · Xinhua · 'Meeting Eileen Gu' feature, 2026-02-09：https://www.news.cn/sports/20260209/b5b25d82142e4fb5b50e7055f67d81e9/c.html
 
-## 10 · 别进入防守模式 · Don't go into defence mode
+## 11 · 别进入防守模式 · Don't go into defence mode
 
 *2026-01-22 · 《时代》周刊 · 米兰冬奥前长篇专访（记者 Sean Gregory，奥地利训练营与旧金山） / TIME · Pre-Games long-form profile by Sean Gregory, reported from training camp in Austria and San Francisco*
 
@@ -559,7 +624,7 @@ On people: her mother is the anchor and reviews jump footage with her; fans are 
 
 - 《时代》· 专访全文 · TIME · the full profile：https://time.com/7355691/eileen-gu-interview-2026-olympics/
 
-## 11 · 你不是紧张，你只是兴奋 · You're not nervous, you're just excited
+## 12 · 你不是紧张，你只是兴奋 · You're not nervous, you're just excited
 
 *2026-01-23 · Red Bull 官网 · 米兰冬奥前关于心态的长篇问答 / Red Bull · Long-form Q&A on mindset ahead of Milano Cortina*
 
@@ -600,7 +665,7 @@ Her advice to girls aged 11 to 14, when drop-out peaks: try sports with friends 
 
 - Red Bull · 问答全文 · Red Bull · the full Q&A：https://www.redbull.com/us-en/eileen-gu-mindset-interview
 
-## 12 · 压力只是能量 · Pressure is just energy
+## 13 · 压力只是能量 · Pressure is just energy
 
 *2026-02 · 米兰—科尔蒂纳冬奥会赛前 · Olympics.com 独家专访（官方播客） / Ahead of Milano Cortina 2026 · Olympics.com exclusive interview, official podcast*
 
@@ -642,7 +707,7 @@ She stood by full-time study with zero regret, despite what it cost in training 
 - Olympics.com · 赛前专访文字版 · Olympics.com · the pre-Games interview in text：https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success
 - The Standard（法新社）· 「压力只是能量」报道 · The Standard (AFP) · 'pressure is just energy' report：https://www.thestandard.com.hk/china/article/323863/Freeski-star-Gu-says-injuries-hit-confidence-as-she-targets-Olympic-treble
 
-## 13 · 我答应过她，我会勇敢 · I promised her I would be brave
+## 14 · 我答应过她，我会勇敢 · I promised her I would be brave
 
 *2026-02-22 · 米兰—科尔蒂纳冬奥会 · 自由式滑雪女子 U 型场地夺金后新闻发布会（利维尼奥） / Milano Cortina 2026 · Women's Freeski Halfpipe gold-medal press conference, Livigno*
 
@@ -712,7 +777,7 @@ This is the emotional capstone of her career so far, and the point where her voc
 - 人民日报客户端 · 发布会现场报道 · People's Daily app · press conference report：https://www.peopleapp.com/column/30051481730-500007362416
 - The Standard（法新社）· 「两枚银牌」问答报道 · The Standard (AFP) · the 'two silvers' exchange：https://www.thestandard.com.hk/china/article/324753/Gus-exchange-with-AFP-at-Winter-Olympics-goes-viral
 
-## 14 · 我会写日记，像科学家修修补补那样 · I journal, tinkering like a scientist
+## 15 · 我会写日记，像科学家修修补补那样 · I journal, tinkering like a scientist
 
 *2026-02-23 · The Athletic（纽约时报）· 记者 Charlotte Harpur 在米兰发布会上问「你说话前会思考吗」引出的长文 / The Athletic (NYT) · Charlotte Harpur's profile built on her press-conference question, 'do you think before you speak?'*
 
@@ -758,7 +823,7 @@ Even on the hill she thinks like a statistician, in hypotheses, trajectories and
 - The Athletic · 长文全文 · The Athletic · the full profile：https://www.nytimes.com/athletic/7063817/2026/02/23/eileen-gu-inside-the-mind/
 - Awful Announcing · 对这段问答的报道（含原话） · Awful Announcing · report on the exchange, with quotes：https://awfulannouncing.com/olympics/elieen-gu-asked-do-you-think-before-speak-charlotte-harpur.html
 
-## 15 · 哭完五分钟，就去解决问题 · Five minutes to cry, then solve the problem
+## 16 · 哭完五分钟，就去解决问题 · Five minutes to cry, then solve the problem
 
 *2026-02-24 · 人民日报视频专访（米兰冬奥落幕之际）· 另附 2026-01-29 赛前文字专访 / People's Daily video interview as Milano Cortina closed · plus a pre-Games written interview of 2026-01-29*
 
@@ -807,7 +872,7 @@ On outside judgement she said that learning to face it properly may itself be pa
 - 人民日报 · 赛前专访全文（新京报转载） · People's Daily · full pre-Games interview (via Beijing News)：https://www.bjnews.com.cn/detail/1769643717129809.html
 - 人民日报客户端 · 《每一天，每一秒，我都在做准备》 · People's Daily app · 'Every day, every second, I am preparing'：https://www.peopleapp.com/column/30051324507-500007330491
 
-## 16 · 脆弱不是弱点，更难的是把它展示给世界 · Vulnerability isn't weakness; showing it is the hard part
+## 17 · 脆弱不是弱点，更难的是把它展示给世界 · Vulnerability isn't weakness; showing it is the hard part
 
 *2026-03-02 · 《杨澜访谈录》米兰专访（录于 U 池卫冕次日，3 月 2 日播出） / Yang Lan One on One · Milan interview, recorded the day after her halfpipe title defence, aired 2 March*
 
@@ -857,7 +922,7 @@ She sees skiing and the Olympics as a kind of international relations: sport let
 
 - 腾讯新闻 · 本期访谈文字整理 · Tencent News · write-up of the episode：https://news.qq.com/rain/a/20260302A057JM00
 
-## 17 · 最大的对手是自己 · The biggest rival is yourself
+## 18 · 最大的对手是自己 · The biggest rival is yourself
 
 *2026-04-01 · 第四届「巾帼建新力论坛」主旨分享（香港信德中心）· 香港各界妇女联合协进会主办 / Keynote at the 4th Women's Innovation Forum, Shun Tak Centre, Hong Kong · hosted by the Hong Kong Federation of Women*
 
@@ -897,71 +962,6 @@ Women, she said, are naturally many-sided, with a particular strength in empathy
 
 - 中国日报 · 论坛报道与会后问答 · China Daily · forum report and post-event Q&A：https://cn.chinadaily.com.cn/a/202604/01/WS69cd0e2ba310942cc49a6161.html
 - 世界日报 · 「最大的对手是自己」报道 · World Journal · 'biggest rival is yourself' report：https://www.worldjournal.com/wj/story/121479/9417800
-
-## 18 · 像从未赢过那样训练，像从未输过那样比赛 · Train like you've never won, compete like you've never lost
-
-*2026-08-31 · 播客《On Purpose with Jay Shetty》·「The Ground Was Cracking Beneath Me」（65 分钟） / On Purpose with Jay Shetty · 'The Ground Was Cracking Beneath Me' (65 min)*
-
-### 背景 · Context
-
-米兰之后半年，她坐进 Jay Shetty 的播客，聊了一个多小时。这期节目的视频版在 Netflix 上线，音频在 Spotify、Apple Podcasts 都能听。它不谈具体比赛，谈的是她怎么训练自己的头脑：方向、证据、批评，以及如何把「自己」和「自己的手艺」分开。
-
-Six months after Milan she sat down with Jay Shetty for just over an hour. The video version streams on Netflix, the audio on Spotify and Apple Podcasts. It is not about any particular competition; it is about how she trains her mind: direction, evidence, criticism, and keeping herself separate from her craft.
-
-### 她说了什么 · What she said
-
-她首先把自己定义为一个选择了体育的知识分子，而不是一个碰巧重视智力的运动员。队里的人都知道她是「最大的书呆子」，经常帮队友做作业。
-
-She defines herself first as an intellectual who chose sport, not an athlete who happens to value intelligence. Her teammates knew her as the biggest nerd on the team, the one who helped with homework.
-
-关于努力，她说了一句很反直觉的话：**努力被高估了。朝错误的方向拼命，就像用力去撞一堵墙——力气很大，进展很少；方向对了，努力才会复利。**母亲教她的是「怎么工作」比「比别人更拼」重要。
-
-On effort she said something counter-intuitive: **hard work is over-praised. Working hard in the wrong direction is like punching a wall: lots of force, little progress. With the right direction, effort compounds.** What her mother taught her was that how you work matters more than out-working everyone.
-
-她把学习称为终极超能力：相信自己能把任何事弄明白。十二三岁时她就开始读育儿书，为了理解自己的成长；移民母亲的「学生心态」——承认自己不知道——是她学来的。
-
-She calls learning the ultimate superpower: the confidence that you can figure anything out. At 12 or 13 she started reading parenting books to understand her own development, and her immigrant mother's student mentality, admitting what she did not know, is where she learned it.
-
-这期最常被引用的，是她和朋友之间的「建设性批评圈」。它是一个正式的约定：朋友之间直接、坦率地指出彼此的弱点，不带自尊心进去。**目的是快速进步——批评只要不往心里去，就能马上用上。她把指出对方的短处看作一种深层的爱与服务，前提是它来自支持而不是羞辱。**
-
-The most quoted part of the episode is her constructive criticism circle with friends. It is a formal arrangement: friends point out each other's weaknesses openly and directly, with ego left outside. **The point is speed of improvement; criticism you do not take personally can be applied at once. She sees naming a friend's weakness as a deep act of love and service, as long as it comes from support rather than insult.**
-
-训练和比赛，她用两套完全不同的心态。训练时她对自己极度挑剔——转体差了两度、起跳早了一秒都要盯着，防止自满；**比赛时则切换成彻底的自信，相信自己是场上最好的，其他人在争第二。**这种巅峰心态只在上场那一刻打开，平时带着它会养出危险的自我。
-
-For training and competing she uses two completely different mindsets. In training she is hypercritical, fixating on a rotation two degrees short or a take-off a second early, to keep complacency out. **In competition she switches to total confidence: she is the best on the hill and everyone else is fighting for second.** That peak mindset is opened only for the performance; carried around every day it would breed a dangerous ego.
-
-信念不能靠口号假装出来。她的说法是「证据胜过肯定」：**信任只能靠重复和真正的准备一点点攒出来。**可视化是其中一部分：她会从多个机位、快放慢放地在脑子里预演动作，甚至模拟 G 力。
-
-Belief cannot be faked with affirmations. Her phrase is evidence over affirmation: **trust is built only through repetition and real preparation.** Visualisation is part of it; she rehearses tricks from several camera angles, in slow and fast motion, even simulating the G-forces.
-
-她也讲了那一个小时的事：米兰夺金后几分钟，还没上领奖台，她看到了殡仪馆的邮件，知道外婆走了。金牌一下子变得不重要。她把悲伤转成了做事——接手葬礼的安排，然后在最后一场发布会上把这件事告诉了大家。
-
-She also told the story of that hour: minutes after winning gold in Milan, before the medal ceremony, she saw an email from a funeral home and knew her grandmother was gone. The gold suddenly felt trivial. She turned grief into work, taking on the funeral arrangements, and then told the world at her final press conference.
-
-### 为什么值得听 · Why it is worth hearing
-
-如果你只想从她身上学一个可操作的习惯，是这一章：找几个信得过的朋友，约定互相直说。它把前面几章里反复出现的「意图」「尝试」「勇敢」落到了一个具体的做法上。
-
-If you want one practical habit from her, it is in this chapter: find a few trusted friends and agree to tell each other the truth. It turns the intention, trying and bravery of earlier chapters into a concrete practice.
-
-**本章金句 · Key lines**
-
-- **努力被高估了，方向没有。** / **Hard work is overpriced. Direction isn't.** （[出处](https://www.youtube.com/shorts/H7Q2JEsuTig)）
-- **我像从未赢过那样训练，像从未输过那样比赛。** / **I train like I've never won, and I compete like I've never lost.** （[出处](https://lifestyle.si.com/celebrities/eileen-gu-powerful-training-approach-perfect-motivation-mantra)）
-- **训练的时候，我只看得见自己的错误。** / **I see only my mistakes when I'm training.** （[出处](https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success)）
-
-**跳转原视频 · Original video**
-
-- YouTube · Jay Shetty Podcast 官方片段 · Hard work is overpriced. Direction isn't：https://www.youtube.com/shorts/H7Q2JEsuTig
-- YouTube · Netflix 官方片段 · I train like I've never won…：https://www.youtube.com/shorts/4RIcNzcmsrw
-- YouTube · Netflix 官方片段 · Final Five 快问快答：https://www.youtube.com/shorts/Z5oNvMmKVeg
-
-**原文与完整报道 · Full text & further reading**
-
-- 播客官方页面 · 时间轴与收听入口（27 分钟起谈批评） · Official episode page · chapters and listen links：https://www.jayshetty.me/podcast/eileen-gu-the-ground-was-cracking-beneath-me
-- Apple Podcasts · 完整音频 · Apple Podcasts · full audio：https://podcasts.apple.com/us/podcast/on-purpose-with-jay-shetty/id1450994021?i=1000786924221
-- Netflix · 视频版 · Netflix · video edition：https://www.netflix.com/onpurposewithjayshetty
-- Olympics.com · 对这期的报道 · Olympics.com · report on the episode：https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success
 
 ## 19 · 做你自己的那条鱼 · Be your own fish
 

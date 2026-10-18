@@ -123,8 +123,8 @@ html[data-lang="both"] .vcard .ext .en{display:none}
 
 /* starred key lines */
 aside.quotes li.star,.quotes-all li.star{background:var(--paper);border:1px solid var(--accent);border-radius:10px;padding:10px 14px}
-aside.quotes li.star strong.q.zh::before,.quotes-all li.star strong.q.zh::before{content:"°5  ";color:var(--accent)}
-html[data-lang="en"] aside.quotes li.star strong.q.en::before,html[data-lang="en"] .quotes-all li.star strong.q.en::before{content:"°5  ";color:var(--accent)}
+aside.quotes li.star strong.q.zh::before,.quotes-all li.star strong.q.zh::before{content:"★ ";color:var(--accent)}
+html[data-lang="en"] aside.quotes li.star strong.q.en::before,html[data-lang="en"] .quotes-all li.star strong.q.en::before{content:"★ ";color:var(--accent)}
 .quotes-all li.star{margin:8px 0}
 
 /* readings & transcript */

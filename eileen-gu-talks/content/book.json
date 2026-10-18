@@ -7,7 +7,7 @@
   "subtitle_zh": "从北京到米兰，十九篇演讲、访谈与自述：一位 Z 世代冠军怎样谈成长、情绪、做决定与待人处事",
   "subtitle_en": "From Beijing to Milan, nineteen talks, interviews and essays on growth, emotions, decisions and dealing with people, each linked to its source",
   "author": "",
-  "version": "1.3",
+  "version": "1.4",
   "repo_url": "https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks",
   "intro": [
     {
@@ -15,8 +15,8 @@
       "en": "Eileen Gu is mostly discussed for her results and her passport. What rewards rereading is how she looks at things: how she handles emotions, makes decisions, treats criticism and rivals, and stays herself when grilled or misread. Line up her public talks and interviews from 2022 to 2026 and you can watch that way of thinking grow."
     },
     {
-      "zh": "这本小书选了十九篇有原视频或官方全文可查的材料：两届冬奥会的新闻发布会、她亲笔写的《我爱上了恐惧》、美国电视和杂志的长访谈、哈佛和商界论坛的演讲、三期播客与对谈、新华社与人民日报的专访、Red Bull 的心态问答、杨澜的米兰访谈，以及 2026 年秋天在新加坡的对谈。每一章按「背景 → 她说了什么 → 为什么值得听」展开，中英对照，章末给出原视频和官方全文的入口。如果你更关心她的思考方式而不是比赛，可以从「按主题读」进。",
-      "en": "This short book selects nineteen pieces that survive as verifiable video or official full text: press conferences at two Winter Games, her own essay on fear, long interviews with US television and magazines, speeches at Harvard and to business leaders, three podcasts and conversations, interviews with Xinhua and People's Daily, a Red Bull mindset Q&A, Yang Lan's Milan interview, and a fireside chat in Singapore in autumn 2026. Each chapter runs context → what she said → why it is worth hearing, in Chinese and English side by side, with links to the original video and official texts. If her way of thinking interests you more than the competitions, start with Read by theme."
+      "zh": "这本小书选了十九篇有原视频或官方全文可查的材料：两届冬奥会的新闻发布会、她亲笔写的《我爱上了恐惧》、美国电视和杂志的长访谈、哈佛和商界论坛的演讲、三期播客与对谈、新华社与人民日报的专访、Red Bull 的心态问答、杨澜的米兰访谈，以及 2026 年秋天在新加坡的对谈。**第一章先放 2026 年 8 月 Jay Shetty 播客那期**——它把方向、证据、建设性批评、训练与比赛的两套心态讲得最集中；其余十八章按时间顺序排。每一章按「背景 → 她说了什么 → 为什么值得听」展开，中英对照，章末给出原视频和官方全文的入口。带 ★ 的金句是编者最想推荐的几条。",
+      "en": "This short book selects nineteen pieces that survive as verifiable video or official full text: press conferences at two Winter Games, her own essay on fear, long interviews with US television and magazines, speeches at Harvard and to business leaders, three podcasts and conversations, interviews with Xinhua and People's Daily, a Red Bull mindset Q&A, Yang Lan's Milan interview, and a fireside chat in Singapore in autumn 2026. **Chapter one is the August 2026 Jay Shetty podcast**, the most concentrated statement of her thinking on direction, evidence, constructive criticism and the two mindsets for training and competing; the other eighteen chapters run in date order. Each chapter goes context → what she said → why it is worth hearing, in Chinese and English side by side, with links to the original video and official texts. Key lines marked ★ are the editor's top picks."
     },
     {
       "zh": "需要说明的是：**这是免费分享的解读与学习笔记，不是逐字稿。**演讲和访谈的内容版权属于讲者和发布平台，所以正文里只保留被媒体公开报道过的极短名句，并逐条标注出处；加粗的句子是提炼的要点。想看原话，每章末尾的「原文与完整报道」给出了官方发布的全文访谈和原视频入口。",
@@ -36,6 +36,133 @@
     "en": "This is a free, non-commercial commentary and study guide. It does not reproduce transcripts; short quotations are widely reported public remarks, cited to their sources. Video and text rights remain with the original publishers."
   },
   "chapters": [
+    {
+      "title_zh": "像从未赢过那样训练，像从未输过那样比赛",
+      "title_en": "Train like you've never won, compete like you've never lost",
+      "date": "2026-08-31",
+      "occasion_zh": "开篇 · 播客《On Purpose with Jay Shetty》「The Ground Was Cracking Beneath Me」（65 分钟）",
+      "occasion_en": "Opening chapter · On Purpose with Jay Shetty, 'The Ground Was Cracking Beneath Me' (65 min)",
+      "sections": [
+        {
+          "heading_zh": "背景",
+          "heading_en": "Context",
+          "paras": [
+            {
+              "zh": "米兰之后半年，她坐进 Jay Shetty 的播客，聊了一个多小时。这期节目的视频版在 Netflix 上线，音频在 Spotify、Apple Podcasts 都能听。它不谈具体比赛，谈的是她怎么训练自己的头脑：方向、证据、批评，以及如何把「自己」和「自己的手艺」分开。",
+              "en": "Six months after Milan she sat down with Jay Shetty for just over an hour. The video version streams on Netflix, the audio on Spotify and Apple Podcasts. It is not about any particular competition; it is about how she trains her mind: direction, evidence, criticism, and keeping herself separate from her craft."
+            }
+          ]
+        },
+        {
+          "heading_zh": "她说了什么",
+          "heading_en": "What she said",
+          "paras": [
+            {
+              "zh": "她首先把自己定义为一个选择了体育的知识分子，而不是一个碰巧重视智力的运动员。队里的人都知道她是「最大的书呆子」，经常帮队友做作业。",
+              "en": "She defines herself first as an intellectual who chose sport, not an athlete who happens to value intelligence. Her teammates knew her as the biggest nerd on the team, the one who helped with homework."
+            },
+            {
+              "zh": "关于努力，她说了一句很反直觉的话：**努力被高估了。朝错误的方向拼命，就像用力去撞一堵墙——力气很大，进展很少；方向对了，努力才会复利。**母亲教她的是「怎么工作」比「比别人更拼」重要。",
+              "en": "On effort she said something counter-intuitive: **hard work is over-praised. Working hard in the wrong direction is like punching a wall: lots of force, little progress. With the right direction, effort compounds.** What her mother taught her was that how you work matters more than out-working everyone."
+            },
+            {
+              "zh": "她把学习称为终极超能力：相信自己能把任何事弄明白。十二三岁时她就开始读育儿书，为了理解自己的成长；移民母亲的「学生心态」——承认自己不知道——是她学来的。",
+              "en": "She calls learning the ultimate superpower: the confidence that you can figure anything out. At 12 or 13 she started reading parenting books to understand her own development, and her immigrant mother's student mentality, admitting what she did not know, is where she learned it."
+            },
+            {
+              "zh": "这期最常被引用的，是她和朋友之间的「建设性批评圈」。它是一个正式的约定：朋友之间直接、坦率地指出彼此的弱点，不带自尊心进去。**目的是快速进步——批评只要不往心里去，就能马上用上。她把指出对方的短处看作一种深层的爱与服务，前提是它来自支持而不是羞辱。**",
+              "en": "The most quoted part of the episode is her constructive criticism circle with friends. It is a formal arrangement: friends point out each other's weaknesses openly and directly, with ego left outside. **The point is speed of improvement; criticism you do not take personally can be applied at once. She sees naming a friend's weakness as a deep act of love and service, as long as it comes from support rather than insult.**"
+            },
+            {
+              "zh": "训练和比赛，她用两套完全不同的心态。训练时她对自己极度挑剔——转体差了两度、起跳早了一秒都要盯着，防止自满；**比赛时则切换成彻底的自信，相信自己是场上最好的，其他人在争第二。**这种巅峰心态只在上场那一刻打开，平时带着它会养出危险的自我。",
+              "en": "For training and competing she uses two completely different mindsets. In training she is hypercritical, fixating on a rotation two degrees short or a take-off a second early, to keep complacency out. **In competition she switches to total confidence: she is the best on the hill and everyone else is fighting for second.** That peak mindset is opened only for the performance; carried around every day it would breed a dangerous ego."
+            },
+            {
+              "zh": "信念不能靠口号假装出来。她的说法是「证据胜过肯定」：**信任只能靠重复和真正的准备一点点攒出来。**可视化是其中一部分：她会从多个机位、快放慢放地在脑子里预演动作，甚至模拟 G 力。",
+              "en": "Belief cannot be faked with affirmations. Her phrase is evidence over affirmation: **trust is built only through repetition and real preparation.** Visualisation is part of it; she rehearses tricks from several camera angles, in slow and fast motion, even simulating the G-forces."
+            },
+            {
+              "zh": "她也讲了那一个小时的事：米兰夺金后几分钟，还没上领奖台，她看到了殡仪馆的邮件，知道外婆走了。金牌一下子变得不重要。她把悲伤转成了做事——接手葬礼的安排，然后在最后一场发布会上把这件事告诉了大家。",
+              "en": "She also told the story of that hour: minutes after winning gold in Milan, before the medal ceremony, she saw an email from a funeral home and knew her grandmother was gone. The gold suddenly felt trivial. She turned grief into work, taking on the funeral arrangements, and then told the world at her final press conference."
+            }
+          ]
+        },
+        {
+          "heading_zh": "为什么值得听",
+          "heading_en": "Why it is worth hearing",
+          "paras": [
+            {
+              "zh": "如果你只想从她身上学一个可操作的习惯，是这一章：找几个信得过的朋友，约定互相直说。它把前面几章里反复出现的「意图」「尝试」「勇敢」落到了一个具体的做法上。",
+              "en": "If you want one practical habit from her, it is in this chapter: find a few trusted friends and agree to tell each other the truth. It turns the intention, trying and bravery of earlier chapters into a concrete practice."
+            }
+          ]
+        }
+      ],
+      "quotes": [
+        {
+          "zh": "努力被高估了，方向没有。",
+          "en": "Hard work is overpriced. Direction isn't.",
+          "source": "https://www.youtube.com/shorts/H7Q2JEsuTig",
+          "star": true
+        },
+        {
+          "zh": "我像从未赢过那样训练，像从未输过那样比赛。",
+          "en": "I train like I've never won, and I compete like I've never lost.",
+          "source": "https://lifestyle.si.com/celebrities/eileen-gu-powerful-training-approach-perfect-motivation-mantra"
+        },
+        {
+          "zh": "训练的时候，我只看得见自己的错误。",
+          "en": "I see only my mistakes when I'm training.",
+          "source": "https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/shorts/H7Q2JEsuTig",
+          "title": "Jay Shetty Podcast 官方片段 · Hard work is overpriced. Direction isn't",
+          "label_zh": "观看「方向比努力重要」片段",
+          "label_en": "Watch the 'direction over hard work' clip"
+        },
+        {
+          "url": "https://www.youtube.com/shorts/4RIcNzcmsrw",
+          "title": "Netflix 官方片段 · I train like I've never won…",
+          "label_zh": "观看「像从未赢过那样训练」片段",
+          "label_en": "Watch the 'train like I've never won' clip"
+        },
+        {
+          "url": "https://www.youtube.com/shorts/Z5oNvMmKVeg",
+          "title": "Netflix 官方片段 · Final Five 快问快答",
+          "label_zh": "观看 Final Five 快问快答",
+          "label_en": "Watch the Final Five"
+        }
+      ],
+      "readings": [
+        {
+          "label_zh": "播客官方页面 · 时间轴与收听入口（27 分钟起谈批评）",
+          "label_en": "Official episode page · chapters and listen links",
+          "url": "https://www.jayshetty.me/podcast/eileen-gu-the-ground-was-cracking-beneath-me",
+          "note": "完整节目：Netflix 视频版 / Spotify / Apple Podcasts"
+        },
+        {
+          "label_zh": "Apple Podcasts · 完整音频",
+          "label_en": "Apple Podcasts · full audio",
+          "url": "https://podcasts.apple.com/us/podcast/on-purpose-with-jay-shetty/id1450994021?i=1000786924221",
+          "note": ""
+        },
+        {
+          "label_zh": "Netflix · 视频版",
+          "label_en": "Netflix · video edition",
+          "url": "https://www.netflix.com/onpurposewithjayshetty",
+          "note": ""
+        },
+        {
+          "label_zh": "Olympics.com · 对这期的报道",
+          "label_en": "Olympics.com · report on the episode",
+          "url": "https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success",
+          "note": ""
+        }
+      ]
+    },
     {
       "title_zh": "我承认，我爱上了恐惧",
       "title_en": "I admit it: I'm in love with fear",
@@ -1418,133 +1545,6 @@
           "label_zh": "世界日报 · 「最大的对手是自己」报道",
           "label_en": "World Journal · 'biggest rival is yourself' report",
           "url": "https://www.worldjournal.com/wj/story/121479/9417800",
-          "note": ""
-        }
-      ]
-    },
-    {
-      "title_zh": "像从未赢过那样训练，像从未输过那样比赛",
-      "title_en": "Train like you've never won, compete like you've never lost",
-      "date": "2026-08-31",
-      "occasion_zh": "播客《On Purpose with Jay Shetty》·「The Ground Was Cracking Beneath Me」（65 分钟）",
-      "occasion_en": "On Purpose with Jay Shetty · 'The Ground Was Cracking Beneath Me' (65 min)",
-      "sections": [
-        {
-          "heading_zh": "背景",
-          "heading_en": "Context",
-          "paras": [
-            {
-              "zh": "米兰之后半年，她坐进 Jay Shetty 的播客，聊了一个多小时。这期节目的视频版在 Netflix 上线，音频在 Spotify、Apple Podcasts 都能听。它不谈具体比赛，谈的是她怎么训练自己的头脑：方向、证据、批评，以及如何把「自己」和「自己的手艺」分开。",
-              "en": "Six months after Milan she sat down with Jay Shetty for just over an hour. The video version streams on Netflix, the audio on Spotify and Apple Podcasts. It is not about any particular competition; it is about how she trains her mind: direction, evidence, criticism, and keeping herself separate from her craft."
-            }
-          ]
-        },
-        {
-          "heading_zh": "她说了什么",
-          "heading_en": "What she said",
-          "paras": [
-            {
-              "zh": "她首先把自己定义为一个选择了体育的知识分子，而不是一个碰巧重视智力的运动员。队里的人都知道她是「最大的书呆子」，经常帮队友做作业。",
-              "en": "She defines herself first as an intellectual who chose sport, not an athlete who happens to value intelligence. Her teammates knew her as the biggest nerd on the team, the one who helped with homework."
-            },
-            {
-              "zh": "关于努力，她说了一句很反直觉的话：**努力被高估了。朝错误的方向拼命，就像用力去撞一堵墙——力气很大，进展很少；方向对了，努力才会复利。**母亲教她的是「怎么工作」比「比别人更拼」重要。",
-              "en": "On effort she said something counter-intuitive: **hard work is over-praised. Working hard in the wrong direction is like punching a wall: lots of force, little progress. With the right direction, effort compounds.** What her mother taught her was that how you work matters more than out-working everyone."
-            },
-            {
-              "zh": "她把学习称为终极超能力：相信自己能把任何事弄明白。十二三岁时她就开始读育儿书，为了理解自己的成长；移民母亲的「学生心态」——承认自己不知道——是她学来的。",
-              "en": "She calls learning the ultimate superpower: the confidence that you can figure anything out. At 12 or 13 she started reading parenting books to understand her own development, and her immigrant mother's student mentality, admitting what she did not know, is where she learned it."
-            },
-            {
-              "zh": "这期最常被引用的，是她和朋友之间的「建设性批评圈」。它是一个正式的约定：朋友之间直接、坦率地指出彼此的弱点，不带自尊心进去。**目的是快速进步——批评只要不往心里去，就能马上用上。她把指出对方的短处看作一种深层的爱与服务，前提是它来自支持而不是羞辱。**",
-              "en": "The most quoted part of the episode is her constructive criticism circle with friends. It is a formal arrangement: friends point out each other's weaknesses openly and directly, with ego left outside. **The point is speed of improvement; criticism you do not take personally can be applied at once. She sees naming a friend's weakness as a deep act of love and service, as long as it comes from support rather than insult.**"
-            },
-            {
-              "zh": "训练和比赛，她用两套完全不同的心态。训练时她对自己极度挑剔——转体差了两度、起跳早了一秒都要盯着，防止自满；**比赛时则切换成彻底的自信，相信自己是场上最好的，其他人在争第二。**这种巅峰心态只在上场那一刻打开，平时带着它会养出危险的自我。",
-              "en": "For training and competing she uses two completely different mindsets. In training she is hypercritical, fixating on a rotation two degrees short or a take-off a second early, to keep complacency out. **In competition she switches to total confidence: she is the best on the hill and everyone else is fighting for second.** That peak mindset is opened only for the performance; carried around every day it would breed a dangerous ego."
-            },
-            {
-              "zh": "信念不能靠口号假装出来。她的说法是「证据胜过肯定」：**信任只能靠重复和真正的准备一点点攒出来。**可视化是其中一部分：她会从多个机位、快放慢放地在脑子里预演动作，甚至模拟 G 力。",
-              "en": "Belief cannot be faked with affirmations. Her phrase is evidence over affirmation: **trust is built only through repetition and real preparation.** Visualisation is part of it; she rehearses tricks from several camera angles, in slow and fast motion, even simulating the G-forces."
-            },
-            {
-              "zh": "她也讲了那一个小时的事：米兰夺金后几分钟，还没上领奖台，她看到了殡仪馆的邮件，知道外婆走了。金牌一下子变得不重要。她把悲伤转成了做事——接手葬礼的安排，然后在最后一场发布会上把这件事告诉了大家。",
-              "en": "She also told the story of that hour: minutes after winning gold in Milan, before the medal ceremony, she saw an email from a funeral home and knew her grandmother was gone. The gold suddenly felt trivial. She turned grief into work, taking on the funeral arrangements, and then told the world at her final press conference."
-            }
-          ]
-        },
-        {
-          "heading_zh": "为什么值得听",
-          "heading_en": "Why it is worth hearing",
-          "paras": [
-            {
-              "zh": "如果你只想从她身上学一个可操作的习惯，是这一章：找几个信得过的朋友，约定互相直说。它把前面几章里反复出现的「意图」「尝试」「勇敢」落到了一个具体的做法上。",
-              "en": "If you want one practical habit from her, it is in this chapter: find a few trusted friends and agree to tell each other the truth. It turns the intention, trying and bravery of earlier chapters into a concrete practice."
-            }
-          ]
-        }
-      ],
-      "quotes": [
-        {
-          "zh": "努力被高估了，方向没有。",
-          "en": "Hard work is overpriced. Direction isn't.",
-          "source": "https://www.youtube.com/shorts/H7Q2JEsuTig",
-          "star": true
-        },
-        {
-          "zh": "我像从未赢过那样训练，像从未输过那样比赛。",
-          "en": "I train like I've never won, and I compete like I've never lost.",
-          "source": "https://lifestyle.si.com/celebrities/eileen-gu-powerful-training-approach-perfect-motivation-mantra"
-        },
-        {
-          "zh": "训练的时候，我只看得见自己的错误。",
-          "en": "I see only my mistakes when I'm training.",
-          "source": "https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success"
-        }
-      ],
-      "videos": [
-        {
-          "url": "https://www.youtube.com/shorts/H7Q2JEsuTig",
-          "title": "Jay Shetty Podcast 官方片段 · Hard work is overpriced. Direction isn't",
-          "label_zh": "观看「方向比努力重要」片段",
-          "label_en": "Watch the 'direction over hard work' clip"
-        },
-        {
-          "url": "https://www.youtube.com/shorts/4RIcNzcmsrw",
-          "title": "Netflix 官方片段 · I train like I've never won…",
-          "label_zh": "观看「像从未赢过那样训练」片段",
-          "label_en": "Watch the 'train like I've never won' clip"
-        },
-        {
-          "url": "https://www.youtube.com/shorts/Z5oNvMmKVeg",
-          "title": "Netflix 官方片段 · Final Five 快问快答",
-          "label_zh": "观看 Final Five 快问快答",
-          "label_en": "Watch the Final Five"
-        }
-      ],
-      "readings": [
-        {
-          "label_zh": "播客官方页面 · 时间轴与收听入口（27 分钟起谈批评）",
-          "label_en": "Official episode page · chapters and listen links",
-          "url": "https://www.jayshetty.me/podcast/eileen-gu-the-ground-was-cracking-beneath-me",
-          "note": "完整节目：Netflix 视频版 / Spotify / Apple Podcasts"
-        },
-        {
-          "label_zh": "Apple Podcasts · 完整音频",
-          "label_en": "Apple Podcasts · full audio",
-          "url": "https://podcasts.apple.com/us/podcast/on-purpose-with-jay-shetty/id1450994021?i=1000786924221",
-          "note": ""
-        },
-        {
-          "label_zh": "Netflix · 视频版",
-          "label_en": "Netflix · video edition",
-          "url": "https://www.netflix.com/onpurposewithjayshetty",
-          "note": ""
-        },
-        {
-          "label_zh": "Olympics.com · 对这期的报道",
-          "label_en": "Olympics.com · report on the episode",
-          "url": "https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success",
           "note": ""
         }
       ]
