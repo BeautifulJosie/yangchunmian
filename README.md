@@ -12,6 +12,7 @@
 | [双屏双游戏](dual-screen-dual-game/) | 让 AI 把 Windows 电脑配置成两块屏同时玩两个游戏（键鼠 + 手柄）：后台不静音、手柄不失灵、两个游戏的声音分开出 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/dual-screen-dual-game) |
 | [小红书视频封面](xhs-video-cover/) | 让 AI 按同一套系列风格做小红书视频封面，直接导出可上传的 PNG，还能顺手写标题和简介 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/xhs-video-cover) |
 | [3D 微缩小世界](threejs-mini-world/) | 让 AI 用 three.js 做一个 3D 微缩小岛网页：薄底座 + 满岛的小建筑和小木偶 + 日落光照 + 现场合成的背景音乐，还能做出发小红书的海报 | [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/threejs-mini-world) |
+| [谷爱凌说 · 双语演讲解读书](eileen-gu-talks/) | 谷爱凌 2022–2026 年 19 篇演讲与访谈的中英双语解读：金句加粗、页内播原视频、关键词搜索、一键下载 EPUB 进微信读书；也可当模板让 AI 做「某某说」 | [在线阅读](https://beautifuljosie.github.io/yangchunmian/eileen-gu-talks/) · [下载这个文件夹](https://download-directory.github.io/?url=https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks) |
 
 后面会陆续加上网页制作等更多分享。
 
