@@ -7,7 +7,7 @@
   "subtitle_zh": "从北京到米兰，十九篇演讲、访谈与自述：一位 Z 世代冠军怎样谈成长、情绪、做决定与待人处事",
   "subtitle_en": "From Beijing to Milan, nineteen talks, interviews and essays on growth, emotions, decisions and dealing with people, each linked to its source",
   "author": "",
-  "version": "1.2",
+  "version": "1.3",
   "repo_url": "https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks",
   "intro": [
     {
@@ -654,7 +654,8 @@
         {
           "zh": "建设性的批评不可能伤到我的感情。",
           "en": "It's impossible to hurt my feelings with constructive criticism.",
-          "source": "https://www.thewantrepreneurshow.com/blog/how-eileen-gu-built-a-global-brand-at-18-without-burning-out/"
+          "source": "https://www.thewantrepreneurshow.com/blog/how-eileen-gu-built-a-global-brand-at-18-without-burning-out/",
+          "star": true
         }
       ],
       "videos": [
@@ -1228,7 +1229,8 @@
         {
           "zh": "哭完5分钟，压力就完全释放出来了。调整好心态后，我就能理性地去看问题以及思考如何去做。",
           "en": "After five minutes of crying the pressure is fully released. Once my mindset is reset, I can look at the problem rationally and think about what to do.",
-          "source": "https://www.bjnews.com.cn/detail/1769643717129809.html"
+          "source": "https://www.bjnews.com.cn/detail/1769643717129809.html",
+          "star": true
         },
         {
           "zh": "正确面对外界评价，可能也是成长的一部分。",
@@ -1446,8 +1448,8 @@
               "en": "She defines herself first as an intellectual who chose sport, not an athlete who happens to value intelligence. Her teammates knew her as the biggest nerd on the team, the one who helped with homework."
             },
             {
-              "zh": "关于努力，她说了一句很反直觉的话：努力被高估了。**朝错误的方向拼命，就像用力打一堵墙——力气很大，进展很少；方向对了，努力才会复利。**母亲教她的是「怎么工作」比「比别人更拼」重要。",
-              "en": "On effort she said something counter-intuitive: hard work is over-praised. **Working hard in the wrong direction is like punching a wall: lots of force, little progress. With the right direction, effort compounds.** What her mother taught her was that how you work matters more than out-working everyone."
+              "zh": "关于努力，她说了一句很反直觉的话：**努力被高估了。朝错误的方向拼命，就像用力去撞一堵墙——力气很大，进展很少；方向对了，努力才会复利。**母亲教她的是「怎么工作」比「比别人更拼」重要。",
+              "en": "On effort she said something counter-intuitive: **hard work is over-praised. Working hard in the wrong direction is like punching a wall: lots of force, little progress. With the right direction, effort compounds.** What her mother taught her was that how you work matters more than out-working everyone."
             },
             {
               "zh": "她把学习称为终极超能力：相信自己能把任何事弄明白。十二三岁时她就开始读育儿书，为了理解自己的成长；移民母亲的「学生心态」——承认自己不知道——是她学来的。",
@@ -1483,6 +1485,12 @@
         }
       ],
       "quotes": [
+        {
+          "zh": "努力被高估了，方向没有。",
+          "en": "Hard work is overpriced. Direction isn't.",
+          "source": "https://www.youtube.com/shorts/H7Q2JEsuTig",
+          "star": true
+        },
         {
           "zh": "我像从未赢过那样训练，像从未输过那样比赛。",
           "en": "I train like I've never won, and I compete like I've never lost.",

@@ -121,6 +121,12 @@ aside.quotes .src{font-family:var(--sans);font-size:.78rem;display:inline-block;
 .vcard .ext .zh,.vcard .ext .en{display:inline}
 html[data-lang="both"] .vcard .ext .en{display:none}
 
+/* starred key lines */
+aside.quotes li.star,.quotes-all li.star{background:var(--paper);border:1px solid var(--accent);border-radius:10px;padding:10px 14px}
+aside.quotes li.star strong.q.zh::before,.quotes-all li.star strong.q.zh::before{content:"°5  ";color:var(--accent)}
+html[data-lang="en"] aside.quotes li.star strong.q.en::before,html[data-lang="en"] .quotes-all li.star strong.q.en::before{content:"°5  ";color:var(--accent)}
+.quotes-all li.star{margin:8px 0}
+
 /* readings & transcript */
 .readings{margin:22px 0 0}
 .readings h4{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}

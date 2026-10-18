@@ -4,7 +4,7 @@
 
 From Beijing to Milan, nineteen talks, interviews and essays on growth, emotions, decisions and dealing with people, each linked to its source
 
-v1.2 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
+v1.3 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
 
 ## 写在前面 · Before you start
 
@@ -914,9 +914,9 @@ Six months after Milan she sat down with Jay Shetty for just over an hour. The v
 
 She defines herself first as an intellectual who chose sport, not an athlete who happens to value intelligence. Her teammates knew her as the biggest nerd on the team, the one who helped with homework.
 
-关于努力，她说了一句很反直觉的话：努力被高估了。**朝错误的方向拼命，就像用力打一堵墙——力气很大，进展很少；方向对了，努力才会复利。**母亲教她的是「怎么工作」比「比别人更拼」重要。
+关于努力，她说了一句很反直觉的话：**努力被高估了。朝错误的方向拼命，就像用力去撞一堵墙——力气很大，进展很少；方向对了，努力才会复利。**母亲教她的是「怎么工作」比「比别人更拼」重要。
 
-On effort she said something counter-intuitive: hard work is over-praised. **Working hard in the wrong direction is like punching a wall: lots of force, little progress. With the right direction, effort compounds.** What her mother taught her was that how you work matters more than out-working everyone.
+On effort she said something counter-intuitive: **hard work is over-praised. Working hard in the wrong direction is like punching a wall: lots of force, little progress. With the right direction, effort compounds.** What her mother taught her was that how you work matters more than out-working everyone.
 
 她把学习称为终极超能力：相信自己能把任何事弄明白。十二三岁时她就开始读育儿书，为了理解自己的成长；移民母亲的「学生心态」——承认自己不知道——是她学来的。
 
@@ -946,6 +946,7 @@ If you want one practical habit from her, it is in this chapter: find a few trus
 
 **本章金句 · Key lines**
 
+- **努力被高估了，方向没有。** / **Hard work is overpriced. Direction isn't.** （[出处](https://www.youtube.com/shorts/H7Q2JEsuTig)）
 - **我像从未赢过那样训练，像从未输过那样比赛。** / **I train like I've never won, and I compete like I've never lost.** （[出处](https://lifestyle.si.com/celebrities/eileen-gu-powerful-training-approach-perfect-motivation-mantra)）
 - **训练的时候，我只看得见自己的错误。** / **I see only my mistakes when I'm training.** （[出处](https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success)）
 

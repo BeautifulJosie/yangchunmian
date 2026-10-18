@@ -76,7 +76,7 @@ def render_chapter_html(i: int, ch: dict) -> str:
             body.append(f'<h3 class="sec">{bi(sec.get("heading_zh", ""), sec.get("heading_en", ""))}</h3>')
         body.extend(pair(p) for p in sec["paras"])
     quotes = "".join(
-        '<li>'
+        f'<li class="{"star" if q.get("star") else ""}">'
         f'<strong class="q zh" lang="zh">{esc(q["zh"])}</strong>'
         f'<strong class="q en" lang="en">{esc(q["en"])}</strong>'
         + (f'<a class="src" href="{esc(q["source"])}" target="_blank" rel="noopener">出处 · source ↗</a>' if q.get("source") else "")
@@ -135,7 +135,7 @@ def render_html() -> str:
         for i, ch in enumerate(chapters))
     body = "".join(render_chapter_html(i, ch) for i, ch in enumerate(chapters))
     all_quotes = "".join(
-        f'<li><strong class="q zh" lang="zh">{esc(q["zh"])}</strong><strong class="q en" lang="en">{esc(q["en"])}</strong>'
+        f'<li class="{"star" if q.get("star") else ""}"><strong class="q zh" lang="zh">{esc(q["zh"])}</strong><strong class="q en" lang="en">{esc(q["en"])}</strong>'
         f'<a class="where" href="#ch{i+1}">{i+1:02d}</a></li>'
         for i, ch in enumerate(chapters) for q in ch.get("quotes", []))
     intro = "".join(pair(p) for p in BOOK["intro"])
