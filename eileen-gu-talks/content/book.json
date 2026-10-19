@@ -7,7 +7,7 @@
   "subtitle_zh": "从北京到米兰，十九篇演讲、访谈与自述：一位 Z 世代冠军怎样谈成长、情绪、做决定与待人处事",
   "subtitle_en": "From Beijing to Milan, nineteen talks, interviews and essays on growth, emotions, decisions and dealing with people, each linked to its source",
   "author": "",
-  "version": "1.5",
+  "version": "1.6",
   "repo_url": "https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks",
   "intro": [
     {
@@ -28,8 +28,8 @@
     }
   ],
   "download_help": {
-    "zh": "EPUB 可直接导入**微信读书**（电脑端网页版「传书到手机」，或在手机上把文件发给微信「文件传输助手」再用微信读书打开）、Apple 图书、Kobo、多看、静读天下等；Kindle 用户先经 Send to Kindle 转换。Markdown 版适合放进 Obsidian / Notion 继续做笔记。",
-    "en": "The EPUB opens in WeChat Reading (微信读书), Apple Books, Kobo and Moon+ Reader, and on Kindle via Send to Kindle. The Markdown file is handy for note-taking in Obsidian or Notion."
+    "zh": "EPUB 有两个版本。**微信读书请用中文版**：微信读书会给英文段落自动加一段机器译文，双语版导进去会看到中文出现两遍；中文版正文只有中文，金句仍保留英文原话以外的全部内容。双语版适合 Apple 图书、Kobo、多看、静读天下等阅读器，Kindle 用户先经 Send to Kindle 转换。导入微信读书：电脑端网页版「传书到手机」，或在手机上把文件发给微信「文件传输助手」再用微信读书打开。Markdown 版适合放进 Obsidian / Notion 继续做笔记。",
+    "en": "Two EPUBs: **use the Chinese-only one in WeChat Reading**, which auto-inserts machine translations under English paragraphs and would otherwise show the Chinese twice. The bilingual EPUB suits Apple Books, Kobo, Moon+ Reader and, via Send to Kindle, Kindle. The Markdown file is handy for note-taking in Obsidian or Notion."
   },
   "footer": {
     "zh": "本书为免费分享的原创评述与学习笔记，不用于商业用途，不收录演讲逐字稿；所引短句均为被公开报道过的名句并注明出处，视频与原文版权归原平台与发布者所有。",

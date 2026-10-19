@@ -15,7 +15,7 @@
 - 19 章正文，每章「背景 → 她说了什么 → 为什么值得听」，中英对照，加粗的是提炼要点
 - 每章末尾：本章金句（每条附报道出处）、**点击即播的原视频**、原文与完整报道入口
 - 附录：全部金句合集
-- 下载页：EPUB（微信读书 / Apple Books / Kobo）和 Markdown
+- 下载页：EPUB 中文版（微信读书请用这个：微信读书会给英文段落自动加译文，双语版导进去中文会出现两遍）、EPUB 双语版（Apple Books / Kobo / 多看等）和 Markdown
 - 右上角：中 / EN / 双语切换；关键词搜索（回车跳第一条，↑↓ 切换，按 `/` 聚焦）
 
 ## 这本书是什么 / 不是什么
@@ -53,7 +53,7 @@ https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
 
 ```
 index.html             # 生成物：网页书（打开即读）
-downloads/*.epub|.md   # 生成物：EPUB 与 Markdown
+downloads/*.epub|.md   # 生成物：EPUB 双语版、EPUB 中文版（-zh）、Markdown
 content/book.json      # 唯一内容源：书名、前言、主题导读、每章正文 / 金句 / 视频 / 原文入口
 build/build.py         # 一条命令生成以上全部（需要 uv，会自动拉 Python 3.12）
 build/book.css|js      # 网页样式与交互（语言切换、搜索、点击播放、侧边目录）

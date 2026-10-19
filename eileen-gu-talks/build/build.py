@@ -188,7 +188,7 @@ def render_html() -> str:
     <h1>{bi(BOOK["title_zh"], BOOK["title_en"])}</h1>
     <p class="sub">{bi(BOOK["subtitle_zh"], BOOK["subtitle_en"])}</p>
     <p class="by">{(bi("编著 · " + BOOK["author"], "Written & compiled by " + BOOK["author"]) + " · ") if BOOK.get("author") else ""}v{esc(BOOK["version"])} · {bi("免费分享", "Free to share")}</p>
-    <a class="btn primary" href="downloads/{SLUG}.epub" download>{bi("⬇ 下载 EPUB · 可导入微信读书", "⬇ Download EPUB")}</a>
+    <a class="btn primary" href="#download">{bi("⬇ 下载 EPUB · 可导入微信读书", "⬇ Download EPUB")}</a>
   </section>
 
   <section class="intro">
@@ -209,7 +209,8 @@ def render_html() -> str:
     <h2>{bi("把这本书带走", "Take the book with you")}</h2>
     {pair(dl_help)}
     <div class="dl-row">
-      <a class="btn primary" href="downloads/{SLUG}.epub" download>⬇ EPUB</a>
+      <a class="btn primary" href="downloads/{SLUG}-zh.epub" download>{bi("⬇ EPUB 中文版 · 微信读书用这个", "⬇ EPUB, Chinese only")}</a>
+      <a class="btn" href="downloads/{SLUG}.epub" download>{bi("⬇ EPUB 双语版", "⬇ EPUB, bilingual")}</a>
       <a class="btn" href="downloads/{SLUG}.md" download>⬇ Markdown</a>
       <a class="btn" href="{esc(BOOK["repo_url"])}" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
@@ -241,8 +242,11 @@ body{font-family:serif;line-height:1.7;margin:0 .5em}
 h1,h2,h3,h4{font-family:sans-serif;line-height:1.3}
 h2{margin-top:1.6em;border-bottom:1px solid #ccc;padding-bottom:.2em}
 h2 small{font-weight:normal;color:#666;font-size:.7em}
-h3{font-size:1.05em;margin-top:1.4em}
-p.en{color:#444;font-size:.95em;margin-top:-.4em;margin-bottom:1.1em}
+h3{font-size:1.05em;margin:1.4em 0 .7em}
+p{margin:0 0 .6em}
+p.zh{margin-bottom:.3em}
+p.en{color:#555;font-size:.92em;margin:0 0 1.2em}
+li{margin:.4em 0}
 p.meta{color:#666;font-size:.9em}
 strong.q{font-weight:bold}
 .quotes{border-left:3px solid #c8102e;padding:.3em 1em;margin:1.4em 0;background:#fafafa}
@@ -253,79 +257,97 @@ ol.toc li{margin:.3em 0}
 """
 
 
-def ch_xhtml(i: int, ch: dict) -> str:
+def ep(p, zh: bool) -> str:
+    """A paragraph pair for EPUB; zh=True drops the English."""
+    out = f'<p class="zh" lang="zh">{rich(p["zh"])}</p>'
+    if not zh:
+        out += f'<p class="en" lang="en">{rich(p["en"])}</p>'
+    return out
+
+
+def ebi(zh_text: str, en_text: str, zh: bool, sep: str = " · ") -> str:
+    return esc(zh_text) if zh else f'{esc(zh_text)}{sep}{esc(en_text)}'
+
+
+def ch_xhtml(i: int, ch: dict, zh: bool = False) -> str:
     n = i + 1
-    b = [f'<h2 id="ch{n}">{n:02d} · {esc(ch["title_zh"])}<br/><small>{esc(ch["title_en"])}</small></h2>',
-         f'<p class="meta">{esc(ch["date"])} · {esc(ch["occasion_zh"])} / {esc(ch["occasion_en"])}</p>']
+    title = f'{n:02d} · {esc(ch["title_zh"])}' + ("" if zh else f'<br/><small>{esc(ch["title_en"])}</small>')
+    b = [f'<h2 id="ch{n}">{title}</h2>',
+         f'<p class="meta">{esc(ch["date"])} · {ebi(ch["occasion_zh"], ch["occasion_en"], zh, " / ")}</p>']
     for sec in ch["sections"]:
         if sec.get("heading_zh"):
-            b.append(f'<h3>{esc(sec["heading_zh"])} · {esc(sec.get("heading_en", ""))}</h3>')
+            b.append(f'<h3>{ebi(sec["heading_zh"], sec.get("heading_en", ""), zh)}</h3>')
         for p in sec["paras"]:
-            b.append(f'<p class="zh">{rich(p["zh"])}</p><p class="en">{rich(p["en"])}</p>')
+            b.append(ep(p, zh))
     if ch.get("quotes"):
-        b.append('<div class="quotes"><h4>本章金句 · Key lines</h4><ul>')
+        b.append(f'<div class="quotes"><h4>{ebi("本章金句", "Key lines", zh)}</h4><ul>')
         for q in ch["quotes"]:
             src = f' <a href="{esc(q["source"])}">[出处]</a>' if q.get("source") else ""
-            b.append(f'<li><strong class="q">{esc(q["zh"])}</strong><br/><strong class="q">{esc(q["en"])}</strong>{src}</li>')
+            star = "★ " if q.get("star") else ""
+            line = f'<strong class="q">{star}{esc(q["zh"])}</strong>'
+            if not zh:
+                line += f'<br/><strong class="q" lang="en">{esc(q["en"])}</strong>'
+            b.append(f'<li>{line}{src}</li>')
         b.append('</ul></div>')
     if ch.get("transcript"):
-        b.append('<h3>访谈原文 · Transcript</h3>')
+        b.append(f'<h3>{ebi("访谈原文", "Transcript", zh)}</h3>')
         for p in ch["transcript"]:
-            if isinstance(p, dict):
-                b.append(f'<p class="zh">{rich(p["zh"])}</p><p class="en">{rich(p["en"])}</p>')
-            else:
-                b.append(f'<p>{rich(p)}</p>')
+            b.append(ep(p, zh) if isinstance(p, dict) else f'<p>{rich(p)}</p>')
     if ch.get("videos"):
-        b.append('<div class="video"><h4>跳转原视频 · Original video</h4><ul>')
+        b.append(f'<div class="video"><h4>{ebi("跳转原视频", "Original video", zh)}</h4><ul>')
         for v in ch["videos"]:
             b.append(f'<li>{esc(platform_of(v["url"]))} · {esc(v.get("title", ""))}<br/>'
                      f'<a href="{esc(v["url"])}">{esc(v["url"])}</a></li>')
         b.append('</ul></div>')
     if ch.get("readings"):
-        b.append('<div class="video"><h4>原文与完整报道 · Full text &amp; further reading</h4><ul>')
+        b.append(f'<div class="video"><h4>{ebi("原文与完整报道", "Full text &amp; further reading", zh)}</h4><ul>')
         for r in ch["readings"]:
-            b.append(f'<li>{esc(r.get("label_zh", ""))} · {esc(r.get("label_en", ""))}<br/>'
+            b.append(f'<li>{ebi(r.get("label_zh", ""), r.get("label_en", ""), zh)}<br/>'
                      f'<a href="{esc(r["url"])}">{esc(r["url"])}</a></li>')
         b.append('</ul></div>')
     return xhtml(ch["title_zh"], "".join(b))
 
 
-def build_epub(path: pathlib.Path):
-    uid = "urn:uuid:" + str(uuid.uuid5(uuid.NAMESPACE_URL, BOOK["repo_url"] + SLUG))
+def build_epub(path: pathlib.Path, zh: bool = False):
+    uid = "urn:uuid:" + str(uuid.uuid5(uuid.NAMESPACE_URL, BOOK["repo_url"] + SLUG + ("-zh" if zh else "")))
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     chapters = BOOK["chapters"]
     files = {"style.css": EPUB_CSS}
     files["title.xhtml"] = xhtml(
         BOOK["title_zh"],
-        f'<h1>{esc(BOOK["title_zh"])}</h1><h2>{esc(BOOK["title_en"])}</h2>'
-        f'<p>{esc(BOOK["subtitle_zh"])}</p><p class="en">{esc(BOOK["subtitle_en"])}</p>'
-        f'<p class="meta">{("编著 " + esc(BOOK["author"]) + " · ") if BOOK.get("author") else ""}v{esc(BOOK["version"])} · 免费分享 · {esc(BOOK["repo_url"])}</p>')
-    intro = "".join(f'<p class="zh">{rich(p["zh"])}</p><p class="en">{rich(p["en"])}</p>' for p in BOOK["intro"])
-    files["intro.xhtml"] = xhtml("写在前面", f'<h2>写在前面 · Before you start</h2>{intro}')
-    nav_items = ['<li><a href="title.xhtml">封面 · Cover</a></li>',
-                 '<li><a href="intro.xhtml">写在前面 · Before you start</a></li>']
+        f'<h1>{esc(BOOK["title_zh"])}</h1>' + ("" if zh else f'<h2>{esc(BOOK["title_en"])}</h2>')
+        + f'<p>{esc(BOOK["subtitle_zh"])}</p>' + ("" if zh else f'<p class="en" lang="en">{esc(BOOK["subtitle_en"])}</p>')
+        + ('<p class="meta">纯中文版 · 双语版见 downloads/eileen-gu-talks.epub</p>' if zh else "")
+        + f'<p class="meta">{("编著 " + esc(BOOK["author"]) + " · ") if BOOK.get("author") else ""}v{esc(BOOK["version"])} · 免费分享 · {esc(BOOK["repo_url"])}</p>')
+    intro = "".join(ep(p, zh) for p in BOOK["intro"])
+    files["intro.xhtml"] = xhtml("写在前面", f'<h2>{ebi("写在前面", "Before you start", zh)}</h2>{intro}')
+    nav_items = [f'<li><a href="title.xhtml">{ebi("封面", "Cover", zh)}</a></li>',
+                 f'<li><a href="intro.xhtml">{ebi("写在前面", "Before you start", zh)}</a></li>']
     if BOOK.get("themes"):
         idx = {c["date"]: i + 1 for i, c in enumerate(chapters)}
-        tb = ['<h2>按主题读 · Read by theme</h2>']
+        tb = [f'<h2>{ebi("按主题读", "Read by theme", zh)}</h2>']
         for t in BOOK["themes"]:
-            tb.append(f'<h3>{esc(t["name_zh"])} · {esc(t["name_en"])}</h3><ul>')
+            tb.append(f'<h3>{ebi(t["name_zh"], t["name_en"], zh)}</h3><ul>')
             for it in t["items"]:
                 n = idx[it["ch"]]
-                tb.append(f'<li><a href="ch{n:02d}.xhtml">{n:02d}</a> {esc(it["zh"])}<br/><span class="en">{esc(it["en"])}</span></li>')
+                en_part = "" if zh else f'<br/><span class="en" lang="en">{esc(it["en"])}</span>'
+                tb.append(f'<li><a href="ch{n:02d}.xhtml">{n:02d}</a> {esc(it["zh"])}{en_part}</li>')
             tb.append('</ul>')
         files["themes.xhtml"] = xhtml("按主题读", "".join(tb))
-        nav_items.append('<li><a href="themes.xhtml">按主题读 · Read by theme</a></li>')
+        nav_items.append(f'<li><a href="themes.xhtml">{ebi("按主题读", "Read by theme", zh)}</a></li>')
     for i, ch in enumerate(chapters):
-        files[f"ch{i+1:02d}.xhtml"] = ch_xhtml(i, ch)
-        nav_items.append(f'<li><a href="ch{i+1:02d}.xhtml">{i+1:02d} · {esc(ch["title_zh"])} · {esc(ch["title_en"])}</a></li>')
+        files[f"ch{i+1:02d}.xhtml"] = ch_xhtml(i, ch, zh)
+        nav_items.append(f'<li><a href="ch{i+1:02d}.xhtml">{i+1:02d} · {ebi(ch["title_zh"], ch["title_en"], zh)}</a></li>')
     allq = "".join(
-        f'<li><strong class="q">{esc(q["zh"])}</strong><br/><strong class="q">{esc(q["en"])}</strong> <small>（{i+1:02d}）</small></li>'
+        f'<li><strong class="q">{"★ " if q.get("star") else ""}{esc(q["zh"])}</strong>'
+        + ("" if zh else f'<br/><strong class="q" lang="en">{esc(q["en"])}</strong>')
+        + f' <small>（{i+1:02d}）</small></li>'
         for i, ch in enumerate(chapters) for q in ch.get("quotes", []))
-    files["quotes.xhtml"] = xhtml("金句合集", f'<h2>附录 · 金句合集 · All key lines</h2><ul>{allq}</ul>')
+    files["quotes.xhtml"] = xhtml("金句合集", f'<h2>{ebi("附录 · 金句合集", "All key lines", zh)}</h2><ul>{allq}</ul>')
     nav_items.append('<li><a href="quotes.xhtml">附录 · 金句合集</a></li>')
     files["nav.xhtml"] = (XHTML_HEAD + '<head><meta charset="utf-8"/><title>目录</title>'
                           '<link rel="stylesheet" type="text/css" href="style.css"/></head>'
-                          f'<body><nav epub:type="toc" id="toc"><h2>目录 · Contents</h2><ol class="toc">{"".join(nav_items)}</ol></nav></body></html>')
+                          f'<body><nav epub:type="toc" id="toc"><h2>{ebi("目录", "Contents", zh)}</h2><ol class="toc">{"".join(nav_items)}</ol></nav></body></html>')
     manifest, spine = [], []
     for name in files:
         mt = "text/css" if name.endswith(".css") else "application/xhtml+xml"
@@ -341,7 +363,7 @@ def build_epub(path: pathlib.Path):
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid" xml:lang="zh-CN">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
 <dc:identifier id="bookid">{uid}</dc:identifier>
-<dc:title>{esc(BOOK["title_zh"])} · {esc(BOOK["title_en"])}</dc:title>
+<dc:title>{esc(BOOK["title_zh"])}{"（中文版）" if zh else " · " + esc(BOOK["title_en"])}</dc:title>
 <dc:language>zh-CN</dc:language>
 <dc:creator>{esc(BOOK.get("author") or "谷爱凌说 · 编者")}</dc:creator>
 <dc:description>{esc(BOOK["subtitle_zh"])}</dc:description>
@@ -412,5 +434,6 @@ def build_md() -> str:
 if __name__ == "__main__":
     (DOCS / "index.html").write_text(render_html(), encoding="utf-8")
     build_epub(DL / f"{SLUG}.epub")
+    build_epub(DL / f"{SLUG}-zh.epub", zh=True)
     (DL / f"{SLUG}.md").write_text(build_md(), encoding="utf-8")
     print("built:", DOCS / "index.html", DL / f"{SLUG}.epub", DL / f"{SLUG}.md")
