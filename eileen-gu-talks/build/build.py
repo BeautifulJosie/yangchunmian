@@ -209,8 +209,8 @@ def render_html() -> str:
     <h2>{bi("把这本书带走", "Take the book with you")}</h2>
     {pair(dl_help)}
     <div class="dl-row">
-      <a class="btn primary" href="downloads/{SLUG}-zh.epub" download>{bi("⬇ EPUB 中文版 · 微信读书用这个", "⬇ EPUB, Chinese only")}</a>
-      <a class="btn" href="downloads/{SLUG}.epub" download>{bi("⬇ EPUB 双语版", "⬇ EPUB, bilingual")}</a>
+      <a class="btn primary" href="downloads/{SLUG}.epub" download>{bi("⬇ EPUB 双语版 · 可导入微信读书", "⬇ EPUB, bilingual")}</a>
+      <a class="btn" href="downloads/{SLUG}-zh.epub" download>{bi("⬇ EPUB 纯中文版", "⬇ EPUB, Chinese only")}</a>
       <a class="btn" href="downloads/{SLUG}.md" download>⬇ Markdown</a>
       <a class="btn" href="{esc(BOOK["repo_url"])}" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
@@ -238,31 +238,30 @@ def xhtml(title: str, body: str) -> str:
 
 
 EPUB_CSS = """
-body{font-family:serif;line-height:1.7;margin:0 .5em}
-h1,h2,h3,h4{font-family:sans-serif;line-height:1.3}
-h2{margin-top:1.6em;border-bottom:1px solid #ccc;padding-bottom:.2em}
-h2 small{font-weight:normal;color:#666;font-size:.7em}
-h3{font-size:1.05em;margin:1.4em 0 .7em}
-p{margin:0 0 .6em}
-p.zh{margin-bottom:.3em}
-p.en{color:#555;font-size:.92em;margin:0 0 1.2em}
-li{margin:.4em 0}
-p.meta{color:#666;font-size:.9em}
+body{line-height:1.7;margin:0 0.5em}
+h1,h2,h3,h4{line-height:1.3;font-weight:bold}
+h1{font-size:1.8em;margin:1em 0 0.6em}
+h2{font-size:1.4em;margin:1.4em 0 0.6em}
+h2 small{font-weight:normal;color:#666;font-size:0.7em}
+h3{font-size:1.1em;margin:1.4em 0 0.6em}
+h4{font-size:1em;margin:1em 0 0.4em}
+p{margin:0 0 1em;text-indent:0}
+p.meta{color:#666;font-size:0.9em}
+.en{color:#555;font-size:0.92em}
 strong.q{font-weight:bold}
-.quotes{border-left:3px solid #c8102e;padding:.3em 1em;margin:1.4em 0;background:#fafafa}
-.quotes h4,.video h4{margin:.2em 0 .6em}
-.quotes li,.video li{margin:.5em 0}
+.quotes{margin:1.2em 0;padding:0.6em 1em;border-left:3px solid #c8102e}
+.quotes ul,.video ul{margin:0;padding-left:1.2em}
+.quotes li,.video li{margin:0 0 0.8em}
 .video a{word-break:break-all}
-ol.toc li{margin:.3em 0}
+ol.toc li{margin:0 0 0.4em}
 """
 
 
 def ep(p, zh: bool) -> str:
     """A paragraph pair for EPUB; zh=True drops the English."""
-    out = f'<p class="zh" lang="zh">{rich(p["zh"])}</p>'
-    if not zh:
-        out += f'<p class="en" lang="en">{rich(p["en"])}</p>'
-    return out
+    if zh:
+        return f'<p class="zh">{rich(p["zh"])}</p>'
+    return f'<p class="pair">{rich(p["zh"])}<br/><span class="en">{rich(p["en"])}</span></p>'
 
 
 def ebi(zh_text: str, en_text: str, zh: bool, sep: str = " · ") -> str:
@@ -286,7 +285,7 @@ def ch_xhtml(i: int, ch: dict, zh: bool = False) -> str:
             star = "★ " if q.get("star") else ""
             line = f'<strong class="q">{star}{esc(q["zh"])}</strong>'
             if not zh:
-                line += f'<br/><strong class="q" lang="en">{esc(q["en"])}</strong>'
+                line += f'<br/><span class="en"><strong class="q">{esc(q["en"])}</strong></span>'
             b.append(f'<li>{line}{src}</li>')
         b.append('</ul></div>')
     if ch.get("transcript"):
@@ -316,7 +315,7 @@ def build_epub(path: pathlib.Path, zh: bool = False):
     files["title.xhtml"] = xhtml(
         BOOK["title_zh"],
         f'<h1>{esc(BOOK["title_zh"])}</h1>' + ("" if zh else f'<h2>{esc(BOOK["title_en"])}</h2>')
-        + f'<p>{esc(BOOK["subtitle_zh"])}</p>' + ("" if zh else f'<p class="en" lang="en">{esc(BOOK["subtitle_en"])}</p>')
+        + f'<p class="pair">{esc(BOOK["subtitle_zh"])}' + ("" if zh else f'<br/><span class="en">{esc(BOOK["subtitle_en"])}</span>') + '</p>'
         + ('<p class="meta">纯中文版 · 双语版见 downloads/eileen-gu-talks.epub</p>' if zh else "")
         + f'<p class="meta">{("编著 " + esc(BOOK["author"]) + " · ") if BOOK.get("author") else ""}v{esc(BOOK["version"])} · 免费分享 · {esc(BOOK["repo_url"])}</p>')
     intro = "".join(ep(p, zh) for p in BOOK["intro"])
@@ -330,7 +329,7 @@ def build_epub(path: pathlib.Path, zh: bool = False):
             tb.append(f'<h3>{ebi(t["name_zh"], t["name_en"], zh)}</h3><ul>')
             for it in t["items"]:
                 n = idx[it["ch"]]
-                en_part = "" if zh else f'<br/><span class="en" lang="en">{esc(it["en"])}</span>'
+                en_part = "" if zh else f'<br/><span class="en">{esc(it["en"])}</span>'
                 tb.append(f'<li><a href="ch{n:02d}.xhtml">{n:02d}</a> {esc(it["zh"])}{en_part}</li>')
             tb.append('</ul>')
         files["themes.xhtml"] = xhtml("按主题读", "".join(tb))
@@ -340,7 +339,7 @@ def build_epub(path: pathlib.Path, zh: bool = False):
         nav_items.append(f'<li><a href="ch{i+1:02d}.xhtml">{i+1:02d} · {ebi(ch["title_zh"], ch["title_en"], zh)}</a></li>')
     allq = "".join(
         f'<li><strong class="q">{"★ " if q.get("star") else ""}{esc(q["zh"])}</strong>'
-        + ("" if zh else f'<br/><strong class="q" lang="en">{esc(q["en"])}</strong>')
+        + ("" if zh else f'<br/><span class="en"><strong class="q">{esc(q["en"])}</strong></span>')
         + f' <small>（{i+1:02d}）</small></li>'
         for i, ch in enumerate(chapters) for q in ch.get("quotes", []))
     files["quotes.xhtml"] = xhtml("金句合集", f'<h2>{ebi("附录 · 金句合集", "All key lines", zh)}</h2><ul>{allq}</ul>')

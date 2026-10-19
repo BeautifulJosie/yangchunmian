@@ -4,7 +4,7 @@
 
 From Beijing to Milan, nineteen talks, interviews and essays on growth, emotions, decisions and dealing with people, each linked to its source
 
-v1.6 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
+v1.7 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
 
 ## 写在前面 · Before you start
 
