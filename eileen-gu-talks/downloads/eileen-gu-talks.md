@@ -4,7 +4,7 @@
 
 From Beijing to Milan, nineteen talks, interviews and essays on growth, emotions, decisions and dealing with people, each linked to its source
 
-v1.4 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
+v1.5 · 免费分享 · https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks
 
 ## 写在前面 · Before you start
 
@@ -55,7 +55,7 @@ How to use it: switch between Chinese, English and bilingual view at the top rig
 - （07）读恐惧的信号，判断什么时候推进、什么时候停；不试的遗憾重于摔倒。 / Read the fear signal to know when to push and when to stop; not trying costs more than falling.
 - （11）分清欲望驱动和恐惧驱动的动力；别进入防守模式。 / Tell desire-driven from fear-driven motivation; don't go into defence mode.
 - （11）把门留着：不提前宣布滑雪之后的计划，不把别的路堵死。 / Keep doors open: don't announce post-skiing plans that foreclose other paths.
-- （01）努力被高估了：方向错了，用力就像打墙；方向对了，努力才复利。 / Hard work is over-praised: wrong direction is punching a wall; right direction compounds.
+- （01）努力被高估了，方向被低估了：方向错了，用力就像打墙；方向对了，努力才复利。 / Hard work is over-praised: wrong direction is punching a wall; right direction compounds.
 - （01）证据胜过肯定：信任只能靠重复和真正的准备攒出来。 / Evidence over affirmation: trust is built by repetition and real preparation.
 - （16）要么不参赛，一旦参赛就竭尽全力；比赛里最危险的是犹豫。 / Either don't enter, or give everything; hesitation is the most dangerous thing.
 - （05）没有对错，只有意图；最坏的失败是不去尝试。 / No right or wrong, only intention; the worst failure is not to try.
@@ -132,7 +132,7 @@ If you want one practical habit from her, it is in this chapter: find a few trus
 
 **本章金句 · Key lines**
 
-- **努力被高估了，方向没有。** / **Hard work is overpriced. Direction isn't.** （[出处](https://www.youtube.com/shorts/H7Q2JEsuTig)）
+- **努力被高估了，方向被低估了。** / **Hard work is overpriced. Direction isn't.** （[出处](https://www.youtube.com/shorts/H7Q2JEsuTig)）
 - **我像从未赢过那样训练，像从未输过那样比赛。** / **I train like I've never won, and I compete like I've never lost.** （[出处](https://lifestyle.si.com/celebrities/eileen-gu-powerful-training-approach-perfect-motivation-mantra)）
 - **训练的时候，我只看得见自己的错误。** / **I see only my mistakes when I'm training.** （[出处](https://www.olympics.com/en/news/triple-olympic-champion-eileen-gu-mindset-freeski-success)）
 

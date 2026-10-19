@@ -7,7 +7,7 @@
   "subtitle_zh": "从北京到米兰，十九篇演讲、访谈与自述：一位 Z 世代冠军怎样谈成长、情绪、做决定与待人处事",
   "subtitle_en": "From Beijing to Milan, nineteen talks, interviews and essays on growth, emotions, decisions and dealing with people, each linked to its source",
   "author": "",
-  "version": "1.4",
+  "version": "1.5",
   "repo_url": "https://github.com/BeautifulJosie/yangchunmian/tree/main/eileen-gu-talks",
   "intro": [
     {
@@ -100,7 +100,7 @@
       ],
       "quotes": [
         {
-          "zh": "努力被高估了，方向没有。",
+          "zh": "努力被高估了，方向被低估了。",
           "en": "Hard work is overpriced. Direction isn't.",
           "source": "https://www.youtube.com/shorts/H7Q2JEsuTig",
           "star": true
@@ -1785,7 +1785,7 @@
         },
         {
           "ch": "2026-08-31",
-          "zh": "努力被高估了：方向错了，用力就像打墙；方向对了，努力才复利。",
+          "zh": "努力被高估了，方向被低估了：方向错了，用力就像打墙；方向对了，努力才复利。",
           "en": "Hard work is over-praised: wrong direction is punching a wall; right direction compounds."
         },
         {
