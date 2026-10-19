@@ -299,7 +299,7 @@ def ch_xhtml(i: int, ch: dict, zh: bool = False) -> str:
                      f'<a href="{esc(v["url"])}">{esc(v["url"])}</a></li>')
         b.append('</ul></div>')
     if ch.get("readings"):
-        b.append(f'<div class="video"><h4>{ebi("原文与完整报道", "Full text &amp; further reading", zh)}</h4><ul>')
+        b.append(f'<div class="video"><h4>{ebi("原文与完整报道", "Full text & further reading", zh)}</h4><ul>')
         for r in ch["readings"]:
             b.append(f'<li>{ebi(r.get("label_zh", ""), r.get("label_en", ""), zh)}<br/>'
                      f'<a href="{esc(r["url"])}">{esc(r["url"])}</a></li>')
